@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | KM Designs</title>
+<meta name="description" content="Tell me about your project. No pricing forms, just the details. I typically reply within a day or two.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KM Designs">
+<meta property="og:title" content="Contact | KM Designs">
+<meta property="og:description" content="Tell me about your project. No pricing forms, just the details. I typically reply within a day or two.">
+<meta property="og:image" content="https://kmdesigns.com/assets/og-image.png">
+<meta property="og:url" content="https://kmdesigns.com/contact.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact | KM Designs">
+<meta name="twitter:description" content="Tell me about your project. No pricing forms, just the details. I typically reply within a day or two.">
+<meta name="twitter:image" content="https://kmdesigns.com/assets/og-image.png">
+<link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="scroll-progress"></div>
+
+<header class="site-header">
+  <a href="index.html" class="brand">KM Designs <small>studio</small></a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="lab.html">Lab</a>
+    <a href="examples.html">Examples</a>
+    <a href="about.html">About</a>
+  </nav>
+  <a href="contact.html" class="nav-cta magnetic" aria-current="page">Start a project</a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="work.html">Work</a>
+  <a href="lab.html">Lab</a>
+  <a href="examples.html">Examples</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <div class="mm-meta">Currently booking. Replies within a day or two.</div>
+</div>
+
+<main>
+
+  <section class="page-hero">
+    <div class="eyebrow" data-reveal>Contact</div>
+    <h1 data-reveal>Tell me about the project.</h1>
+    <p class="head-note" data-reveal>No pricing to fill out here. Send the details and I'll follow up with a quote and timeline by email.</p>
+  </section>
+
+  <section class="section-pad" style="padding-top:1rem;">
+    <div class="contact-grid">
+
+      <div class="contact-side">
+        <div class="side-block" data-reveal>
+          <h4>Email</h4>
+          <a class="big-link" href="mailto:kkjonlinebusiness@gmail.com">kkjonlinebusiness@gmail.com</a>
+        </div>
+        <div class="side-block" data-reveal>
+          <h4>Turnaround</h4>
+          <p class="note">Most sites take <strong>2 to 5 days</strong> depending on complexity. That's not a rush job, it's what it actually takes to get something right, and since I only work on one project at a time, yours gets the full stretch, not whatever's left over after other clients. You'll get an exact timeframe once I know what you need.</p>
+          <span class="turnaround-badge">Currently booking</span>
+        </div>
+        <div class="side-block" data-reveal>
+          <h4>Elsewhere</h4>
+          <p class="note"><a href="#">Instagram</a> · <a href="#">X / Twitter</a> · <a href="#">Dribbble</a></p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form" data-reveal novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-name">Full name</label>
+            <input type="text" id="f-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-business">Business name <span class="opt">(optional)</span></label>
+            <input type="text" id="f-business" name="business" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-socials">Socials or current site <span class="opt">(optional)</span></label>
+            <input type="text" id="f-socials" name="socials" placeholder="@handle or url">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field select-wrap">
+            <label for="f-type">What do you need?</label>
+            <select id="f-type" name="type">
+              <option value="">Select one</option>
+              <option>New website</option>
+              <option>Redesign of an existing site</option>
+              <option>Online store</option>
+              <option>Landing page</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field select-wrap">
+            <label for="f-timeline">Timeline <span class="opt">(optional)</span></label>
+            <select id="f-timeline" name="timeline">
+              <option value="">No rush</option>
+              <option>As soon as possible</option>
+              <option>Within a few weeks</option>
+              <option>Just exploring for now</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-message">Tell me about the project</label>
+          <textarea id="f-message" name="message" placeholder="What you do, who it's for, anything you've already got in mind…"></textarea>
+        </div>
+
+        <div class="form-foot">
+          <button type="submit" class="btn btn-solid magnetic">Send it over <span class="btn-arrow">→</span></button>
+          <span class="form-status" role="status"></span>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <section class="section-pad" style="background:var(--paper-dim);">
+    <div class="section-head" data-reveal>
+      <h2>A few things people ask</h2>
+    </div>
+    <div style="max-width:760px;">
+      <div class="faq-item" data-reveal>
+        <h4>How much does a website cost?</h4>
+        <p>It depends entirely on what you need. Send over the details and I'll reply with a quote tailored to the project. No generic pricing tiers.</p>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h4>How fast can you actually turn it around?</h4>
+        <p>Most projects land somewhere between 2 and 5 days once scope is locked in. I'm not optimizing for the fastest possible turnaround, I'm optimizing for getting it right, and bigger builds with custom features take longer. I'll give you a real timeframe up front.</p>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h4>Do you work with multiple clients at the same time?</h4>
+        <p>No. I take one project at a time, start to finish, before starting the next. It means a short wait if I'm already booked, but once your project starts, it has my full attention until it's live, not a few hours a week squeezed between other work.</p>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h4>Do I have to reach out first?</h4>
+        <p>No. Sometimes I reach out first. If I come across a business I think I can genuinely help, I'll research your current site, put together specific things I'd change, and build you a working example, before asking for a cent. If you like what you see, we talk. If not, no hard feelings.</p>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h4>Do I need to have my content ready?</h4>
+        <p>It helps but isn't required to get started. Send what you have and we'll fill in the gaps together.</p>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h4>What if I just want to talk it through first?</h4>
+        <p>That's exactly what the form above is for. No commitment, just a starting point for a conversation.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>Let's build something worth clicking on.</h3>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="lab.html">Lab</a>
+        <a href="examples.html">Examples</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:kkjonlinebusiness@gmail.com">kkjonlinebusiness@gmail.com</a>
+        <p>Replies within a day or two</p>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="#">Instagram</a>
+        <a href="#">X / Twitter</a>
+        <a href="#">Dribbble</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> KM Designs</span>
+    <span class="footer-legal"><a href="privacy.html">Privacy</a><span>·</span><a href="terms.html">Terms</a></span>
+    <span>Designed and built to fit your business.</span>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js?v=3"></script>
+<script src="js/contact.js?v=3"></script>
+</body>
+</html>
