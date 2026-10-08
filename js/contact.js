@@ -4,7 +4,7 @@
    Formspree (or similar) endpoint URL. The fetch branch will be used
    automatically and the mailto fallback is skipped. */
 
-const FORM_ENDPOINT = ''; // e.g. 'https://formspree.io/f/xxxxxxx'
+const FORM_ENDPOINT = 'https://formspree.io/f/mdeaewrd';
 const DEST_EMAIL = 'kkjonlinebusiness@gmail.com'; // swap to whichever inbox should receive these
 
 (function contactForm(){
