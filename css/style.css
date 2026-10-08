@@ -894,6 +894,7 @@ section{ position: relative; }
   padding: 9rem var(--gutter) 3.5rem;
 }
 .page-hero h1{ font-size: var(--fs-h1); max-width: 16ch; }
+.page-hero.compact h1{ font-size: clamp(2rem, 3.5vw + 1rem, 3.6rem); }
 .page-hero .head-note{ margin-top: 1.4rem; max-width: 46ch; color: var(--ink-soft); font-size: 1.1rem; }
 
 /* ---------------------------------------------------------------------- */
