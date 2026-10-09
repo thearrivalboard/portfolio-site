@@ -5,7 +5,7 @@
    automatically and the mailto fallback is skipped. */
 
 const FORM_ENDPOINT = 'https://formspree.io/f/mdeaewrd';
-const DEST_EMAIL = 'kkjonlinebusiness@gmail.com'; // swap to whichever inbox should receive these
+const DEST_EMAIL = 'kmdesignsstudios@gmail.com'; // swap to whichever inbox should receive these
 
 (function contactForm(){
   const form = document.querySelector('#contact-form');
