@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Team | Cooper Levenson Attorneys at Law</title>
+<meta name="description" content="Attorneys and staff across Cooper Levenson's six offices in New Jersey, Delaware, Pennsylvania, Nevada, Florida and New York.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --paper:#f5f2ea; --white:#ffffff; --ink:#10181f; --ink-2:#4d5c63; --line:#dcd6c8;
+  --deep:#0a2f3d; --deep-2:#072330; --deep-soft:#e4ebec;
+  --brass:#b08a4e; --brass-soft:#f1e7d3; --brass-deep:#8c6c38;
+  --display:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Space Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--deep)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(34px,4.6vw,54px)}
+h2{font-size:clamp(28px,3.6vw,38px)}
+h3{font-size:19px}
+.eyebrow{font:700 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--brass-deep)}
+.btn{display:inline-flex;align-items:center;font:600 15px/1 var(--body);text-decoration:none;padding:15px 26px;border:1.5px solid transparent;letter-spacing:.01em}
+.btn-primary{background:var(--deep);color:#fff}
+.btn-primary:hover{background:var(--deep-2)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+
+.concept{background:var(--deep-2);color:#cfe0e3;font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:#fff}
+
+header.site{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{height:40px;width:auto}
+.brand-text{font-family:var(--display);font-weight:600;font-size:19px;line-height:1.1}
+.brand-text span{display:block;font:700 10px/1 var(--mono);letter-spacing:.14em;color:var(--ink-2);margin-top:3px}
+.links{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:600}
+.links a{color:var(--ink);text-decoration:none}
+.links a:hover{color:var(--deep)}
+.links a[aria-current="page"]{color:var(--deep);text-decoration:underline;text-underline-offset:5px}
+.nav .btn{padding:12px 20px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);padding:9px 11px;cursor:pointer}
+.menu-toggle svg{display:block}
+@media (max-width:1100px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--white);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+
+.page-hero{padding-block:60px;background:var(--deep);color:#e4ebec}
+.page-hero .eyebrow{color:var(--brass)}
+.page-hero h1{color:#fff;margin:14px 0 16px}
+.page-hero p{color:#b9cdd1;max-width:62ch;margin:0;font-size:18px}
+
+section{padding-block:72px}
+.sec-head{display:flex;flex-direction:column;gap:14px;max-width:760px;margin-bottom:40px}
+.sec-head p{margin:0;color:var(--ink-2);font-size:17px}
+
+.search{display:flex;gap:10px;max-width:420px;margin-bottom:48px}
+.search input{flex:1;padding:14px 16px;border:1.5px solid var(--line);background:var(--white);font:16px/1 var(--body);color:var(--ink)}
+.search input::placeholder{color:#9aa3a8}
+.search button{padding:14px 20px;background:var(--deep);color:#fff;border:none;font:600 14px/1 var(--body);cursor:pointer}
+
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.member{background:var(--white);border:1px solid var(--line);padding:24px}
+.member h3{margin-bottom:4px}
+.member .role{font:700 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:10px}
+.member dl{margin:0;font-size:14px;color:var(--ink-2)}
+.member dl div{display:flex;gap:6px;margin-bottom:3px}
+.member dt{font-weight:600;color:var(--ink)}
+.member a{color:var(--deep)}
+@media (max-width:900px){.team{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.team{grid-template-columns:1fr}}
+
+.full-dir{background:var(--brass-soft);text-align:center;padding:40px}
+.full-dir p{margin:0 0 18px;color:var(--ink-2);max-width:52ch;margin-inline:auto}
+
+.contact{background:var(--deep-2);color:#dce7e9}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.contact h2{color:#fff;margin-bottom:16px}
+.contact p{color:#aec4c8;max-width:50ch;margin:0 0 28px}
+.contact .btn-primary{background:var(--brass);color:var(--ink)}
+.contact .btn-primary:hover{background:#c49d5e}
+.details{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:28px;display:grid;gap:18px;margin:0}
+.details dt{font:700 11.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#8fa8ad;margin-bottom:4px}
+.details dd{margin:0;font-size:18px;font-weight:600}
+.details a{color:#fff;text-decoration:none}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#8a9499;font-size:13.5px;padding-block:34px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:flex-start}
+footer a{color:#cfd6d9}
+.foot-disclaimer{max-width:620px;font-size:12.5px;line-height:1.6;color:#6d7579}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Cooper Levenson by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="https://www.cooperlevenson.com/wp-content/uploads/2022/08/Cooper-Logo.png" alt="Cooper Levenson">
+      <span class="brand-text">Cooper Levenson<span>ATTORNEYS AT LAW</span></span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="practice-areas.html">Practice Areas</a></li>
+      <li><a href="gaming-igaming.html">Gaming &amp; iGaming</a></li>
+      <li><a href="team.html" aria-current="page">Our Team</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="contact.html">Contact Us</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Our team</div>
+    <h1>It all starts with our people.</h1>
+    <p>Over the last 65+ years, Cooper Levenson has brought talented, compassionate attorneys and staff into its ranks across six offices.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <form class="search" role="search" onsubmit="return false">
+      <input type="text" placeholder="Search attorneys by name" aria-label="Search attorneys by name">
+      <button type="submit">Search</button>
+    </form>
+    <div class="team">
+      <div class="member">
+        <h3>Jennifer B. Barr</h3>
+        <div class="role">Attorney</div>
+        <dl><div><dt>Office:</dt> Atlantic City, NJ</div><div><dt>Phone:</dt> <a href="tel:+16095727410">609-572-7410</a></div><div><dt>Email:</dt> <a href="mailto:jbarr@cooperlevenson.com">jbarr@cooperlevenson.com</a></div></dl>
+      </div>
+      <div class="member">
+        <h3>William S. Donio</h3>
+        <div class="role">Attorney</div>
+        <dl><div><dt>Office:</dt> Atlantic City, NJ</div><div><dt>Phone:</dt> <a href="tel:+16095727610">609-572-7610</a></div><div><dt>Email:</dt> <a href="mailto:wdonio@cooperlevenson.com">wdonio@cooperlevenson.com</a></div></dl>
+      </div>
+      <div class="member">
+        <h3>Kenneth J. Calemmo</h3>
+        <div class="role">Attorney</div>
+        <dl><div><dt>Office:</dt> Atlantic City, NJ</div><div><dt>Phone:</dt> <a href="tel:+16095727500">609-572-7500</a></div><div><dt>Email:</dt> <a href="mailto:kcalemmo@cooperlevenson.com">kcalemmo@cooperlevenson.com</a></div></dl>
+      </div>
+      <div class="member">
+        <h3>Brian D. Barr</h3>
+        <div class="role">Attorney</div>
+        <dl><div><dt>Office:</dt> Cherry Hill, NJ</div><div><dt>Phone:</dt> <a href="tel:+18568575514">856-857-5514</a></div><div><dt>Email:</dt> <a href="mailto:bbarr@cooperlevenson.com">bbarr@cooperlevenson.com</a></div></dl>
+      </div>
+      <div class="member">
+        <h3>Samantha T. Carmody</h3>
+        <div class="role">Attorney</div>
+        <dl><div><dt>Office:</dt> Atlantic City, NJ</div><div><dt>Phone:</dt> <a href="tel:+16095727480">609-572-7480</a></div><div><dt>Email:</dt> <a href="mailto:scarmody@cooperlevenson.com">scarmody@cooperlevenson.com</a></div></dl>
+      </div>
+      <div class="member">
+        <h3>Brian B. Carnecchia</h3>
+        <div class="role">Attorney</div>
+        <dl><div><dt>Office:</dt> Harrisburg, PA</div><div><dt>Phone:</dt> <a href="tel:+17174184305">717-418-4305</a></div><div><dt>Email:</dt> <a href="mailto:bcarnecchia@cooperlevenson.com">bcarnecchia@cooperlevenson.com</a></div></dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="full-dir">
+  <div class="wrap">
+    <div class="eyebrow">A-Z directory</div>
+    <h2 style="margin:12px 0 18px">The full team, in one place.</h2>
+    <p>On the live site, this page carries the complete attorney and staff directory, searchable by name with direct phone and email for each office.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow">Get in touch</div>
+      <h2>Looking for a specific attorney?</h2>
+      <p>Call our main line and we'll connect you directly, or reach out to the attorney whose practice area fits your matter.</p>
+      <a class="btn btn-primary" href="contact.html">Contact Cooper Levenson</a>
+    </div>
+    <dl class="details">
+      <div><dt>Main line</dt><dd><a href="tel:+18005293161">(800) 529-3161</a></dd></div>
+      <div><dt>Headquarters</dt><dd>Atlantic City, NJ</dd></div>
+      <div><dt>Offices</dt><dd>NJ &middot; DE &middot; PA &middot; NV &middot; FL &middot; NY</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div style="font-family:var(--display);font-weight:600;color:#e4ebec;font-size:17px;margin-bottom:6px">Cooper Levenson</div>
+        <div>Attorneys at Law, since 1957</div>
+      </div>
+      <p class="foot-disclaimer">© 2026 Cooper Levenson Attorneys at Law. All rights reserved. <strong>Attorney Advertising.</strong> Prior results do not guarantee a similar outcome.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

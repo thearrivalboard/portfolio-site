@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Cooper Levenson Attorneys at Law</title>
+<meta name="description" content="Contact Cooper Levenson Attorneys at Law. Offices in Atlantic City, Cherry Hill, Wilmington, Harrisburg, Las Vegas and Fort Lauderdale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --paper:#f5f2ea; --white:#ffffff; --ink:#10181f; --ink-2:#4d5c63; --line:#dcd6c8;
+  --deep:#0a2f3d; --deep-2:#072330; --deep-soft:#e4ebec;
+  --brass:#b08a4e; --brass-soft:#f1e7d3; --brass-deep:#8c6c38;
+  --display:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Space Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--deep)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(34px,4.6vw,54px)}
+h2{font-size:clamp(26px,3.2vw,32px)}
+h3{font-size:18px}
+.eyebrow{font:700 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--brass-deep)}
+.btn{display:inline-flex;align-items:center;font:600 15px/1 var(--body);text-decoration:none;padding:15px 26px;border:1.5px solid transparent;letter-spacing:.01em}
+.btn-primary{background:var(--deep);color:#fff}
+.btn-primary:hover{background:var(--deep-2)}
+
+.concept{background:var(--deep-2);color:#cfe0e3;font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:#fff}
+
+header.site{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{height:40px;width:auto}
+.brand-text{font-family:var(--display);font-weight:600;font-size:19px;line-height:1.1}
+.brand-text span{display:block;font:700 10px/1 var(--mono);letter-spacing:.14em;color:var(--ink-2);margin-top:3px}
+.links{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:600}
+.links a{color:var(--ink);text-decoration:none}
+.links a:hover{color:var(--deep)}
+.links a[aria-current="page"]{color:var(--deep);text-decoration:underline;text-underline-offset:5px}
+.nav .btn{padding:12px 20px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);padding:9px 11px;cursor:pointer}
+.menu-toggle svg{display:block}
+@media (max-width:1100px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--white);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+
+.contact-hero{background:var(--deep);color:#e4ebec;padding-block:60px}
+.contact-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.contact-hero .eyebrow{color:var(--brass)}
+.contact-hero h1{color:#fff;margin:14px 0 16px}
+.contact-hero p{color:#b9cdd1;max-width:50ch;margin:0 0 10px;font-size:18px}
+.details{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:28px;display:grid;gap:18px;margin:0}
+.details dt{font:700 11.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#8fa8ad;margin-bottom:4px}
+.details dd{margin:0;font-size:19px;font-weight:600}
+.details a{color:#fff;text-decoration:none}
+@media (max-width:860px){.contact-hero-grid{grid-template-columns:1fr}}
+
+section{padding-block:72px}
+.sec-head{display:flex;flex-direction:column;gap:14px;max-width:760px;margin-bottom:40px}
+.sec-head p{margin:0;color:var(--ink-2);font-size:17px}
+
+.office-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.office{background:var(--white);border:1px solid var(--line);padding:24px}
+.office h3{margin-bottom:10px}
+.office p{margin:0;color:var(--ink-2);font-size:14.5px;line-height:1.5}
+.office a{display:block;margin-top:10px;font:700 13.5px/1 var(--mono);color:var(--deep);text-decoration:none}
+@media (max-width:900px){.office-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.office-grid{grid-template-columns:1fr}}
+
+.note-bar{background:var(--brass-soft);text-align:center;padding:22px;font-size:14.5px;color:var(--ink-2)}
+
+footer{background:var(--ink);color:#8a9499;font-size:13.5px;padding-block:34px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:flex-start}
+footer a{color:#cfd6d9}
+.foot-disclaimer{max-width:620px;font-size:12.5px;line-height:1.6;color:#6d7579}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Cooper Levenson by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="https://www.cooperlevenson.com/wp-content/uploads/2022/08/Cooper-Logo.png" alt="Cooper Levenson">
+      <span class="brand-text">Cooper Levenson<span>ATTORNEYS AT LAW</span></span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="practice-areas.html">Practice Areas</a></li>
+      <li><a href="gaming-igaming.html">Gaming &amp; iGaming</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#top">Contact Us</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<section class="contact-hero">
+  <div class="wrap contact-hero-grid">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h1>Tell us what you're facing.</h1>
+      <p>Call our main line and we'll connect you with the right attorney, or reach out to an office directly.</p>
+    </div>
+    <dl class="details">
+      <div><dt>Main line</dt><dd><a href="tel:+18005293161">(800) 529-3161</a></dd></div>
+      <div><dt>Payment portal</dt><dd><a href="#">Pay a retainer online</a></dd></div>
+      <div><dt>Careers</dt><dd><a href="mailto:jbarr@cooperlevenson.com">jbarr@cooperlevenson.com</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Our locations</div>
+      <h2>Six offices, one firm.</h2>
+    </div>
+    <div class="office-grid">
+      <div class="office">
+        <h3>Atlantic City, NJ</h3>
+        <p>1125 Atlantic Avenue, Third Floor<br>Atlantic City, NJ 08401</p>
+        <a href="tel:+16093443161">609-344-3161</a>
+      </div>
+      <div class="office">
+        <h3>Cherry Hill, NJ</h3>
+        <p>1415 Marlton Pike East, Cherry Hill Plaza, Suite 205<br>Cherry Hill, NJ 08034</p>
+        <a href="tel:+18568559110">856-795-9110</a>
+      </div>
+      <div class="office">
+        <h3>Wilmington, DE</h3>
+        <p>1201 N. Orange Street, Suite 713<br>Wilmington, DE 19801</p>
+        <a href="tel:+13028382600">302-838-2600</a>
+      </div>
+      <div class="office">
+        <h3>Harrisburg, PA</h3>
+        <p>2601 North Front Street<br>Harrisburg, PA 17110</p>
+        <a href="tel:+12156446640">215-644-6640</a>
+      </div>
+      <div class="office">
+        <h3>Las Vegas, NV</h3>
+        <p>Attorneys available to serve Nevada clients.</p>
+        <a href="tel:+18005293161">(800) 529-3161</a>
+      </div>
+      <div class="office">
+        <h3>Fort Lauderdale, FL</h3>
+        <p>Attorneys available to serve Florida clients.</p>
+        <a href="tel:+18005293161">(800) 529-3161</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="note-bar">Paying a retainer? Write the word &ldquo;retainer&rdquo; in the invoice line.</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div style="font-family:var(--display);font-weight:600;color:#e4ebec;font-size:17px;margin-bottom:6px">Cooper Levenson</div>
+        <div>Attorneys at Law, since 1957</div>
+      </div>
+      <p class="foot-disclaimer">© 2026 Cooper Levenson Attorneys at Law. All rights reserved. <strong>Attorney Advertising.</strong> Prior results do not guarantee a similar outcome.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
