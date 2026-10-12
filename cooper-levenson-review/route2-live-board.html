@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cooper Levenson · The Live Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a newsroom data desk. The tracker is the hero; night above the fold, paper from the regional band down. Single committed look. */
+:root {
+  --paper: #F6F3EC; --ink: #121A1F; --inlet: #0E4D4A; --slate: #4A5560; --stone: #E4E1D8; --vermilion: #B83A12; --dune: #C9B79C;
+  --night: #0B1214; --pit: #16211F; --line: #2B3A37; --bone: #EDE8DD; --fog: #9AA5A8; --coral: #FF7A4D; --coral-hover: #E8673D; --tide: #6FD1C3; --white: #FFFFFF;
+  --t-live: #0E4D4A; --t-launch: #2F7A73; --t-pend: #8FC3BC; --t-no: #E4E1D8;
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --text: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", "Courier New", monospace;
+  --max: 1312px; --gutter: clamp(16px, 4.5vw, 64px);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--night); color: var(--bone); font-family: var(--text); font-size: 18px; line-height: 1.55; }
+a { color: var(--tide); text-underline-offset: 4px; }
+a:hover { color: var(--coral); }
+:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.wrap { max-width: var(--max); margin: 0 auto; padding-inline: var(--gutter); }
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fog); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.h2 { font-family: var(--display); font-weight: 500; font-size: clamp(30px, 3.2vw, 40px); line-height: 1.12; letter-spacing: -0.01em; }
+section { padding-block: clamp(64px, 8vw, 112px); }
+.btn { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 4px; font-weight: 600; font-size: 16px; text-decoration: none; border: 1.5px solid transparent; cursor: pointer; font-family: var(--text); transition: background 160ms cubic-bezier(.2,.7,.2,1), color 160ms; }
+.btn-primary { background: var(--coral); color: var(--night); border-color: var(--coral); }
+.btn-primary:hover { background: var(--coral-hover); color: var(--night); }
+.btn-primary .arr { transition: transform 160ms; }
+.btn-primary:hover .arr { transform: translateX(4px); }
+.btn-secondary { color: var(--bone); border-color: var(--bone); background: transparent; }
+.btn-secondary:hover { background: var(--bone); color: var(--night); }
+.ph { position: relative; overflow: hidden; background: var(--pit); margin: 0; }
+.ph::after { content: attr(data-label); position: absolute; left: 16px; right: 16px; bottom: 14px; font-family: var(--mono); font-size: 12px; color: var(--fog); }
+.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+
+header.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--night); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; min-height: 80px; padding-block: 12px; }
+.lockup { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; color: var(--bone); }
+.wordmark { font-family: var(--display); font-weight: 500; font-size: 26px; letter-spacing: -0.015em; display: inline-flex; align-items: center; gap: 0.28em; font-variation-settings: "opsz" 72; color: inherit; text-decoration: none; }
+.wordmark i { width: 1px; height: 0.72em; background: var(--vermilion); display: inline-block; }
+.lockup .bar { width: 2px; height: 30px; background: var(--coral); }
+.lockup .g { font-weight: 600; font-size: 13px; letter-spacing: 0.14em; }
+.nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 26px; font-size: 15px; font-weight: 500; }
+.nav ul a { color: var(--bone); text-decoration: none; padding-bottom: 4px; }
+.nav ul a.gaming { border-bottom: 2px solid var(--coral); }
+.nav ul a:hover { color: var(--coral); }
+.nav .btn { min-height: 44px; }
+
+/* hero */
+.hero { padding-block: clamp(48px, 6vw, 88px); background-color: var(--night); background-image: repeating-linear-gradient(0deg, rgba(201,183,156,0.06) 0 1px, transparent 1px 64px), repeating-linear-gradient(90deg, rgba(201,183,156,0.06) 0 1px, transparent 1px 64px); }
+.hero .wrap { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px; align-items: center; }
+.hero-copy { grid-column: span 5; min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 4.8vw, 68px); line-height: 1.04; letter-spacing: -0.018em; }
+.hero h1 em { color: var(--coral); }
+.hero .lede { color: var(--fog); font-size: 19px; max-width: 52ch; }
+.ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+.board { grid-column: span 7; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.seg { display: flex; flex-wrap: wrap; border: 1px solid var(--line); align-self: flex-start; max-width: 100%; }
+.seg button { background: transparent; color: var(--bone); border: 0; border-right: 1px solid var(--line); padding: 10px 14px; font: 500 14px var(--text); cursor: pointer; }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--bone); color: var(--night); font-weight: 600; }
+.tiles { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 2px; }
+.tile { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-weight: 500; font-size: clamp(8px, 0.9vw, 12px); border: 0; padding: 0; cursor: pointer; transition: transform 160ms; }
+.tile:hover { transform: scale(1.06); }
+.tile.live { background: var(--t-live); color: var(--white); }
+.tile.launch { background: var(--t-launch); color: var(--white); clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%); }
+.tile.pend { background-color: var(--t-pend); background-image: repeating-linear-gradient(45deg, rgba(18,26,31,0.18) 0 2px, transparent 2px 7px); color: var(--ink); }
+.tile.no { background: var(--t-no); color: var(--ink); }
+.tile.sel { outline: 2px solid var(--coral); outline-offset: 1px; }
+.empty { aspect-ratio: 1; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; }
+.legend span { display: inline-flex; gap: 8px; align-items: center; }
+.legend i { width: 14px; height: 14px; display: inline-block; }
+.drawer { background: var(--pit); border: 1px solid var(--line); padding: 20px 22px; display: grid; grid-template-columns: 1fr auto; gap: 8px 20px; align-items: center; }
+.drawer .st { font-family: var(--mono); font-size: 14px; color: var(--tide); }
+.drawer p { font-size: 15px; color: var(--fog); }
+.sample { font-family: var(--mono); font-size: 12px; color: var(--fog); }
+
+.ticker { background: var(--pit); border-block: 1px solid var(--line); font-family: var(--mono); font-size: 14px; }
+.ticker .wrap { display: flex; flex-wrap: wrap; gap: 8px 40px; align-items: center; min-height: 56px; padding-block: 10px; }
+.ticker .label { color: var(--coral); font-size: 12px; letter-spacing: 0.08em; }
+.ticker .item { color: var(--tide); }
+.ticker .item.dim { color: var(--fog); }
+
+.proof { padding-block: 48px; border-bottom: 1px solid var(--line); }
+.proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px 0; }
+.proof-item { position: relative; padding: 4px 24px 4px 28px; border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+.proof-item::before { content: ""; position: absolute; left: -1px; top: 6px; width: 2px; height: 40px; background: var(--coral); }
+.proof-item .fig { font-family: var(--mono); font-size: clamp(30px, 3vw, 40px); letter-spacing: -0.02em; line-height: 1.1; }
+.proof-item .lbl { font-size: 15px; color: var(--fog); line-height: 1.45; }
+
+.current .wrap { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px; align-items: center; }
+.current .ph { grid-column: span 6; aspect-ratio: 4 / 3; max-width: 100%; }
+.current .copy { grid-column: span 6; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-family: var(--mono); font-size: 15px; }
+.sub { display: flex; flex-wrap: wrap; gap: 10px; }
+.sub input { flex: 1 1 220px; min-height: 52px; padding: 0 16px; font: 17px var(--text); color: var(--bone); background: var(--pit); border: 1px solid var(--fog); border-radius: 2px; }
+.sub label { flex-basis: 100%; font-weight: 600; font-size: 15px; }
+.ok { color: var(--tide); font-size: 15px; }
+
+/* paper half */
+.paper { background: var(--paper); color: var(--ink); }
+.paper a { color: var(--inlet); }
+.paper a:hover { color: var(--vermilion); }
+.paper .eyebrow { color: var(--slate); }
+.paper .btn-primary { background: var(--inlet); color: var(--white); border-color: var(--inlet); }
+.paper .btn-primary:hover { background: #0A3B39; color: var(--white); }
+.path-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 28px; margin-block: 40px 36px; }
+.step { border-left: 2px solid var(--vermilion); padding: 4px 0 4px 20px; display: flex; flex-direction: column; gap: 8px; }
+.step .n { font-family: var(--mono); font-size: 13px; color: var(--vermilion); }
+.step h3 { font-size: 20px; font-weight: 600; }
+.step p { font-size: 16px; color: var(--slate); }
+.regional { border-top: 1px solid var(--stone); }
+.regional .lede { max-width: 62ch; color: var(--slate); margin-top: 14px; }
+.finder { display: flex; flex-direction: column; gap: 8px; max-width: 520px; margin-block: 28px 20px; }
+.finder label { font-weight: 600; font-size: 15px; }
+.finder input { min-height: 52px; padding: 0 16px; font: 17px var(--text); color: var(--ink); background: var(--white); border: 1px solid var(--slate); border-radius: 2px; }
+.plinks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0 32px; }
+.plinks a { padding: 13px 0; border-bottom: 1px solid var(--stone); color: var(--ink); text-decoration: none; font-weight: 600; display: flex; gap: 12px; align-items: center; }
+.plinks a::before { content: ""; width: 2px; height: 18px; background: var(--vermilion); }
+.plinks a[hidden] { display: none; }
+.people-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px 24px; margin-top: 40px; }
+.person { display: flex; flex-direction: column; gap: 10px; }
+.mono-portrait { aspect-ratio: 4 / 5; max-width: 100%; background: var(--stone); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 64px; color: var(--slate); position: relative; }
+.mono-portrait small { position: absolute; left: 12px; bottom: 10px; font-family: var(--mono); font-size: 11px; }
+.person h3 { font-size: 20px; font-weight: 600; }
+.person .role { font-size: 15px; color: var(--slate); }
+.person .rev { font-family: var(--mono); font-size: 12px; color: var(--inlet); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.chips button { font: 500 14px var(--text); padding: 8px 14px; border-radius: 2px; border: 1px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; }
+.chips button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.ins-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 28px; }
+.ins { background: var(--stone); border-radius: 4px; padding: 32px; display: flex; flex-direction: column; gap: 14px; min-height: 260px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden; }
+.ins[hidden] { display: none; }
+.ins::before { content: ""; position: absolute; left: 0; top: 0; height: 2px; width: 0; background: var(--vermilion); transition: width 200ms; }
+.ins:hover::before { width: 100%; }
+.ins:hover { color: var(--ink); }
+.ins .eyebrow { color: var(--vermilion); }
+.ins h3 { font-size: 22px; line-height: 1.3; font-weight: 600; }
+.ins .meta { font-family: var(--mono); font-size: 13px; color: var(--slate); margin-top: auto; }
+.intake .wrap { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px; }
+.intake form { grid-column: span 7; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.intake .offices { grid-column: span 5; min-width: 0; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field label { font-weight: 600; font-size: 15px; }
+.field select, .field input { min-height: 52px; padding: 0 16px; font: 17px var(--text); color: var(--ink); background: var(--white); border: 1px solid var(--slate); border-radius: 2px; width: 100%; }
+.legal { font-size: 14px; color: var(--slate); }
+.extra { display: flex; flex-direction: column; gap: 14px; }
+.otiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2px; margin-top: 14px; }
+.otiles button { aspect-ratio: 1; background: var(--inlet); color: var(--white); border: 0; font: 500 14px var(--mono); cursor: pointer; }
+.otiles button[aria-pressed="true"] { background: var(--ink); outline: 2px solid var(--vermilion); outline-offset: 1px; }
+.odetail { margin-top: 14px; font-size: 15px; color: var(--slate); }
+.odetail b { color: var(--ink); }
+footer { background: var(--ink); color: var(--stone); padding-block: 64px 48px; }
+footer .wordmark { color: var(--paper); }
+.foot { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px; margin-top: 32px; font-size: 15px; }
+.foot h4 { margin: 0 0 10px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fog); }
+.foot a { display: block; color: var(--stone); text-decoration: none; padding: 3px 0; }
+.foot a:hover { color: var(--coral); }
+.disclaimer { margin-top: 40px; font-size: 13px; color: var(--fog); max-width: 80ch; }
+
+@media (max-width: 900px) {
+  .hero-copy, .board, .current .ph, .current .copy, .intake form, .intake .offices { grid-column: 1 / -1; }
+  .nav ul { order: 3; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="lockup" href="#top" aria-label="Cooper Levenson Gaming home"><span class="wordmark">Cooper <i></i> Levenson</span><span class="bar" aria-hidden="true"></span><span class="g">GAMING</span></a>
+  <nav aria-label="Main"><ul><li><a class="gaming" href="#top">Gaming</a></li><li><a href="#regional">Practices</a></li><li><a href="#regional">Industries</a></li><li><a href="#people">People</a></li><li><a href="#insights">Insights</a></li><li><a href="#contact">Offices</a></li><li><a href="#contact">Careers</a></li><li><a href="#people">About</a></li></ul></nav>
+  <a class="btn btn-secondary" href="#contact">Contact</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <div class="hero-copy">
+    <p class="mono" style="font-size: 13px; color: var(--fog); letter-spacing: 0.04em;">COOPER LEVENSON GAMING TRACKER · LAST REVIEWED [DATE]</p>
+    <h1>Every state. Every status. <em>Reviewed by the lawyers who file there.</em></h1>
+    <p class="lede">Sports betting, iGaming, pending bills, prediction markets and sweepstakes, state by state. Gaming counsel since Atlantic City's first casino law.</p>
+    <div class="ctas"><a class="btn btn-primary" href="#contact">Book a 20-minute market-entry call <span class="arr" aria-hidden="true">→</span></a><a class="btn btn-secondary" href="#top">Open the full tracker</a></div>
+  </div>
+  <div class="board">
+    <div class="seg" role="group" aria-label="Tracker category" id="seg">
+      <button type="button" aria-pressed="true" data-cat="0">Sports betting</button>
+      <button type="button" aria-pressed="false" data-cat="1">iGaming</button>
+      <button type="button" aria-pressed="false" data-cat="2">Pending bills</button>
+      <button type="button" aria-pressed="false" data-cat="3">Prediction markets</button>
+      <button type="button" aria-pressed="false" data-cat="4">Sweepstakes</button>
+    </div>
+    <div class="tiles" id="tiles" aria-label="Sample state tiles. Select a state for details."></div>
+    <div class="legend">
+      <span><i style="background: var(--t-live); box-shadow: inset 0 0 0 1px var(--t-launch);"></i>Legal and live</span>
+      <span><i style="background: var(--t-launch);"></i>Legal, not launched</span>
+      <span><i style="background: var(--t-pend);"></i>Pending legislation</span>
+      <span><i style="background: var(--t-no);"></i>Not legal</span>
+    </div>
+    <div class="drawer" id="drawer" aria-live="polite">
+      <div>
+        <p class="st" id="dState">NEW JERSEY · SPORTS BETTING · SAMPLE STATUS</p>
+        <p>Last reviewed [date] by [attorney] · Our lawyers approved here: [names]</p>
+      </div>
+      <a class="btn btn-primary" href="#contact" id="dBtn" style="min-height: 44px;">Book a call</a>
+    </div>
+    <p class="sample">SAMPLE DATA FOR LAYOUT ONLY · not a statement of any state's law</p>
+  </div>
+</div></div>
+
+<div class="ticker" aria-label="Recently reviewed"><div class="wrap">
+  <span class="label">RECENTLY REVIEWED</span>
+  <span class="item">[STATE] · [CATEGORY] · [STATUS CHANGE] · REVIEWED [DATE] · [INITIALS]</span>
+  <span class="item dim">[STATE] · [CATEGORY] · REVIEWED [DATE]</span>
+</div></div>
+
+<div class="proof"><div class="wrap proof-grid">
+  <div class="proof-item"><span class="fig">Band 3</span><span class="lbl">Chambers USA 2026, Gaming and Licensing, Nationwide</span></div>
+  <div class="proof-item"><span class="fig">Tier 1</span><span class="lbl">Best Law Firms 2026, Gaming Law, New Jersey</span></div>
+  <div class="proof-item"><span class="fig">17</span><span class="lbl">States where our lawyers hold gaming approvals</span></div>
+  <div class="proof-item"><span class="fig">1957</span><span class="lbl">Founded in Atlantic City</span></div>
+</div></div>
+
+<section class="current"><div class="wrap">
+  <figure class="ph" data-label="PLACEHOLDER · Final: an attorney's hands marking up a printed bill under a desk lamp">
+    <img src="https://images.unsplash.com/photo-1695388474402-ed805a890d8d?auto=format&fit=crop&w=1400&q=70" alt="Placeholder stock photo: a person reading printed papers at a table">
+  </figure>
+  <div class="copy">
+    <p class="eyebrow">How the board stays current</p>
+    <h2 class="h2">Dated. Signed. Reviewed by people, not scraped.</h2>
+    <ul class="steps"><li>01 Our lawyers monitor statutes and regulator dockets.</li><li>02 Each state entry carries a reviewer and a date.</li><li>03 Status changes post to LinkedIn and your inbox.</li></ul>
+    <form class="sub" id="subForm" novalidate>
+      <label for="subEmail">Subscribe to tracker alerts</label>
+      <input id="subEmail" type="email" placeholder="you@company.com" autocomplete="email">
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+      <p class="ok" id="subOk" hidden>Prototype only. In the live site this adds you to tracker alerts.</p>
+    </form>
+  </div>
+</div></section>
+
+<div class="paper">
+<section><div class="wrap">
+  <p class="eyebrow">Market entry</p>
+  <h2 class="h2" style="margin-top: 14px;">Entering a new state? Here's the order.</h2>
+  <div class="path-grid">
+    <div class="step"><span class="n">STEP 1</span><h3>Assess the market</h3><p>[One sentence on market assessment.]</p><a href="#contact">Market assessment</a></div>
+    <div class="step"><span class="n">STEP 2</span><h3>Sequence the applications</h3><p>[One sentence on application sequencing.]</p><a href="#contact">Licensing</a></div>
+    <div class="step"><span class="n">STEP 3</span><h3>Prepare people and entities</h3><p>[One sentence on suitability and entity work.]</p><a href="#contact">Suitability</a></div>
+    <div class="step"><span class="n">STEP 4</span><h3>Launch and stay compliant</h3><p>[One sentence on ongoing compliance.]</p><a href="#contact">Compliance</a></div>
+  </div>
+  <a class="btn btn-primary" href="#contact">Book a 20-minute market-entry call <span class="arr" aria-hidden="true">→</span></a>
+</div></section>
+
+<section class="regional" id="regional"><div class="wrap">
+  <p class="eyebrow">Regional practice</p>
+  <h2 class="h2" style="margin-top: 14px; max-width: 24ch;">Off the casino floor, we're a regional law firm with deep roots.</h2>
+  <p class="lede">Seven offices. Twenty-seven practices. Businesses, schools, hospitals and families across New Jersey, Pennsylvania, Delaware, New York, Nevada and Florida.</p>
+  <div class="finder"><label for="pfind">Find a practice</label><input id="pfind" type="search" placeholder="Try employment or real estate"></div>
+  <div class="plinks" id="plinks"><a href="#regional">Business and Corporate</a><a href="#regional">Employment</a><a href="#regional">Education</a><a href="#regional">Healthcare</a><a href="#regional">Real Estate</a><a href="#regional">Estates and Trusts</a><a href="#regional">Tax</a><a href="#regional">Litigation</a><a href="#regional">Workers' Compensation</a><a href="#regional">Cannabis</a></div>
+</div></section>
+
+<section id="people" style="padding-top: 0;"><div class="wrap">
+  <p class="eyebrow">People</p>
+  <h2 class="h2" style="margin-top: 14px;">The names behind the dates.</h2>
+  <div class="people-grid">
+    <div class="person"><div class="mono-portrait">LK<small>PORTRAIT TO COME</small></div><h3>Lynne Kaufman</h3><p class="role">Head of Gaming and Licensing</p><p class="rev">REVIEWS TRACKER: [STATES]</p></div>
+    <div class="person"><div class="mono-portrait">LL<small>PORTRAIT TO COME</small></div><h3>Lucas R. Levenson</h3><p class="role">Partner, Gaming · approvals in 17 states</p><p class="rev">REVIEWS TRACKER: [STATES]</p></div>
+    <div class="person"><div class="mono-portrait">KM<small>PORTRAIT TO COME</small></div><h3>Kimberly Maxson-Rushton</h3><p class="role">Las Vegas · former counsel to Nevada gaming regulators</p><p class="rev">REVIEWS TRACKER: [STATES]</p></div>
+    <div class="person"><div class="mono-portrait">LL<small>PORTRAIT TO COME</small></div><h3>Lloyd D. Levenson</h3><p class="role">Chief Executive Officer · Co-chair, Casino and iGaming</p><p class="rev">REVIEWS TRACKER: [STATES]</p></div>
+  </div>
+</div></section>
+
+<section id="insights" style="padding-top: 0;"><div class="wrap">
+  <p class="eyebrow">Insights</p>
+  <h2 class="h2" style="margin-top: 14px;">Analysis, with a date on it.</h2>
+  <div class="chips" role="group" aria-label="Filter insights" id="chips">
+    <button type="button" aria-pressed="true" data-f="all">All</button><button type="button" aria-pressed="false" data-f="gaming">Gaming</button><button type="button" aria-pressed="false" data-f="employment">Employment</button><button type="button" aria-pressed="false" data-f="business">Business</button>
+  </div>
+  <div class="ins-grid" id="ins">
+    <a class="ins" data-k="gaming" href="#insights"><span class="eyebrow">Gaming</span><h3>[Headline] Prediction markets and state regulators: what operators should watch</h3><span class="meta">[DATE] · [AUTHOR]</span></a>
+    <a class="ins" data-k="gaming" href="#insights"><span class="eyebrow">Gaming</span><h3>[Headline] Entering a new state: the order applications should go in</h3><span class="meta">[DATE] · [AUTHOR]</span></a>
+    <a class="ins" data-k="employment" href="#insights"><span class="eyebrow">Employment</span><h3>[Headline] Employment update for hospitality employers</h3><span class="meta">[DATE] · [AUTHOR]</span></a>
+  </div>
+</div></section>
+
+<section class="intake" id="contact" style="border-top: 1px solid var(--stone);"><div class="wrap">
+  <form id="intake" novalidate>
+    <h2 class="h2">What do you need help with?</h2>
+    <div class="field"><label for="need">Choose the closest match</label>
+      <select id="need"><option value="">Select one</option><option>Entering a new gaming market</option><option>Licensing or compliance for an existing license</option><option>Casino or hospitality claim</option><option>Business or employment matter</option><option>Estate, tax or real estate</option><option>Something else</option></select>
+    </div>
+    <div class="extra" id="extra" hidden>
+      <div class="field"><label for="name">Your name</label><input id="name" autocomplete="name"></div>
+      <div class="field"><label for="reach">Phone or email</label><input id="reach" autocomplete="email"></div>
+      <button class="btn btn-primary" type="submit" style="align-self: flex-start;">Send</button>
+    </div>
+    <p class="legal">Contacting us does not create an attorney-client relationship. Please do not send confidential information.</p>
+    <p id="confirm" hidden style="font-weight: 600;">Prototype only. The live site routes this to [named practice contact], who replies within [response window].</p>
+  </form>
+  <div class="offices">
+    <p class="eyebrow">Offices</p>
+    <div class="otiles" role="group" aria-label="Choose an office" id="otiles">
+      <button type="button" aria-pressed="true" data-o="Atlantic City, NJ">ACY</button><button type="button" aria-pressed="false" data-o="Cherry Hill, NJ">CHL</button><button type="button" aria-pressed="false" data-o="Wilmington, DE">WIL</button><button type="button" aria-pressed="false" data-o="Harrisburg, PA">HBG</button><button type="button" aria-pressed="false" data-o="Las Vegas, NV">LAS</button><button type="button" aria-pressed="false" data-o="Fort Lauderdale, FL">FLL</button><button type="button" aria-pressed="false" data-o="New York, NY">NYC</button>
+    </div>
+    <p class="odetail" id="odetail"><b>Atlantic City, NJ</b> · [ADDRESS] · [PHONE]</p>
+  </div>
+</div></section>
+</div>
+</main>
+
+<footer><div class="wrap">
+  <a class="wordmark" href="#top">Cooper <i></i> Levenson</a>
+  <p style="margin-top: 10px; color: var(--fog);">From the first license to the next market.</p>
+  <div class="foot">
+    <div><h4>Gaming</h4><a href="#top">Gaming Tracker</a><a href="#top">Tracker methodology</a><a href="#contact">Book a call</a></div>
+    <div><h4>Firm</h4><a href="#regional">Practices</a><a href="#people">People</a><a href="#insights">Insights</a></div>
+    <div><h4>Careers</h4><a href="#contact">Open roles</a><a href="#contact">NJBIZ Best Places to Work 2026</a></div>
+  </div>
+  <p class="disclaimer">Attorney advertising. [Required disclaimer text for each jurisdiction.] Tracker data on this prototype is sample data for layout only. Design prototype by Ideas Art Code; stock photos are placeholders for original photography.</p>
+</div></footer>
+
+<script>
+(function () {
+  document.querySelectorAll('.ph img').forEach(function (img) {
+    var fail = function () { img.hidden = true; };
+    img.addEventListener('error', fail);
+    if (img.complete && img.naturalWidth === 0) fail();
+  });
+
+  var grid = [['AK',0,0],['ME',10,0],['VT',9,1],['NH',10,1],['WA',0,2],['ID',1,2],['MT',2,2],['ND',3,2],['MN',4,2],['IL',5,2],['WI',6,2],['MI',7,2],['NY',8,2],['RI',9,2],['MA',10,2],['OR',0,3],['NV',1,3],['WY',2,3],['SD',3,3],['IA',4,3],['IN',5,3],['OH',6,3],['PA',7,3],['NJ',8,3],['CT',9,3],['CA',0,4],['UT',1,4],['CO',2,4],['NE',3,4],['MO',4,4],['KY',5,4],['WV',6,4],['VA',7,4],['MD',8,4],['DE',9,4],['AZ',1,5],['NM',2,5],['KS',3,5],['AR',4,5],['TN',5,5],['NC',6,5],['SC',7,5],['DC',8,5],['OK',3,6],['LA',4,6],['MS',5,6],['AL',6,6],['GA',7,6],['HI',0,7],['TX',3,7],['FL',8,7]];
+  var names = {AK:'Alaska',ME:'Maine',VT:'Vermont',NH:'New Hampshire',WA:'Washington',ID:'Idaho',MT:'Montana',ND:'North Dakota',MN:'Minnesota',IL:'Illinois',WI:'Wisconsin',MI:'Michigan',NY:'New York',RI:'Rhode Island',MA:'Massachusetts',OR:'Oregon',NV:'Nevada',WY:'Wyoming',SD:'South Dakota',IA:'Iowa',IN:'Indiana',OH:'Ohio',PA:'Pennsylvania',NJ:'New Jersey',CT:'Connecticut',CA:'California',UT:'Utah',CO:'Colorado',NE:'Nebraska',MO:'Missouri',KY:'Kentucky',WV:'West Virginia',VA:'Virginia',MD:'Maryland',DE:'Delaware',AZ:'Arizona',NM:'New Mexico',KS:'Kansas',AR:'Arkansas',TN:'Tennessee',NC:'North Carolina',SC:'South Carolina',DC:'District of Columbia',OK:'Oklahoma',LA:'Louisiana',MS:'Mississippi',AL:'Alabama',GA:'Georgia',HI:'Hawaii',TX:'Texas',FL:'Florida'};
+  var cats = ['SPORTS BETTING','iGAMING','PENDING BILLS','PREDICTION MARKETS','SWEEPSTAKES'];
+  var classes = ['live','launch','pend','no'];
+  var labels = {live:'LEGAL AND LIVE', launch:'LEGAL, NOT LAUNCHED', pend:'PENDING LEGISLATION', no:'NOT LEGAL'};
+  var weights = [[0,0,0,1,2,3,0,2,3,0],[3,3,0,2,3,3,1,3,2,3],[2,3,2,2,3,2,3,2,3,3],[3,2,3,3,2,3,3,1,3,2],[3,0,2,3,3,2,3,3,0,3]];
+  var cat = 0, selected = 'NJ';
+  var tilesEl = document.getElementById('tiles');
+  var dState = document.getElementById('dState');
+  var dBtn = document.getElementById('dBtn');
+
+  function statusFor(i, c) { var w = weights[c]; return classes[w[(i * 7 + c * 3) % w.length]]; }
+
+  function render() {
+    tilesEl.innerHTML = '';
+    var cells = {};
+    grid.forEach(function (g, i) { cells[g[1] + ',' + g[2]] = { code: g[0], s: statusFor(i, cat) }; });
+    for (var r = 0; r < 8; r++) for (var c = 0; c < 11; c++) {
+      var cell = cells[c + ',' + r];
+      if (!cell) { var e = document.createElement('div'); e.className = 'empty'; tilesEl.appendChild(e); continue; }
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'tile ' + cell.s + (cell.code === selected ? ' sel' : '');
+      b.textContent = cell.code;
+      b.setAttribute('aria-label', names[cell.code] + ': sample status, ' + labels[cell.s].toLowerCase());
+      (function (cell) { b.addEventListener('click', function () { selected = cell.code; render(); var s = tilesEl.querySelector('.sel'); if (s) s.focus(); }); })(cell);
+      tilesEl.appendChild(b);
+      if (cell.code === selected) {
+        dState.textContent = names[cell.code].toUpperCase() + ' · ' + cats[cat] + ' · SAMPLE: ' + labels[cell.s];
+        dBtn.textContent = 'Book a call about ' + names[cell.code];
+      }
+    }
+  }
+  document.getElementById('seg').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    cat = +b.dataset.cat;
+    this.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    render();
+  });
+  render();
+
+  document.getElementById('subForm').addEventListener('submit', function (e) { e.preventDefault(); document.getElementById('subOk').hidden = false; });
+
+  var pfind = document.getElementById('pfind');
+  pfind.addEventListener('input', function () {
+    var q = pfind.value.trim().toLowerCase();
+    document.querySelectorAll('#plinks a').forEach(function (a) { a.hidden = q && a.textContent.toLowerCase().indexOf(q) === -1; });
+  });
+
+  document.getElementById('chips').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    this.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    document.querySelectorAll('#ins .ins').forEach(function (a) { a.hidden = b.dataset.f !== 'all' && a.dataset.k !== b.dataset.f; });
+  });
+
+  var need = document.getElementById('need');
+  need.addEventListener('change', function () { document.getElementById('extra').hidden = !need.value; });
+  document.getElementById('intake').addEventListener('submit', function (e) { e.preventDefault(); document.getElementById('confirm').hidden = false; });
+
+  document.getElementById('otiles').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    this.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    document.getElementById('odetail').innerHTML = '<b>' + b.dataset.o + '</b> · [ADDRESS] · [PHONE]';
+  });
+})();
+</script>
+
+</body>
+</html>
