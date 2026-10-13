@@ -4,117 +4,176 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gaming &amp; iGaming Law | Cooper Levenson Attorneys at Law</title>
-<meta name="description" content="Cooper Levenson's Gaming and iGaming practice: licensing, compliance, sports wagering, esports, interactive casino and online gaming law, since the 1970s.">
+<meta name="description" content="Cooper Levenson's Gaming and iGaming practice: market entry, licensing, compliance, sports wagering, esports, interactive casino and online gaming law, since the 1970s.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
 :root{
   color-scheme:light;
-  --paper:#f5f2ea; --white:#ffffff; --ink:#10181f; --ink-2:#4d5c63; --line:#dcd6c8;
-  --deep:#0a2f3d; --deep-2:#072330; --deep-soft:#e4ebec;
-  --brass:#b08a4e; --brass-soft:#f1e7d3; --brass-deep:#8c6c38;
-  --display:"Source Serif 4",Georgia,"Times New Roman",serif;
-  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"Space Mono",ui-monospace,monospace;
+  --paper:#f6f3ec; --white:#ffffff; --ink:#121a1f; --slate:#4a5560; --stone:#e4e1d8; --dune:#c9b79c;
+  --inlet:#0e4d4a; --inlet-deep:#0a3936; --inlet-soft:#dcebe9;
+  --vermilion:#b83a12;
+  --night:#0b1214; --pit:#16211f; --bone:#ede8dd; --fog:#9aa5a8; --coral:#ff7a4d; --tide:#6fd1c3;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--body)}
 img{max-width:100%;display:block}
-a{color:var(--deep)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+a{color:var(--inlet)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--vermilion);outline-offset:3px}
 .wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
 h1{font-size:clamp(34px,4.6vw,54px)}
 h2{font-size:clamp(28px,3.6vw,38px)}
 h3{font-size:20px}
-.eyebrow{font:700 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--brass-deep)}
-.photo{background:var(--deep-soft);overflow:hidden}
+.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--inlet)}
+.photo{background:var(--stone);overflow:hidden}
 .photo img{width:100%;height:100%;object-fit:cover}
-.btn{display:inline-flex;align-items:center;font:600 15px/1 var(--body);text-decoration:none;padding:15px 26px;border:1.5px solid transparent;letter-spacing:.01em}
-.btn-primary{background:var(--deep);color:#fff}
-.btn-primary:hover{background:var(--deep-2)}
+.btn{display:inline-flex;align-items:center;font:600 15px/1 var(--body);text-decoration:none;padding:15px 26px;border:1.5px solid transparent;letter-spacing:.01em;border-radius:4px}
+.btn-primary{background:var(--inlet);color:#fff}
+.btn-primary:hover{background:var(--inlet-deep)}
+.btn-coral{background:var(--coral);color:var(--night)}
+.btn-coral:hover{background:#ff8f68}
 .btn-ghost{border-color:var(--ink);color:var(--ink)}
 .btn-ghost:hover{background:var(--ink);color:#fff}
 
-.concept{background:var(--deep-2);color:#cfe0e3;font-size:13px;text-align:center;padding:9px 20px}
-.concept b{color:#fff}
+.concept{background:var(--night);color:var(--bone);font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:var(--coral)}
 
-header.site{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+header.site{background:var(--white);border-bottom:1px solid var(--dune);position:sticky;top:0;z-index:10}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
 .brand img{height:40px;width:auto}
-.brand-text{font-family:var(--display);font-weight:600;font-size:19px;line-height:1.1}
-.brand-text span{display:block;font:700 10px/1 var(--mono);letter-spacing:.14em;color:var(--ink-2);margin-top:3px}
-.links{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:600}
-.links a{color:var(--ink);text-decoration:none}
-.links a:hover{color:var(--deep)}
-.links a[aria-current="page"]{color:var(--deep);text-decoration:underline;text-underline-offset:5px}
+.brand-text{font-family:var(--display);font-weight:500;font-size:19px;line-height:1.1;display:flex;align-items:center;gap:8px}
+.brand-text .bar{width:1px;height:16px;background:var(--vermilion);display:inline-block}
+.brand-sub{display:block;font:600 10px/1 var(--mono);letter-spacing:.14em;color:var(--slate);margin-top:3px}
+.links{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:600}
+.links a{color:var(--ink);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent}
+.links a:hover{color:var(--inlet)}
+.links a[aria-current="page"]{border-bottom-color:var(--inlet)}
+.links a.nav-gaming{border-bottom-color:var(--coral)}
+.links a.nav-gaming:hover{color:var(--ink)}
 .nav .btn{padding:12px 20px;font-size:13.5px}
-.menu-toggle{display:none;background:none;border:1.5px solid var(--line);padding:9px 11px;cursor:pointer}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--dune);padding:9px 11px;cursor:pointer;border-radius:4px}
 .menu-toggle svg{display:block}
-@media (max-width:1100px){
-  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--white);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
+@media (max-width:1150px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--white);border-bottom:1px solid var(--dune);padding:6px 24px 14px;display:none}
   .links.open{display:flex}
   .links li{width:100%}
-  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--dune);border-bottom:none}
+  .links a.nav-gaming{border-left:3px solid var(--coral);padding-left:10px}
   .menu-toggle{display:block}
   header.site .nav{position:relative}
 }
 @media (max-width:480px){
-  .brand-text span{display:none}
-  .brand-text{font-size:16px}
+  .brand-sub{display:none}
+  .brand-text{display:none}
   .nav{gap:10px}
   .nav .btn{padding:10px 14px;font-size:12.5px}
 }
 
-.page-hero{padding-block:30px 0;background:var(--deep-2)}
+.page-hero{padding-block:30px 0;background:var(--night)}
 .hero-photo{aspect-ratio:21/9;position:relative;max-width:1600px;margin-inline:auto}
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,12,16,.4) 0%,rgba(3,12,16,.15) 45%,rgba(3,12,16,0) 100%)}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,8,9,.5) 0%,rgba(3,8,9,.2) 45%,rgba(3,8,9,0) 100%)}
 .hero-copy h1,.hero-copy p,.hero-copy .eyebrow{text-shadow:0 1px 3px rgba(0,0,0,.9),0 4px 22px rgba(0,0,0,.7)}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-copy{position:absolute;left:0;right:0;bottom:0;padding:34px 0 44px;color:#fff;z-index:1}
-.hero-panel{display:inline-block;max-width:620px;padding:24px 28px;background:rgba(3,12,16,.88)}
-.hero-copy .eyebrow{color:var(--brass)}
+.hero-copy{position:absolute;left:0;right:0;bottom:0;padding:34px 0 44px;color:var(--bone);z-index:1}
+.hero-panel{display:inline-block;max-width:640px;padding:24px 28px;background:rgba(5,12,13,.88);border-radius:4px}
+.hero-copy .eyebrow{color:var(--coral)}
 .page-hero h1{color:#fff;margin:14px 0 14px;max-width:18ch}
-.hero-copy p{color:#dce7e9;font-size:18px;max-width:60ch;margin:0}
+.hero-copy p{color:var(--bone);font-size:18px;max-width:60ch;margin:0 0 18px}
 @media (max-width:760px){.hero-photo{aspect-ratio:4/5}}
+
+.chip-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:8px 14px;border-radius:2px;font:600 12.5px/1 var(--mono);color:var(--bone)}
+.chip b{color:var(--coral)}
 
 section{padding-block:72px}
 .sec-head{display:flex;flex-direction:column;gap:14px;max-width:760px;margin-bottom:40px}
-.sec-head p{margin:0;color:var(--ink-2);font-size:17px}
+.sec-head p{margin:0;color:var(--slate);font-size:17px}
 
-.matters{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.matter{background:var(--white);padding:22px 24px;font-weight:600}
-@media (max-width:700px){.matters{grid-template-columns:1fr}}
+/* sub service cards */
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{background:var(--stone);border:1px solid var(--dune);padding:26px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px;border-radius:4px}
+.service:hover{border-color:var(--inlet)}
+.service h3{font-size:18px}
+.service p{margin:0;color:var(--slate);font-size:14.5px}
+@media (max-width:900px){.service-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.service-grid{grid-template-columns:1fr}}
 
-.quote-block{background:var(--deep);color:#e4ebec}
+.quote-block{background:var(--night);color:var(--bone)}
 .quote-inner{max-width:820px;margin:0 auto;text-align:center}
-.quote-inner .mark{font:600 80px/1 var(--display);color:var(--brass);display:block;margin-bottom:-18px}
-.quote-inner p{font:500 28px/1.45 var(--display);color:#fff;margin:0}
-.quote-inner cite{display:block;font:700 13px/1 var(--mono);color:#9fb7bd;font-style:normal;margin-top:22px;letter-spacing:.02em}
+.quote-inner .mark{font:500 80px/1 var(--display);color:var(--coral);display:block;margin-bottom:-18px}
+.quote-inner p{font:400 italic 28px/1.45 var(--display);color:#fff;margin:0}
+.quote-inner cite{display:block;font:600 13px/1 var(--mono);color:var(--tide);font-style:normal;margin-top:22px;letter-spacing:.02em}
 
 .advisor-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.advisor-grid ul{margin:16px 0 0;padding-left:20px;color:var(--ink-2);font-size:16px}
+.advisor-grid ul{margin:16px 0 0;padding-left:20px;color:var(--slate);font-size:16px}
 .advisor-grid ul li{margin-bottom:8px}
 @media (max-width:860px){.advisor-grid{grid-template-columns:1fr}}
 
-.contact{background:var(--deep-2);color:#dce7e9}
+/* leaders (shared pattern with homepage) */
+.leaders{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.leader{background:var(--white);border:1px solid var(--dune);padding:0;border-radius:4px;overflow:hidden}
+.leader .avatar{aspect-ratio:1/1;background:var(--inlet);color:var(--paper);display:flex;align-items:center;justify-content:center;font:500 28px/1 var(--display);letter-spacing:.02em}
+.leader .leader-body{padding:18px 20px 20px}
+.leader h3{font-size:17px;margin-bottom:4px}
+.leader .role{font:600 11px/1.3 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--inlet);margin-bottom:6px}
+.leader .office{color:var(--slate);font-size:13.5px;margin-bottom:14px}
+.leader-actions{display:flex;gap:14px;font-size:13px;font-weight:600}
+.leader-actions a{text-decoration:none}
+@media (max-width:900px){.leaders{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.leaders{grid-template-columns:1fr}}
+
+/* gaming tracker teaser */
+.tracker{background:var(--night);color:var(--bone)}
+.tracker-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.tracker .eyebrow{color:var(--coral)}
+.tracker h2{color:#fff;margin:14px 0 16px}
+.tracker p{color:var(--fog);margin:0 0 20px;max-width:46ch}
+.tracker-meta{font:600 12.5px/1 var(--mono);color:var(--tide);margin-bottom:22px}
+.tile-map{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;margin-bottom:18px}
+.tile{aspect-ratio:1/1;border-radius:2px}
+.tile.live{background:var(--tide)}
+.tile.not-launched{background:#3a8f84}
+.tile.pending{background:var(--coral)}
+.tile.not-legal{background:var(--pit)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--fog);margin-bottom:22px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.sample-note{font-size:12.5px;color:var(--fog);margin-top:-10px;margin-bottom:20px}
+@media (max-width:860px){.tracker-grid{grid-template-columns:1fr}}
+
+/* insights */
+.insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.insight{background:var(--stone);border:1px solid var(--dune);padding:24px;border-radius:4px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px}
+.insight:hover{border-color:var(--inlet)}
+.insight .date{font:600 12px/1 var(--mono);color:var(--slate)}
+.insight h3{font-size:17px}
+.insight .byline{font-size:13.5px;color:var(--slate)}
+@media (max-width:900px){.insight-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.insight-grid{grid-template-columns:1fr}}
+
+.contact{background:var(--ink);color:var(--bone)}
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
 .contact h2{color:#fff;margin-bottom:16px}
-.contact p{color:#aec4c8;max-width:50ch;margin:0 0 28px}
-.contact .btn-primary{background:var(--brass);color:var(--ink)}
-.contact .btn-primary:hover{background:#c49d5e}
-.details{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:28px;display:grid;gap:18px;margin:0}
-.details dt{font:700 11.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#8fa8ad;margin-bottom:4px}
+.contact p{color:var(--fog);max-width:50ch;margin:0 0 28px}
+.contact .btn-primary{background:var(--coral);color:var(--night)}
+.contact .btn-primary:hover{background:#ff8f68}
+.details{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:28px;display:grid;gap:18px;margin:0;border-radius:4px}
+.details dt{font:600 11.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--tide);margin-bottom:4px}
 .details dd{margin:0;font-size:18px;font-weight:600}
 .details a{color:#fff;text-decoration:none}
 @media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
 
-footer{background:var(--ink);color:#8a9499;font-size:13.5px;padding-block:34px}
+footer{background:var(--night);color:var(--fog);font-size:13.5px;padding-block:34px}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:flex-start}
-footer a{color:#cfd6d9}
+footer a{color:var(--bone)}
+.foot-tagline{font-family:var(--display);color:var(--bone);font-size:15px;margin-top:6px}
 .foot-disclaimer{max-width:620px;font-size:12.5px;line-height:1.6;color:#6d7579}
 </style>
 </head>
@@ -126,17 +185,23 @@ footer a{color:#cfd6d9}
   <div class="wrap nav">
     <a class="brand" href="index.html">
       <img src="https://www.cooperlevenson.com/wp-content/uploads/2022/08/Cooper-Logo.png" alt="Cooper Levenson">
-      <span class="brand-text">Cooper Levenson<span>ATTORNEYS AT LAW</span></span>
+      <span>
+        <span class="brand-text">Cooper<span class="bar"></span>Levenson</span>
+        <span class="brand-sub">ATTORNEYS AT LAW</span>
+      </span>
     </a>
     <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="practice-areas.html">Practice Areas</a></li>
-      <li><a href="gaming-igaming.html" aria-current="page">Gaming &amp; iGaming</a></li>
-      <li><a href="team.html">Our Team</a></li>
+      <li><a class="nav-gaming" href="gaming-igaming.html" aria-current="page">Gaming</a></li>
+      <li><a href="practice-areas.html">Practices</a></li>
+      <!-- TODO: dedicated Industries page not yet built, pointing at Practices for now -->
+      <li><a href="practice-areas.html">Industries</a></li>
+      <li><a href="team.html">People</a></li>
+      <li><a href="gaming-igaming.html#insights">Insights</a></li>
+      <li><a href="index.html#offices">Offices</a></li>
+      <li><a href="contact.html#careers">Careers</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a class="btn btn-primary" href="contact.html">Contact Us</a>
+    <a class="btn btn-primary" href="contact.html">Contact</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
     </button>
@@ -146,12 +211,17 @@ footer a{color:#cfd6d9}
 <main>
 <section class="page-hero">
   <div class="hero-photo photo">
-    <img src="https://www.cooperlevenson.com/wp-content/uploads/2025/09/gaming_igaming_law_coverimage.webp" alt="Gaming and iGaming law">
+    <img src="https://www.cooperlevenson.com/wp-content/uploads/2025/09/gaming_igaming_law_coverimage.webp" alt="Gaming and iGaming law, intended final shot: an Atlantic City casino floor at night">
     <div class="hero-copy wrap">
       <div class="hero-panel">
         <div class="eyebrow">Gaming &amp; iGaming law</div>
-        <h1>Counsel for a spectrum of interactive gaming matters.</h1>
+        <h1>From the first license to the next market.</h1>
         <p>Sports wagering, esports wagering, interactive casino and online gaming, online poker, skilled and social gaming, sweepstakes and promotions, licensing and compliance, all in one practice group.</p>
+        <div class="chip-row">
+          <span class="chip"><b>Band 3</b> Chambers USA 2026, Gaming &amp; Licensing</span>
+          <span class="chip"><b>Tier 1</b> Best Law Firms 2026, Gaming Law, NJ</span>
+          <span class="chip"><b>17</b> states with approvals held</span>
+        </div>
       </div>
     </div>
   </div>
@@ -161,22 +231,34 @@ footer a{color:#cfd6d9}
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">What we handle</div>
-      <h2>From licensing to litigation.</h2>
-      <p>Our clients range from sovereign governments to casino hotel resorts to the vendors that serve the industry. We assist through licensing and the going-live process, and stay with clients as legislation and the market evolve.</p>
+      <h2>Six ways we work with operators.</h2>
+      <p>Our clients range from sovereign governments to casino hotel resorts to the vendors that serve the industry. We assist through licensing and the going live process, and stay with clients as legislation and the market evolve.</p>
     </div>
-    <div class="matters">
-      <div class="matter">Sports wagering</div>
-      <div class="matter">Esports wagering</div>
-      <div class="matter">Interactive casino &amp; other gaming</div>
-      <div class="matter">Online poker</div>
-      <div class="matter">Online skilled &amp; social gaming</div>
-      <div class="matter">Sweepstakes, contests &amp; promotions</div>
-      <div class="matter">Licensing &amp; employee qualification</div>
-      <div class="matter">Software &amp; equipment approval</div>
-      <div class="matter">Corporate structuring</div>
-      <div class="matter">Mergers &amp; acquisitions</div>
-      <div class="matter">Criminal liability</div>
-      <div class="matter">Contracts &amp; compliance</div>
+    <div class="service-grid">
+      <a class="service" href="#"> <!-- TODO: link to a real sub service page -->
+        <h3>Market entry &amp; licensing</h3>
+        <p>Applications, key employee licensing and software or equipment approval for operators entering a new state.</p>
+      </a>
+      <a class="service" href="#"> <!-- TODO: link to a real sub service page -->
+        <h3>Suppliers &amp; vendors</h3>
+        <p>Registration and approval for platform providers, payment processors and equipment manufacturers.</p>
+      </a>
+      <a class="service" href="#"> <!-- TODO: link to a real sub service page -->
+        <h3>Compliance &amp; AML</h3>
+        <p>Ongoing regulatory compliance, anti money laundering programs and reporting.</p>
+      </a>
+      <a class="service" href="#"> <!-- TODO: link to a real sub service page -->
+        <h3>Transactions &amp; change of control</h3>
+        <p>Mergers, acquisitions and corporate structuring across gaming holdings.</p>
+      </a>
+      <a class="service" href="#"> <!-- TODO: link to a real sub service page -->
+        <h3>Casino defense</h3>
+        <p>Defense litigation and enforcement matters involving casino and gaming operations.</p>
+      </a>
+      <a class="service" href="#"> <!-- TODO: link to a real sub service page -->
+        <h3>Sweepstakes &amp; prediction markets</h3>
+        <p>Sweepstakes, contests, promotions and the emerging prediction markets space.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -193,16 +275,121 @@ footer a{color:#cfd6d9}
   <div class="wrap advisor-grid">
     <div>
       <div class="eyebrow">Industry standing</div>
-      <h2 style="margin:16px 0 18px">Trusted as the gaming industry's own legal advisor.</h2>
-      <p style="color:var(--ink-2);margin:0">Since casino gambling began in Atlantic City, Cooper Levenson has represented every department of a casino, from security and construction to facilities and personnel.</p>
+      <h2 style="margin:16px 0 18px">A legal advisor inside the gaming industry's own rooms.</h2>
+      <p style="color:var(--slate);margin:0">Since casino gambling began in Atlantic City, Cooper Levenson has represented every department of a casino, from security and construction to facilities and personnel.</p>
     </div>
     <div>
       <h3>Advisory roles</h3>
       <ul>
-        <li>Legal &amp; regulatory partner to SBC Summit North America</li>
-        <li>Legal &amp; regulatory advisor to Global Gaming Expo (G2E) for a dozen years</li>
+        <!-- TODO: confirm SBC Summit relationship status for 2026 against cooperlevenson.com -->
+        <li>Former legal &amp; regulatory partner to SBC Summit North America</li>
+        <!-- TODO: confirm this advisory role to G2E is still current -->
+        <li>About 12 years advising Global Gaming Expo (G2E)</li>
         <li>Advisor to WrB and GiGse, two additional gaming industry conferences</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section id="team-gaming">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Who you'd work with</div>
+      <h2>The attorneys who head this practice</h2>
+      <p>Part of a team of attorneys across seven offices. <a href="team.html">See the full directory &rarr;</a></p>
+    </div>
+    <!-- TODO: confirm each attorney's home office and current title against cooperlevenson.com -->
+    <div class="leaders">
+      <div class="leader">
+        <div class="avatar" aria-hidden="true">LL</div>
+        <div class="leader-body">
+          <h3>Lloyd D. Levenson</h3>
+          <div class="role">CEO &middot; Co-Chair, Casino &amp; iGaming</div>
+          <div class="office">Atlantic City, NJ</div>
+          <div class="leader-actions"><a href="#">View profile</a><a href="#">Book 20 min</a></div>
+        </div>
+      </div>
+      <div class="leader">
+        <div class="avatar" aria-hidden="true">LK</div>
+        <div class="leader-body">
+          <h3>Lynne Kaufman</h3>
+          <div class="role">Head of Gaming &amp; Licensing</div>
+          <div class="office">Atlantic City, NJ</div>
+          <div class="leader-actions"><a href="#">View profile</a><a href="#">Book 20 min</a></div>
+        </div>
+      </div>
+      <div class="leader">
+        <div class="avatar" aria-hidden="true">LL</div>
+        <div class="leader-body">
+          <h3>Lucas R. Levenson</h3>
+          <div class="role">Partner &middot; Approvals in 17 states</div>
+          <div class="office">Atlantic City, NJ</div>
+          <div class="leader-actions"><a href="#">View profile</a><a href="#">Book 20 min</a></div>
+        </div>
+      </div>
+      <div class="leader">
+        <div class="avatar" aria-hidden="true">KM</div>
+        <div class="leader-body">
+          <h3>Kimberly Maxson-Rushton</h3>
+          <div class="role">Former counsel, Nevada gaming regulators</div>
+          <div class="office">Las Vegas, NV</div>
+          <div class="leader-actions"><a href="#">View profile</a><a href="#">Book 20 min</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tracker">
+  <div class="wrap tracker-grid">
+    <div>
+      <div class="eyebrow">Gaming Tracker</div>
+      <h2>Every state, one view.</h2>
+      <p>A state by state look at where sports wagering and iGaming stand, built and maintained by our gaming attorneys.</p>
+      <div class="tracker-meta">Last reviewed [DATE]</div>
+      <a class="btn btn-coral" href="#">Open the Gaming Tracker</a> <!-- TODO: build and link the real Gaming Tracker -->
+    </div>
+    <div>
+      <div class="tile-map" aria-hidden="true">
+        <div class="tile live"></div><div class="tile live"></div><div class="tile not-launched"></div><div class="tile pending"></div><div class="tile not-legal"></div><div class="tile live"></div><div class="tile pending"></div><div class="tile not-legal"></div><div class="tile live"></div><div class="tile not-launched"></div>
+        <div class="tile pending"></div><div class="tile live"></div><div class="tile live"></div><div class="tile not-legal"></div><div class="tile live"></div><div class="tile not-launched"></div><div class="tile live"></div><div class="tile pending"></div><div class="tile live"></div><div class="tile not-legal"></div>
+        <div class="tile not-legal"></div><div class="tile live"></div><div class="tile pending"></div><div class="tile live"></div><div class="tile not-launched"></div><div class="tile live"></div><div class="tile live"></div><div class="tile not-legal"></div><div class="tile pending"></div><div class="tile live"></div>
+        <div class="tile live"></div><div class="tile not-legal"></div><div class="tile live"></div><div class="tile live"></div><div class="tile pending"></div><div class="tile not-launched"></div><div class="tile live"></div><div class="tile live"></div><div class="tile not-legal"></div><div class="tile live"></div>
+        <div class="tile not-launched"></div><div class="tile live"></div><div class="tile not-legal"></div><div class="tile pending"></div><div class="tile live"></div><div class="tile live"></div><div class="tile not-legal"></div><div class="tile live"></div><div class="tile pending"></div><div class="tile not-launched"></div>
+      </div>
+      <div class="legend">
+        <span><i style="background:var(--tide)"></i>Legal &amp; live</span>
+        <span><i style="background:#3a8f84"></i>Legal, not launched</span>
+        <span><i style="background:var(--coral)"></i>Pending legislation</span>
+        <span><i style="background:var(--pit)"></i>Not legal</span>
+      </div>
+      <div class="sample-note">Sample data for concept purposes only. Not actual regulatory status.</div>
+    </div>
+  </div>
+</section>
+
+<section id="insights">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Insights</div>
+      <h2>Recent thinking from the gaming team</h2>
+    </div>
+    <div class="insight-grid">
+      <a class="insight" href="#"> <!-- TODO: link to a real article -->
+        <div class="date">[DATE]</div>
+        <h3>What prediction markets mean for state gaming law</h3>
+        <div class="byline">Lloyd D. Levenson</div>
+      </a>
+      <a class="insight" href="#"> <!-- TODO: link to a real article -->
+        <div class="date">[DATE]</div>
+        <h3>Sweepstakes enforcement: what operators are getting wrong</h3>
+        <div class="byline">Lynne Kaufman</div>
+      </a>
+      <a class="insight" href="#"> <!-- TODO: link to a real article -->
+        <div class="date">[DATE]</div>
+        <h3>A playbook for entering a new gaming market</h3>
+        <div class="byline">Lucas R. Levenson</div>
+      </a>
     </div>
   </div>
 </section>
@@ -228,12 +415,25 @@ footer a{color:#cfd6d9}
   <div class="wrap">
     <div class="foot">
       <div>
-        <div style="font-family:var(--display);font-weight:600;color:#e4ebec;font-size:17px;margin-bottom:6px">Cooper Levenson</div>
+        <div style="font-family:var(--display);font-weight:500;color:#fff;font-size:17px">Cooper Levenson</div>
         <div>Attorneys at Law, since 1957</div>
+        <div class="foot-tagline">From the first license to the next market.</div>
       </div>
-      <p class="foot-disclaimer">© 2026 Cooper Levenson Attorneys at Law. All rights reserved. <strong>Attorney Advertising.</strong> Prior results do not guarantee a similar outcome.</p>
+      <p class="foot-disclaimer">&copy; 2026 Cooper Levenson Attorneys at Law. All rights reserved. <strong>Attorney Advertising.</strong> Prior results do not guarantee a similar outcome.</p>
     </div>
   </div>
 </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Person", "name": "Lloyd D. Levenson", "jobTitle": "CEO, Co-Chair Casino & iGaming", "worksFor": { "@type": "Organization", "name": "Cooper Levenson Attorneys at Law" } },
+    { "@type": "Person", "name": "Lynne Kaufman", "jobTitle": "Head of Gaming & Licensing", "worksFor": { "@type": "Organization", "name": "Cooper Levenson Attorneys at Law" } },
+    { "@type": "Person", "name": "Lucas R. Levenson", "jobTitle": "Partner", "worksFor": { "@type": "Organization", "name": "Cooper Levenson Attorneys at Law" } },
+    { "@type": "Person", "name": "Kimberly Maxson-Rushton", "jobTitle": "Partner", "worksFor": { "@type": "Organization", "name": "Cooper Levenson Attorneys at Law" } }
+  ]
+}
+</script>
 </body>
 </html>
