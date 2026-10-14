@@ -146,6 +146,29 @@ section{padding-block:84px}
 .pledge .eyebrow{display:block;margin-bottom:18px}
 .pledge p{font:500 28px/1.4 var(--display);color:var(--inlet-deep);margin:0}
 
+/* video */
+.video-rule{height:2px;width:56px;background:var(--vermilion)}
+.video-title{font-family:var(--display);font-weight:500;font-size:1.3rem;margin:12px 0 18px}
+.video-block{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden}
+.video-block video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.video-block .poster-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
+@media (prefers-reduced-motion:reduce){
+  .video-block.autoplay video{display:none}
+  .video-block.autoplay .poster-fallback{display:block}
+}
+.video-play{position:absolute;inset:0;margin:auto;width:60px;height:60px;padding:0;background:rgba(10,22,38,.82);border:1px solid rgba(255,255,255,.5);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.video-pause{position:absolute;bottom:14px;right:14px;z-index:2;background:rgba(10,22,38,.82);color:#fff;border:1px solid rgba(255,255,255,.5);padding:8px 12px;font:600 11px/1 var(--mono);letter-spacing:.04em;cursor:pointer}
+.video-lower-third{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(0deg,rgba(0,0,0,.88),rgba(0,0,0,0));color:#fff;font:600 11.5px/1.5 var(--mono);letter-spacing:.03em;z-index:1}
+
+.video-modal{position:fixed;inset:0;background:rgba(5,12,13,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:24px}
+.video-modal.open{display:flex}
+.video-modal-inner{max-width:900px;width:100%;position:relative}
+.video-modal video{width:100%;aspect-ratio:16/9;background:#000;display:block}
+.video-modal .video-title{color:#fff}
+.video-modal-close{position:absolute;top:-44px;right:0;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;width:36px;height:36px;cursor:pointer;font-size:18px;line-height:1}
+.hero-photo.video-block{aspect-ratio:21/9}
+@media (max-width:760px){.hero-photo.video-block{aspect-ratio:3/4}}
+
 /* leaders */
 .leaders{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .leader{background:var(--white);border:1px solid var(--dune);padding:0;border-radius:4px;overflow:hidden}
@@ -209,17 +232,22 @@ footer a{color:var(--bone)}
 
 <main id="top">
 <section class="hero">
-  <div class="hero-photo photo">
-    <img src="https://www.cooperlevenson.com/wp-content/uploads/2026/07/CooperLevenson_BPTW_2.webp" alt="Cooper Levenson office">
+  <div class="hero-photo photo video-block autoplay">
+    <img class="poster-fallback" src="https://www.cooperlevenson.com/wp-content/uploads/2026/07/CooperLevenson_BPTW_2.webp" alt="Atlantic City Boardwalk at sunrise, intended final shot">
+    <!-- TODO: swap in hero-loop.mp4 (8-10s, muted) once footage exists -->
+    <video id="hero-bg-video" class="hero-video" poster="https://www.cooperlevenson.com/wp-content/uploads/2026/07/CooperLevenson_BPTW_2.webp" muted loop playsinline preload="none" autoplay aria-hidden="true">
+      <source src="assets/video/hero-loop.mp4" type="video/mp4">
+    </video>
+    <button class="video-pause" type="button" onclick="toggleVideo('hero-bg-video',this)" aria-label="Pause background video">Pause</button>
     <div class="hero-copy wrap">
       <div class="hero-panel">
-        <div class="eyebrow">Attorneys at law &middot; Since 1957</div>
         <h1>The firm that helped write the rules of gaming law.</h1>
         <p>Cooper Levenson has represented the gaming industry since the earliest days of casino gambling in Atlantic City.</p>
         <div class="cta-row">
           <!-- TODO: route to real scheduling link once available -->
           <a class="btn btn-coral" href="#">Book a 20-minute market-entry call</a>
           <a class="btn btn-ghost" href="practice-areas.html" style="color:#fff;border-color:rgba(255,255,255,.6)">See practice areas</a>
+          <button class="btn btn-ghost" type="button" style="color:#fff;border-color:rgba(255,255,255,.6)" onclick="openStoryModal()">Watch the story (90 sec)</button>
         </div>
       </div>
     </div>
@@ -243,7 +271,6 @@ footer a{color:var(--bone)}
 <section class="spotlight" id="gaming">
   <div class="wrap spotlight-grid">
     <div>
-      <div class="eyebrow">Gaming &amp; iGaming law</div>
       <h2>Since the first casino opened on the boardwalk, we've been in the room.</h2>
       <p>Our Gaming and iGaming practice advises sports wagering, esports, interactive casino and online gaming operators, from licensing and compliance through M&amp;A and corporate structuring. Clients range from sovereign governments to casino resorts to the vendors that serve them.</p>
       <a class="btn btn-ghost" href="gaming-igaming.html" style="color:#fff;border-color:rgba(255,255,255,.6)">Explore gaming &amp; iGaming law</a>
@@ -251,45 +278,54 @@ footer a{color:var(--bone)}
         <cite>Frank J. Fahrenkopf, Jr. &middot; Former President &amp; CEO, American Gaming Association</cite>
       </div>
     </div>
-    <div class="photo" style="aspect-ratio:4/5"><img src="https://www.cooperlevenson.com/wp-content/uploads/2025/09/Commercial-Litigation.webp" alt="Attorney at work, intended final shot: Cooper Levenson attorney in an Atlantic City gaming office"></div>
+    <div>
+      <div class="video-rule"></div>
+      <div class="video-title" style="color:#fff">First-state licensing in 60 seconds</div>
+      <div class="video-block">
+        <video id="gaming-video" preload="none" poster="https://www.cooperlevenson.com/wp-content/uploads/2025/09/Commercial-Litigation.webp" playsinline aria-label="First-state licensing in 60 seconds">
+          <!-- TODO: add licensing-60.mp4 once footage exists -->
+          <source src="assets/video/licensing-60.mp4" type="video/mp4">
+          <track kind="captions" src="assets/video/licensing-60.en.vtt" srclang="en" label="English" default>
+        </video>
+        <button class="video-play" type="button" aria-label="Play video: First-state licensing in 60 seconds" onclick="playInlineVideo('gaming-video',this)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="video-lower-third">LYNNE KAUFMAN &middot; HEAD OF GAMING &amp; LICENSING &middot; CHAMBERS USA 2026, BAND 3</div>
+      </div>
+      <!-- TODO: route to real scheduling link once available -->
+      <a class="btn btn-coral" href="#" style="margin-top:18px">Book a 20-minute market-entry call</a>
+    </div>
   </div>
 </section>
 
 <section id="practice-areas">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">What we practice</div>
       <h2>A full service firm, organized around how clients actually need help.</h2>
       <p>27 practice areas, grouped into six groups so you can find the right attorney faster.</p>
     </div>
     <div class="clusters">
       <a class="cluster" href="gaming-igaming.html">
-        <div class="eyebrow">Gaming &amp; hospitality</div>
         <h3>Casino &amp; interactive gaming</h3>
         <ul><li>Gaming &amp; iGaming law</li><li>Casino &amp; hospitality defense litigation</li><li>Licensing &amp; compliance</li></ul>
       </a>
       <a class="cluster" href="practice-areas.html">
-        <div class="eyebrow">Business &amp; corporate</div>
         <h3>Business &amp; transactions</h3>
         <ul><li>Business law</li><li>Banking &amp; financial services</li><li>Tax law</li><li>Bankruptcy &amp; restructuring</li></ul>
       </a>
       <a class="cluster" href="practice-areas.html">
-        <div class="eyebrow">Litigation &amp; disputes</div>
         <h3>Litigation &amp; defense</h3>
         <ul><li>Commercial &amp; general litigation</li><li>Defense litigation</li><li>Appellate law</li><li>Construction defect litigation</li></ul>
       </a>
       <a class="cluster" href="practice-areas.html">
-        <div class="eyebrow">Individuals &amp; families</div>
         <h3>Family, estate &amp; injury</h3>
         <ul><li>Estate planning &amp; administration</li><li>Family &amp; divorce law</li><li>Personal injury</li><li>Workers' compensation</li></ul>
       </a>
       <a class="cluster" href="practice-areas.html">
-        <div class="eyebrow">Property &amp; place</div>
         <h3>Real estate &amp; land use</h3>
         <ul><li>Real estate</li><li>Land use, zoning &amp; planning</li><li>Community &amp; HOA law</li></ul>
       </a>
       <a class="cluster" href="practice-areas.html">
-        <div class="eyebrow">Regulated industries</div>
         <h3>Cannabis, labor &amp; healthcare</h3>
         <ul><li>Cannabis industry practice group</li><li>Labor &amp; employment law</li><li>Health care law</li></ul>
       </a>
@@ -300,7 +336,6 @@ footer a{color:var(--bone)}
 <section class="offices" id="offices">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Where we are</div>
       <h2>Seven offices, one firm.</h2>
     </div>
     <div class="office-grid">
@@ -347,7 +382,6 @@ footer a{color:var(--bone)}
 
 <section class="pledge">
   <div class="wrap pledge-inner">
-    <span class="eyebrow">Our pledge</span>
     <p>And for everything else, the same partners for decades.</p>
   </div>
 </section>
@@ -355,9 +389,20 @@ footer a{color:var(--bone)}
 <section id="team">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Our team</div>
       <h2>The attorneys who head our gaming practice</h2>
       <p>Part of a team of attorneys across seven offices. <a href="team.html">See the full directory &rarr;</a></p>
+    </div>
+    <div class="video-rule"></div>
+    <div class="video-title">Seven offices, one firm.</div>
+    <div class="video-block" style="margin-bottom:40px">
+      <video id="offices-video" preload="none" poster="https://www.cooperlevenson.com/wp-content/uploads/2026/07/CooperLevenson_BPTW_2.webp" playsinline aria-label="Seven offices, one firm">
+        <!-- TODO: add seven-offices.mp4 (45-60s) once footage exists -->
+        <source src="assets/video/seven-offices.mp4" type="video/mp4">
+        <track kind="captions" src="assets/video/seven-offices.en.vtt" srclang="en" label="English" default>
+      </video>
+      <button class="video-play" type="button" aria-label="Play video: Seven offices, one firm" onclick="playInlineVideo('offices-video',this)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+      </button>
     </div>
     <!-- TODO: confirm each attorney's home office and current title against cooperlevenson.com -->
     <div class="leaders">
@@ -404,7 +449,6 @@ footer a{color:var(--bone)}
 <section class="contact" id="contact">
   <div class="wrap contact-grid">
     <div>
-      <div class="eyebrow">Get in touch</div>
       <h2>Tell us what you're facing.</h2>
       <p>Call our main line or reach out online, and we'll connect you with the right attorney for your matter.</p>
       <a class="btn btn-primary" href="contact.html">Contact Cooper Levenson</a>
@@ -430,6 +474,44 @@ footer a{color:var(--bone)}
     </div>
   </div>
 </footer>
+
+<div class="video-modal" id="story-modal" onclick="if(event.target===this){closeStoryModal()}">
+  <div class="video-modal-inner">
+    <button class="video-modal-close" type="button" aria-label="Close video" onclick="closeStoryModal()">&times;</button>
+    <div class="video-rule"></div>
+    <div class="video-title">The First Rule</div>
+    <!-- TODO: add the-first-rule.mp4 (90 sec) once footage exists -->
+    <video id="story-video" controls preload="none" poster="https://www.cooperlevenson.com/wp-content/uploads/2026/07/CooperLevenson_BPTW_2.webp">
+      <source src="assets/video/the-first-rule.mp4" type="video/mp4">
+      <track kind="captions" src="assets/video/the-first-rule.en.vtt" srclang="en" label="English" default>
+    </video>
+  </div>
+</div>
+
+<script>
+function toggleVideo(id, btn){
+  var v = document.getElementById(id);
+  if(v.paused){ v.play().catch(function(){}); btn.textContent='Pause'; btn.setAttribute('aria-label','Pause background video'); }
+  else { v.pause(); btn.textContent='Play'; btn.setAttribute('aria-label','Play background video'); }
+}
+function playInlineVideo(id, btn){
+  var v = document.getElementById(id);
+  v.setAttribute('controls','');
+  v.play().catch(function(){});
+  btn.style.display = 'none';
+}
+function openStoryModal(){
+  document.getElementById('story-modal').classList.add('open');
+  document.getElementById('story-video').play().catch(function(){});
+}
+function closeStoryModal(){
+  document.getElementById('story-modal').classList.remove('open');
+  document.getElementById('story-video').pause();
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closeStoryModal();
+});
+</script>
 
 <script type="application/ld+json">
 {
