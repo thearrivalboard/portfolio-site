@@ -6,50 +6,44 @@
 <title>How It Works | An Organized Project</title>
 <meta name="description" content="A clear, three-step organizing process: a quick conversation, a one-time consultation, and hands-on organizing sessions built to last.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;600;700&family=Fragment+Mono&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
 <style>
 :root{
   color-scheme:light;
-  --paper:#f4f2ee; --white:#ffffff; --ink:#26241f; --ink-2:#6b6558; --line:#ded9cd;
-  --sage:#5c6e5a; --sage-deep:#3f4d3d; --sage-soft:#e7ebe3;
-  --brass:#c08a3e; --brass-soft:#f3e6cc; --brass-deep:#96692b;
-  --display:"Lora",Georgia,"Times New Roman",serif;
-  --body:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"Fragment Mono",ui-monospace,monospace;
+  --paper:#f5f3ef; --white:#ffffff; --ink:#201f1b; --ink-2:#6e6a60; --line:#e1ddd3;
+  --sage:#53644f; --sage-deep:#3a4737; --sage-soft:#e8ebe4;
+  --font:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 var(--body)}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--font)}
 img{max-width:100%;display:block}
 a{color:var(--sage-deep)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
-.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.14;margin:0;text-wrap:balance}
-h1{font-size:clamp(32px,4.4vw,50px)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--font);font-weight:600;line-height:1.2;margin:0;text-wrap:balance}
+h1{font-weight:700;font-size:clamp(32px,4.2vw,46px)}
 h2{font-size:clamp(26px,3.4vw,34px)}
-h3{font-size:23px}
-.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--brass-deep)}
-.btn{display:inline-flex;align-items:center;font:600 15px/1 var(--body);text-decoration:none;padding:15px 25px;border-radius:3px;border:1.5px solid transparent;letter-spacing:.01em}
-.btn-primary{background:var(--sage);color:#fff}
-.btn-primary:hover{background:var(--sage-deep)}
+h3{font-size:21px}
+.btn{display:inline-flex;align-items:center;font:600 15px/1 var(--font);text-decoration:none;padding:14px 24px;border-radius:3px;border:1.5px solid transparent}
+.btn-primary{background:var(--sage-deep);color:#fff}
+.btn-primary:hover{background:var(--ink)}
 
-.concept{background:var(--sage-deep);color:#dde5db;font-size:13px;text-align:center;padding:9px 20px}
+.concept{background:var(--ink);color:#cfcbc0;font-size:13px;text-align:center;padding:9px 20px}
 .concept b{color:#fff}
 
 header.site{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
-.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
-.brand strong{font-family:var(--display);font-weight:600;font-size:19px;line-height:1.1}
-.brand span{font:500 10.5px/1 var(--mono);letter-spacing:.12em;color:var(--brass-deep);margin-top:4px;text-transform:uppercase}
-.links{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14.5px;font-weight:600}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:16px}
+.brand{text-decoration:none;color:var(--ink);font-weight:700;font-size:19px}
+.links{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:500}
 .links a{color:var(--ink);text-decoration:none}
 .links a:hover{color:var(--sage-deep)}
 .links a[aria-current="page"]{color:var(--sage-deep);text-decoration:underline;text-underline-offset:5px}
-.nav .btn{padding:12px 20px;font-size:13.5px}
+.nav .btn{padding:11px 18px;font-size:13.5px}
 .menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:3px;padding:9px 11px;cursor:pointer}
 .menu-toggle svg{display:block}
-@media (max-width:1040px){
+@media (max-width:980px){
   .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--white);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
   .links.open{display:flex}
   .links li{width:100%}
@@ -58,48 +52,44 @@ header.site{background:var(--white);border-bottom:1px solid var(--line);position
   header.site .nav{position:relative}
 }
 @media (max-width:460px){
-  .brand strong{font-size:16px}
-  .nav{gap:10px}
   .nav .btn{padding:10px 14px;font-size:12.5px}
 }
 
-.page-hero{padding-block:56px;background:var(--sage-deep);color:#e4e9e2}
-.page-hero .eyebrow{color:var(--brass)}
-.page-hero h1{color:#fff;margin:14px 0 16px}
-.page-hero p{color:#c3d0c0;max-width:62ch;margin:0;font-size:18px}
+.page-hero{padding-block:52px 44px}
+.page-hero p{color:var(--ink-2);max-width:62ch;margin:16px 0 0;font-size:18px}
 
-section{padding-block:80px}
+section{padding-block:56px}
 
 .steps-detail{display:grid;gap:0}
-.step-row{display:grid;grid-template-columns:120px 1fr;gap:28px;padding-block:40px;border-top:1px solid var(--line)}
+.step-row{display:grid;grid-template-columns:52px 1fr;gap:20px;padding-block:36px;border-top:1px solid var(--line)}
 .step-row:last-child{border-bottom:1px solid var(--line)}
-.step-row .num{font:500 42px/1 var(--display);color:var(--brass-deep)}
+.step-row .num{font:600 17px/1.2 var(--font);color:var(--ink-2)}
 .step-row h3{margin-bottom:12px}
 .step-row p{margin:0 0 16px;color:var(--ink-2);font-size:16.5px;max-width:62ch}
 .step-row ul{margin:0;padding-left:20px;color:var(--ink);font-size:15.5px;columns:2;column-gap:28px}
 .step-row ul li{margin-bottom:6px;break-inside:avoid}
-@media (max-width:700px){.step-row{grid-template-columns:1fr}.step-row ul{columns:1}}
+@media (max-width:700px){.step-row{grid-template-columns:1fr}.step-row ul{columns:1}.step-row .num{margin-bottom:4px}}
 
-.partners{background:var(--sage-soft)}
-.partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.partner-grid div{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:18px 20px;font-weight:600;font-size:14.5px;text-align:center}
+.partners{background:var(--white);border-block:1px solid var(--line)}
+.partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.partner-grid div{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:18px 20px;font-weight:600;font-size:14.5px;text-align:center}
 @media (max-width:760px){.partner-grid{grid-template-columns:1fr 1fr}}
 
-.contact{background:var(--sage-deep);color:#dde5db}
-.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.contact h2{color:#fff;margin-bottom:16px}
-.contact p{color:#bdccba;max-width:50ch;margin:0 0 28px}
-.contact .btn-primary{background:var(--brass);color:var(--ink)}
-.contact .btn-primary:hover{background:#d19c4f}
-.details{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:4px;padding:28px;display:grid;gap:18px;margin:0}
-.details dt{font:500 11.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#a9bba6;margin-bottom:4px}
+.contact{background:var(--sage-deep);color:#e3e7e0}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.contact h2{color:#fff;margin-bottom:12px}
+.contact p{color:#c3cec0;max-width:50ch;margin:0 0 24px}
+.contact .btn-primary{background:#fff;color:var(--sage-deep)}
+.contact .btn-primary:hover{background:var(--sage-soft)}
+.details{border:1px solid rgba(255,255,255,.22);border-radius:3px;padding:26px;display:grid;gap:16px;margin:0}
+.details dt{font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;color:#a9b7a5;margin-bottom:3px}
 .details dd{margin:0;font-size:18px;font-weight:600}
 .details a{color:#fff;text-decoration:none}
 @media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
 
-footer{background:var(--ink);color:#a39d8e;font-size:13.5px;padding-block:34px}
-.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
-footer a{color:#e3ded2}
+footer{background:var(--ink);color:#99948a;font-size:13.5px;padding-block:30px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:#d8d4c8}
 </style>
 </head>
 <body>
@@ -108,10 +98,7 @@ footer a{color:#e3ded2}
 
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html">
-      <strong>An Organized Project</strong>
-      <span>Organize &middot; Declutter &middot; Simplify</span>
-    </a>
+    <a class="brand" href="index.html">An Organized Project</a>
     <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
@@ -130,23 +117,22 @@ footer a{color:#e3ded2}
 <main>
 <section class="page-hero">
   <div class="wrap">
-    <div class="eyebrow">How it works</div>
-    <h1>A clear, thoughtful process, designed to support real life.</h1>
-    <p>Intentional, efficient and tailored to you. Whether you're preparing for a move or seeking sustainable systems, we meet you where you are and guide you forward, step by step.</p>
+    <h1>A clear process, built for real life.</h1>
+    <p>Whether you're preparing for a move or working toward systems that stick, we meet you where you are and go step by step.</p>
   </div>
 </section>
 
-<section>
+<section style="padding-top:0">
   <div class="wrap steps-detail">
     <div class="step-row">
-      <div class="num">01</div>
+      <div class="num">1</div>
       <div>
         <h3>Start the conversation</h3>
-        <p>We begin with a brief phone call or email to understand your overall goals, timeline and immediate concerns. This helps us determine the best next step and ensures our approach is aligned from the start.</p>
+        <p>We begin with a brief phone call or email to understand your goals, timeline and immediate concerns. This helps us figure out the right next step together.</p>
       </div>
     </div>
     <div class="step-row">
-      <div class="num">02</div>
+      <div class="num">2</div>
       <div>
         <h3>Consultation, in person or virtual</h3>
         <p>A one-time working session with a Certified Professional Organizer&reg;, completed before any hands-on organizing begins.</p>
@@ -161,10 +147,10 @@ footer a{color:#e3ded2}
       </div>
     </div>
     <div class="step-row">
-      <div class="num">03</div>
+      <div class="num">3</div>
       <div>
         <h3>Organizing sessions</h3>
-        <p>Once you're ready, we schedule your organizing session and confirm additional days as needed. Sessions are customized to your project and may include one or more organizers depending on scope.</p>
+        <p>Once you're ready, we schedule your organizing session and confirm additional days as needed. Sessions are built around your project and may include more than one organizer depending on scope.</p>
         <ul>
           <li>Hands-on editing and decision support</li>
           <li>Sorting, categorizing and containerizing</li>
@@ -180,8 +166,7 @@ footer a{color:#e3ded2}
 
 <section class="partners">
   <div class="wrap">
-    <div class="eyebrow" style="margin-bottom:12px">Who we partner with</div>
-    <h2 style="margin-bottom:28px">A trusted network, when you need it</h2>
+    <h2>A trusted network, when you need it</h2>
     <div class="partner-grid">
       <div>Realtors &amp; Real Estate Pros</div>
       <div>Movers &amp; Haulers</div>
@@ -194,7 +179,6 @@ footer a{color:#e3ded2}
 <section class="contact" id="contact">
   <div class="wrap contact-grid">
     <div>
-      <div class="eyebrow">Get started</div>
       <h2>Ready for step one?</h2>
       <p>Start the conversation today, no commitment, just a chance to talk through what you're facing.</p>
       <a class="btn btn-primary" href="contact.html">Schedule a Consultation</a>

@@ -6,52 +6,46 @@
 <title>About Laura Smith | An Organized Project</title>
 <meta name="description" content="Meet Laura Smith, Certified Professional Organizer and former ballet dancer, NAPO-LA Board President 2019-2024, bringing 30+ years of experience to LA homes and offices.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;600;700&family=Fragment+Mono&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
 <style>
 :root{
   color-scheme:light;
-  --paper:#f4f2ee; --white:#ffffff; --ink:#26241f; --ink-2:#6b6558; --line:#ded9cd;
-  --sage:#5c6e5a; --sage-deep:#3f4d3d; --sage-soft:#e7ebe3;
-  --brass:#c08a3e; --brass-soft:#f3e6cc; --brass-deep:#96692b;
-  --display:"Lora",Georgia,"Times New Roman",serif;
-  --body:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"Fragment Mono",ui-monospace,monospace;
+  --paper:#f5f3ef; --white:#ffffff; --ink:#201f1b; --ink-2:#6e6a60; --line:#e1ddd3;
+  --sage:#53644f; --sage-deep:#3a4737; --sage-soft:#e8ebe4;
+  --font:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 var(--body)}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--font)}
 img{max-width:100%;display:block}
 a{color:var(--sage-deep)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
-.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.14;margin:0;text-wrap:balance}
-h1{font-size:clamp(32px,4.4vw,50px)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--font);font-weight:600;line-height:1.2;margin:0;text-wrap:balance}
+h1{font-weight:700;font-size:clamp(32px,4.2vw,46px)}
 h2{font-size:clamp(26px,3.4vw,34px)}
-h3{font-size:20px}
-.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--brass-deep)}
-.photo{background:var(--sage-soft);overflow:hidden;border-radius:4px}
+h3{font-size:16px}
+.photo{background:var(--sage-soft);overflow:hidden;border-radius:3px}
 .photo img{width:100%;height:100%;object-fit:cover}
-.btn{display:inline-flex;align-items:center;font:600 15px/1 var(--body);text-decoration:none;padding:15px 25px;border-radius:3px;border:1.5px solid transparent;letter-spacing:.01em}
-.btn-primary{background:var(--sage);color:#fff}
-.btn-primary:hover{background:var(--sage-deep)}
+.btn{display:inline-flex;align-items:center;font:600 15px/1 var(--font);text-decoration:none;padding:14px 24px;border-radius:3px;border:1.5px solid transparent}
+.btn-primary{background:var(--sage-deep);color:#fff}
+.btn-primary:hover{background:var(--ink)}
 
-.concept{background:var(--sage-deep);color:#dde5db;font-size:13px;text-align:center;padding:9px 20px}
+.concept{background:var(--ink);color:#cfcbc0;font-size:13px;text-align:center;padding:9px 20px}
 .concept b{color:#fff}
 
 header.site{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
-.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
-.brand strong{font-family:var(--display);font-weight:600;font-size:19px;line-height:1.1}
-.brand span{font:500 10.5px/1 var(--mono);letter-spacing:.12em;color:var(--brass-deep);margin-top:4px;text-transform:uppercase}
-.links{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14.5px;font-weight:600}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:16px}
+.brand{text-decoration:none;color:var(--ink);font-weight:700;font-size:19px}
+.links{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:500}
 .links a{color:var(--ink);text-decoration:none}
 .links a:hover{color:var(--sage-deep)}
 .links a[aria-current="page"]{color:var(--sage-deep);text-decoration:underline;text-underline-offset:5px}
-.nav .btn{padding:12px 20px;font-size:13.5px}
+.nav .btn{padding:11px 18px;font-size:13.5px}
 .menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:3px;padding:9px 11px;cursor:pointer}
 .menu-toggle svg{display:block}
-@media (max-width:1040px){
+@media (max-width:980px){
   .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--white);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
   .links.open{display:flex}
   .links li{width:100%}
@@ -60,55 +54,50 @@ header.site{background:var(--white);border-bottom:1px solid var(--line);position
   header.site .nav{position:relative}
 }
 @media (max-width:460px){
-  .brand strong{font-size:16px}
-  .nav{gap:10px}
   .nav .btn{padding:10px 14px;font-size:12.5px}
 }
 
-section{padding-block:80px}
-.sec-head{display:flex;flex-direction:column;gap:14px;max-width:700px;margin-bottom:44px}
-.sec-head p{margin:0;color:var(--ink-2);font-size:18px}
+section{padding-block:60px}
+.sec-head{max-width:640px;margin-bottom:32px}
 
 /* about hero */
-.about-hero{background:var(--white)}
-.about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:56px;align-items:start}
+.about-hero{background:var(--white);border-bottom:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}
 .about-grid .photo{aspect-ratio:4/5}
-.about-copy p{margin:0 0 18px;max-width:62ch;color:var(--ink)}
-.pull{font:500 italic 24px/1.5 var(--display);color:var(--sage-deep);border-left:3px solid var(--brass);padding-left:22px;margin:26px 0}
-.dancer-inset{display:flex;align-items:center;gap:16px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
-.dancer-inset img{width:70px;height:auto;border:4px solid var(--white);box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.about-copy p{margin:0 0 18px;max-width:62ch;color:var(--ink-2)}
+.about-copy .quote{font-size:19px;font-weight:600;color:var(--ink);margin:24px 0}
+.dancer-inset{display:flex;align-items:center;gap:16px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.dancer-inset img{width:64px;height:auto;border-radius:3px}
 .dancer-inset p{margin:0;font-size:14px;color:var(--ink-2);max-width:46ch}
-@media (max-width:860px){.about-grid{grid-template-columns:1fr}.about-grid .photo{max-width:320px}}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}.about-grid .photo{max-width:300px}}
 
 /* credentials */
-.creds{background:var(--sage-soft)}
-.cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.cred{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:24px;text-align:center}
-.cred .badge{font:600 15px/1 var(--display);color:var(--sage-deep);margin-bottom:8px}
+.cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cred{background:var(--white);padding:22px 20px;text-align:center}
+.cred .badge{font:700 16px/1 var(--font);color:var(--sage-deep);margin-bottom:8px}
 .cred p{margin:0;color:var(--ink-2);font-size:13.5px}
 @media (max-width:860px){.cred-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.cred-grid{grid-template-columns:1fr}}
 
-/* team note */
 .team-note{background:var(--white);border-block:1px solid var(--line)}
 .team-note .wrap{max-width:780px}
-.team-note p{color:var(--ink-2);font-size:17px}
+.team-note p{color:var(--ink-2);font-size:17px;margin:14px 0 0}
 
-.contact{background:var(--sage-deep);color:#dde5db}
-.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.contact h2{color:#fff;margin-bottom:16px}
-.contact p{color:#bdccba;max-width:50ch;margin:0 0 28px}
-.contact .btn-primary{background:var(--brass);color:var(--ink)}
-.contact .btn-primary:hover{background:#d19c4f}
-.details{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:4px;padding:28px;display:grid;gap:18px;margin:0}
-.details dt{font:500 11.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#a9bba6;margin-bottom:4px}
+.contact{background:var(--sage-deep);color:#e3e7e0}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.contact h2{color:#fff;margin-bottom:12px}
+.contact p{color:#c3cec0;max-width:50ch;margin:0 0 24px}
+.contact .btn-primary{background:#fff;color:var(--sage-deep)}
+.contact .btn-primary:hover{background:var(--sage-soft)}
+.details{border:1px solid rgba(255,255,255,.22);border-radius:3px;padding:26px;display:grid;gap:16px;margin:0}
+.details dt{font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;color:#a9b7a5;margin-bottom:3px}
 .details dd{margin:0;font-size:18px;font-weight:600}
 .details a{color:#fff;text-decoration:none}
 @media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
 
-footer{background:var(--ink);color:#a39d8e;font-size:13.5px;padding-block:34px}
-.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
-footer a{color:#e3ded2}
+footer{background:var(--ink);color:#99948a;font-size:13.5px;padding-block:30px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:#d8d4c8}
 </style>
 </head>
 <body>
@@ -117,10 +106,7 @@ footer a{color:#e3ded2}
 
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html">
-      <strong>An Organized Project</strong>
-      <span>Organize &middot; Declutter &middot; Simplify</span>
-    </a>
+    <a class="brand" href="index.html">An Organized Project</a>
     <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
@@ -141,12 +127,11 @@ footer a{color:#e3ded2}
   <div class="wrap about-grid">
     <div class="photo"><img src="https://www.anorganizedproject.com/uploads/7/3/3/4/73345157/ls-v-2_2.png" alt="Laura Smith, Certified Professional Organizer"></div>
     <div class="about-copy">
-      <div class="eyebrow">About</div>
-      <h1 style="margin:16px 0 20px">Hi, I'm Laura.</h1>
-      <p>My professional career as a ballet dancer in New York City taught me discipline, precision, attention to detail, and the importance of preparation, qualities that continue to shape the way I lead projects and serve my clients today.</p>
+      <h1 style="margin-bottom:20px">Hi, I'm Laura.</h1>
+      <p>My career as a ballet dancer in New York City taught me discipline, precision and the importance of preparation, qualities that still shape how I lead projects and serve clients today.</p>
       <p>About 10 years ago, I asked a coworker how they were doing on a Friday morning. They smiled and said, "Great, it's Friday!" I remember thinking I wanted to be just as excited on a Monday morning as other people are on a Friday afternoon. So I built a business around something I genuinely loved: helping people create spaces that support their lives instead of overwhelming them.</p>
-      <p>Every client, every home, every office and every move is unique. I have the privilege of helping individuals, families, businesses and seniors navigate life's biggest transitions, from decluttering and downsizing to move management and organizing systems that truly last.</p>
-      <p class="pull">"Organization isn't about perfection. It's about creating systems that give you more time for what matters most."</p>
+      <p>Every client, home, office and move is different. I help individuals, families, businesses and seniors through life's biggest transitions, from decluttering and downsizing to move management and systems that actually last.</p>
+      <p class="quote">"Organization isn't about perfection. It's about creating systems that give you more time for what matters most."</p>
       <div class="dancer-inset">
         <img src="https://www.anorganizedproject.com/uploads/7/3/3/4/73345157/published/laura-dancer-copy_2.jpg?1783035982" alt="Laura Smith as a professional ballet dancer in New York City">
         <p>Laura, early in her career as a professional ballet dancer in New York City.</p>
@@ -155,10 +140,9 @@ footer a{color:#e3ded2}
   </div>
 </section>
 
-<section class="creds">
+<section>
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Certifications &amp; associations</div>
       <h2>Credentials that back up the work</h2>
     </div>
     <div class="cred-grid">
@@ -172,8 +156,7 @@ footer a{color:#e3ded2}
 
 <section class="team-note">
   <div class="wrap">
-    <div class="eyebrow">Meet the team</div>
-    <h2 style="margin:16px 0 18px">Laura leads a team of organizers</h2>
+    <h2>Laura leads a team of organizers</h2>
     <p>For larger projects and moves, Laura works alongside a trusted team of organizers, so every project gets the hands-on attention it needs, no matter the scope.</p>
   </div>
 </section>
@@ -181,7 +164,6 @@ footer a{color:#e3ded2}
 <section class="contact" id="contact">
   <div class="wrap contact-grid">
     <div>
-      <div class="eyebrow">Get started</div>
       <h2>Ready to work together?</h2>
       <p>Tell us about your space and we'll put together a plan, judgment-free, at your pace.</p>
       <a class="btn btn-primary" href="contact.html">Schedule a Consultation</a>
