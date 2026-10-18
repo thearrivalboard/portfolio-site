@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Street Studios | Balloon Decor on LA's Westside</title>
+<meta name="description" content="Balloon decor for birthdays, baby showers, corporate events and graduations across LA's Westside. Over 25 years of experience, award-winning design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0b0b0e; --panel:#15151a; --panel-2:#1c1c22; --line:rgba(255,255,255,.12);
+  --text:#f4f2ec; --text-dim:#a8a6a2;
+  --teal:#38d9c9; --teal-deep:#1fa89a;
+  --display:"Baloo 2",system-ui,sans-serif;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font:16.5px/1.6 var(--font)}
+img{max-width:100%;display:block}
+a{color:var(--teal)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(34px,4.6vw,54px)}
+h2{font-size:clamp(26px,3.2vw,34px)}
+h3{font-size:19px}
+.photo{background:var(--panel-2);overflow:hidden;border-radius:6px}
+.photo img{width:100%;height:100%;object-fit:cover}
+.btn{display:inline-flex;align-items:center;font:700 15px/1 var(--font);text-decoration:none;padding:14px 26px;border-radius:30px;border:1.5px solid transparent}
+.btn-primary{background:var(--teal);color:#07211e}
+.btn-primary:hover{background:#5ae4d6}
+.btn-ghost{border-color:var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+
+.concept{background:var(--panel);color:var(--text-dim);font-size:13px;text-align:center;padding:9px 20px;border-bottom:1px solid var(--line)}
+.concept b{color:var(--text)}
+
+header.site{background:rgba(11,11,14,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--text);line-height:1.1}
+.brand strong{font-family:var(--display);font-weight:700;font-size:19px}
+.brand span{font:700 10.5px/1 var(--font);letter-spacing:.18em;color:var(--teal);margin-top:4px}
+.links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
+.links a{color:var(--text);text-decoration:none}
+.links a:hover{color:var(--teal)}
+.links a[aria-current="page"]{color:var(--teal)}
+.nav .btn{padding:11px 20px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:20px;padding:9px 11px;cursor:pointer;color:var(--text)}
+.menu-toggle svg{display:block}
+@media (max-width:980px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--panel);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+@media (max-width:460px){
+  .nav .btn{padding:10px 16px;font-size:12.5px}
+}
+
+/* hero */
+.hero{position:relative;padding-block:80px 64px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.38}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,14,.55) 0%,rgba(11,11,14,.88) 70%,var(--bg) 100%)}
+.hero-inner{position:relative;z-index:1;max-width:680px}
+.hero h1{margin-bottom:20px}
+.hero p.lead{font-size:18.5px;color:var(--text-dim);margin:0 0 28px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px}
+.cred-line{margin:0;font-size:14.5px;color:var(--text-dim)}
+.cred-line b{color:var(--text)}
+
+section{padding-block:68px}
+.sec-head{max-width:640px;margin-bottom:34px}
+.sec-head p{margin:10px 0 0;color:var(--text-dim);font-size:17px}
+.sec-foot{margin-top:30px}
+
+/* occasions */
+.occasions{display:flex;flex-wrap:wrap;gap:10px}
+.occasions span{background:var(--panel);border:1px solid var(--line);border-radius:30px;padding:10px 18px;font-size:14.5px;font-weight:600;color:var(--text-dim)}
+
+/* decor styles grid */
+.styles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.style-card{text-decoration:none;color:inherit;border-radius:8px;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+.style-card .photo{aspect-ratio:4/3;border-radius:0}
+.style-card .cap{padding:14px 16px;font-weight:700;font-family:var(--display);font-size:15.5px}
+@media (max-width:860px){.styles-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.styles-grid{grid-template-columns:1fr}}
+
+/* gallery */
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gal-grid .photo{aspect-ratio:1/1}
+@media (max-width:760px){.gal-grid{grid-template-columns:1fr 1fr}}
+
+/* about teaser */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.about-grid .photo{aspect-ratio:4/5}
+.about-grid p{color:var(--text-dim);font-size:17px;margin:0 0 18px}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr}.about-grid .photo{max-width:280px}}
+
+/* promise */
+.promise{background:var(--panel);border-block:1px solid var(--line)}
+.promise-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.promise-grid p{color:var(--text-dim);margin:0;font-size:16px}
+.promise-grid h3{margin-bottom:10px}
+@media (max-width:760px){.promise-grid{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--panel-2)}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.contact p{color:var(--text-dim);max-width:48ch;margin:10px 0 26px}
+.details{border:1px solid var(--line);border-radius:8px;padding:26px;display:grid;gap:16px;margin:0}
+.details dt{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim);margin-bottom:3px}
+.details dd{margin:0;font-size:18px;font-weight:700}
+.details a{color:var(--text);text-decoration:none}
+@media (max-width:820px){.contact-grid{grid-template-columns:1fr}}
+
+footer{background:var(--bg);color:var(--text-dim);font-size:13.5px;padding-block:30px;border-top:1px solid var(--line)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:var(--text)}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Design Street Studios by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <strong>Design Street Studios</strong>
+      <span>BALLOONS</span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="services.html">Decor Styles</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-bg"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2023/11/J-Classic-Balloon-Arch-Reunion-scaled.jpg" alt=""></div>
+  <div class="wrap hero-inner">
+    <h1>Balloon decor for your next celebration.</h1>
+    <p class="lead">Design Street Studios brings color, scale and craft to birthdays, baby showers, corporate events and graduations across LA's Westside.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+      <a class="btn btn-ghost" href="services.html">See decor styles</a>
+    </div>
+    <p class="cred-line"><b>Over 25 years in business.</b> 2009 Designer of the Year, balloon industry.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>For every kind of celebration</h2>
+    </div>
+    <div class="occasions">
+      <span>Birthdays</span><span>Baby Showers</span><span>Corporate Events</span><span>Graduations</span><span>Weddings</span><span>School Events</span><span>Holiday Parties</span><span>Grand Openings</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Decor styles</h2>
+      <p>Nine ways to bring balloons into your event, from a single arch to a full room.</p>
+    </div>
+    <div class="styles-grid">
+      <a class="style-card" href="services.html">
+        <div class="photo"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2023/10/Cover-for-Arches-scaled-350x263.jpg" alt="Balloon arch"></div>
+        <div class="cap">Arches</div>
+      </a>
+      <a class="style-card" href="services.html">
+        <div class="photo"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2023/10/Cover-for-Columns-scaled-350x263.jpg" alt="Balloon columns"></div>
+        <div class="cap">Columns &amp; Party Standards</div>
+      </a>
+      <a class="style-card" href="services.html">
+        <div class="photo"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2023/10/COVER-PHOTO-AND-K-Super-Lux-Garland-40-with-faux-Wisteria-1500.jpg" alt="Balloon garland"></div>
+        <div class="cap">Garlands &amp; Cascades</div>
+      </a>
+      <a class="style-card" href="services.html">
+        <div class="photo"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2023/10/Cover-for-Big-Numbers-scaled-350x263.jpg" alt="Balloon numbers"></div>
+        <div class="cap">Numbers, Names &amp; Words</div>
+      </a>
+      <a class="style-card" href="services.html">
+        <div class="photo"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2023/11/Cover-for-Centerpieces--350x263.jpg" alt="Balloon centerpiece"></div>
+        <div class="cap">Centerpieces</div>
+      </a>
+      <a class="style-card" href="services.html">
+        <div class="photo"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2023/11/Cover-for-Big-Balloon--350x263.jpg" alt="Oversized balloon decor"></div>
+        <div class="cap">Big Balloons</div>
+      </a>
+    </div>
+    <div class="sec-foot"><a class="btn btn-ghost" href="services.html">See all decor styles</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Recent work</h2>
+    </div>
+    <div class="gal-grid">
+      <div class="photo"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2023/11/A--scaled.jpg" alt="Balloon arch installation"></div>
+      <div class="photo"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2024/01/D-Floor-Decor-Corp.jpg" alt="Corporate balloon floor decor"></div>
+      <div class="photo"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2023/11/I-popcorn-arch.jpg" alt="Popcorn-style balloon arch"></div>
+      <div class="photo"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2024/01/N-Corp-Festival-Corp.jpg" alt="Corporate festival balloon decor"></div>
+    </div>
+    <div class="sec-foot"><a class="btn btn-ghost" href="gallery.html">View full gallery</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap about-grid">
+    <div class="photo"><img src="https://designstreetstudiosballoons.com/wp-content/uploads/2023/10/Sony-best.jpg" alt="Design Street Studios balloon decor at a corporate event"></div>
+    <div>
+      <h2>26 years of bringing the party</h2>
+      <p>Design Street Studios has been building balloon decor on LA's Westside for over 25 years, earning 2009 Designer of the Year along the way. From backyard birthdays to studio lots, it's still a small team that cares about getting the details right.</p>
+      <a class="btn btn-ghost" href="about.html">Read our story</a>
+    </div>
+  </div>
+</section>
+
+<section class="promise">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Balloons, done responsibly</h2>
+    </div>
+    <div class="promise-grid">
+      <div>
+        <h3>We never release balloons</h3>
+        <p>We follow the California Balloon Law on every job: foil balloons are weighed and never released, and we offer a "release &amp; tether" option for anyone who wants the look without the litter.</p>
+      </div>
+      <div>
+        <h3>We reuse what we can</h3>
+        <p>Bases, poles, frames and weights get reused and repurposed from job to job, so less ends up in a landfill after your event is over.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Let's plan your event</h2>
+      <p>Tell us your date, venue and vision, and we'll put together a design and quote.</p>
+      <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+    </div>
+    <dl class="details">
+      <div><dt>Call</dt><dd><a href="tel:+13108976969">(310) 897-6969</a></dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:designstreetstudios@gmail.com">designstreetstudios@gmail.com</a></dd></div>
+      <div><dt>Serving</dt><dd>LA's Westside &amp; surrounding areas</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Design Street Studios</div>
+    <div>Arches &middot; Columns &middot; Garlands &middot; Centerpieces &middot; Big Balloons</div>
+    <div>(310) 897-6969</div>
+  </div>
+</footer>
+</body>
+</html>

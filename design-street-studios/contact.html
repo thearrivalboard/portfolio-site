@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Design Street Studios</title>
+<meta name="description" content="Request a balloon decor quote from Design Street Studios. Call, email or send event details to start planning, serving LA's Westside.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0b0b0e; --panel:#15151a; --panel-2:#1c1c22; --line:rgba(255,255,255,.12);
+  --text:#f4f2ec; --text-dim:#a8a6a2;
+  --teal:#38d9c9; --teal-deep:#1fa89a;
+  --display:"Baloo 2",system-ui,sans-serif;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font:16.5px/1.6 var(--font)}
+img{max-width:100%;display:block}
+a{color:var(--teal)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(32px,4.2vw,46px)}
+h2{font-size:clamp(22px,2.6vw,26px)}
+h3{font-size:17px}
+.btn{display:inline-flex;align-items:center;font:700 15px/1 var(--font);text-decoration:none;padding:14px 26px;border-radius:30px;border:1.5px solid transparent}
+.btn-primary{background:var(--teal);color:#07211e}
+.btn-primary:hover{background:#5ae4d6}
+
+.concept{background:var(--panel);color:var(--text-dim);font-size:13px;text-align:center;padding:9px 20px;border-bottom:1px solid var(--line)}
+.concept b{color:var(--text)}
+
+header.site{background:rgba(11,11,14,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--text);line-height:1.1}
+.brand strong{font-family:var(--display);font-weight:700;font-size:19px}
+.brand span{font:700 10.5px/1 var(--font);letter-spacing:.18em;color:var(--teal);margin-top:4px}
+.links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
+.links a{color:var(--text);text-decoration:none}
+.links a:hover{color:var(--teal)}
+.links a[aria-current="page"]{color:var(--teal)}
+.nav .btn{padding:11px 20px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:20px;padding:9px 11px;cursor:pointer;color:var(--text)}
+.menu-toggle svg{display:block}
+@media (max-width:980px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--panel);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+@media (max-width:460px){
+  .nav .btn{padding:10px 16px;font-size:12.5px}
+}
+
+.contact-hero{background:var(--panel);padding-block:56px;border-bottom:1px solid var(--line)}
+.contact-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.contact-hero p{color:var(--text-dim);max-width:50ch;margin:14px 0 0;font-size:18px}
+.details{border:1px solid var(--line);border-radius:8px;padding:26px;display:grid;gap:16px;margin:0}
+.details dt{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim);margin-bottom:3px}
+.details dd{margin:0;font-size:18px;font-weight:700}
+.details a{color:var(--text);text-decoration:none}
+@media (max-width:860px){.contact-hero-grid{grid-template-columns:1fr}}
+
+section{padding-block:60px}
+.sec-head{max-width:640px;margin-bottom:28px}
+
+.booking{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.booking-card{background:var(--panel);padding:26px}
+.booking-card h3{margin-bottom:8px}
+.booking-card p{margin:0;color:var(--text-dim);font-size:15px}
+@media (max-width:820px){.booking{grid-template-columns:1fr}}
+
+.safety{background:var(--panel);border-block:1px solid var(--line)}
+.safety .wrap p{color:var(--text-dim);font-size:15.5px;max-width:70ch;margin:0 0 12px}
+
+footer{background:var(--bg);color:var(--text-dim);font-size:13.5px;padding-block:30px;border-top:1px solid var(--line)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:var(--text)}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Design Street Studios by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <strong>Design Street Studios</strong>
+      <span>BALLOONS</span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Decor Styles</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#top">Request a Quote</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<section class="contact-hero">
+  <div class="wrap contact-hero-grid">
+    <div>
+      <h1>Let's plan your event.</h1>
+      <p>Give us as much detail as you can about your date, venue and vision, it helps us quote accurately the first time.</p>
+    </div>
+    <dl class="details">
+      <div><dt>Call</dt><dd><a href="tel:+13108976969">(310) 897-6969</a></dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:designstreetstudios@gmail.com">designstreetstudios@gmail.com</a></dd></div>
+      <div><dt>Response time</dt><dd>Same-day confirmation, full reply within 24 hours</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How booking works</h2>
+    </div>
+    <div class="booking">
+      <div class="booking-card">
+        <h3>Tell us the details</h3>
+        <p>Event date, venue, type of event, theme and colors, indoors or outdoors. The more detail, the more accurate your quote.</p>
+      </div>
+      <div class="booking-card">
+        <h3>Reserve your date</h3>
+        <p>A non-refundable retainer holds your event date and applies toward your final invoice. Your date isn't held until it's paid.</p>
+      </div>
+      <div class="booking-card">
+        <h3>We handle setup</h3>
+        <p>Delivery, installation and tax are additional and included in your final quote, so there are no surprises on event day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="safety">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Worth knowing</h2>
+    </div>
+    <p>Balloons are a choking hazard to children, we always recommend supervision and prompt cleanup of any popped pieces.</p>
+    <p>We follow the California Balloon Law on every job: foil balloons are weighed and never released into the air. If you love the look of a release, ask about our "release &amp; tether" option instead.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Design Street Studios</div>
+    <div>Arches &middot; Columns &middot; Garlands &middot; Centerpieces &middot; Big Balloons</div>
+    <div>(310) 897-6969</div>
+  </div>
+</footer>
+</body>
+</html>
