@@ -13,6 +13,7 @@
   --bg:#0b0b0e; --panel:#15151a; --panel-2:#1c1c22; --line:rgba(255,255,255,.12);
   --text:#f4f2ec; --text-dim:#a8a6a2;
   --teal:#38d9c9; --teal-deep:#1fa89a;
+  --coral:#ff7a8a; --gold:#ffcd5c; --lime:#9bd977;
   --display:"Baloo 2",system-ui,sans-serif;
   --font:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
@@ -42,6 +43,11 @@ header.site{background:rgba(11,11,14,.9);backdrop-filter:blur(8px);border-bottom
 .brand{display:flex;flex-direction:column;text-decoration:none;color:var(--text);line-height:1.1}
 .brand strong{font-family:var(--display);font-weight:700;font-size:19px}
 .brand span{font:700 10.5px/1 var(--font);letter-spacing:.18em;color:var(--teal);margin-top:4px}
+.brand-dots{display:inline-flex;gap:4px;margin-left:8px;vertical-align:middle}
+.brand-dots i{width:6px;height:6px;border-radius:50%;display:inline-block}
+.brand-dots i:nth-child(1){background:var(--coral)}
+.brand-dots i:nth-child(2){background:var(--gold)}
+.brand-dots i:nth-child(3){background:var(--lime)}
 .links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
 .links a{color:var(--text);text-decoration:none}
 .links a:hover{color:var(--teal)}
@@ -72,6 +78,11 @@ section{padding-block:0}
 .style-grid .photo{aspect-ratio:4/3}
 .style-grid h2{margin-bottom:12px}
 .style-grid p{color:var(--text-dim);font-size:16.5px;max-width:50ch;margin:0}
+.style-grid .photo{border-top:4px solid var(--line)}
+.style-row:nth-child(4n+1) .style-grid .photo{border-top-color:var(--teal)}
+.style-row:nth-child(4n+2) .style-grid .photo{border-top-color:var(--coral)}
+.style-row:nth-child(4n+3) .style-grid .photo{border-top-color:var(--gold)}
+.style-row:nth-child(4n+4) .style-grid .photo{border-top-color:var(--lime)}
 @media (max-width:820px){.style-grid{grid-template-columns:1fr !important;direction:ltr !important}}
 
 .contact{background:var(--panel-2);margin-top:50px}
@@ -96,7 +107,7 @@ footer a{color:var(--text)}
   <div class="wrap nav">
     <a class="brand" href="index.html">
       <strong>Design Street Studios</strong>
-      <span>BALLOONS</span>
+      <span>BALLOONS <span class="brand-dots"><i></i><i></i><i></i></span></span>
     </a>
     <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
       <li><a href="index.html">Home</a></li>
