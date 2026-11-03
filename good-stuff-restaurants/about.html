@@ -11,7 +11,7 @@
 :root{
   color-scheme:light;
   --cream:#fbf1de; --sand:#f3e2bd; --white:#fffaf0; --ink:#231f18; --ink-2:#6e6554; --line:#e4d4ac;
-  --coral:#fb5a35; --coral-deep:#d8401d; --teal:#15696a; --teal-soft:#dcebe9;
+  --coral:#fb5a35; --coral-deep:#d8401d; --teal:#1f3063; --teal-soft:#dde2ef; --mustard:#f2b332;
   --display:"Anton",system-ui,sans-serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
@@ -38,9 +38,10 @@ h3{font-size:18px}
 
 header.site{background:rgba(251,241,222,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
-.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1}
-.brand strong{font-family:var(--display);font-weight:400;font-size:23px;text-transform:uppercase}
-.brand span{font:700 10px/1 var(--body);letter-spacing:.2em;color:var(--coral-deep);margin-top:5px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);line-height:1}
+.brand img{width:42px;height:42px}
+.brand strong{font-family:var(--display);font-weight:400;font-size:22px;text-transform:uppercase;display:block}
+.brand span{font:700 10px/1 var(--body);letter-spacing:.2em;color:var(--coral-deep);margin-top:5px;display:block}
 .links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:700}
 .links a{color:var(--ink);text-decoration:none}
 .links a:hover{color:var(--coral-deep)}
@@ -75,6 +76,10 @@ section{padding-block:60px}
 .tl-row p{margin:0;color:var(--ink-2)}
 @media (max-width:600px){.tl-row{grid-template-columns:70px 1fr}}
 
+.today-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.today-grid .photo{aspect-ratio:4/3}
+@media (max-width:560px){.today-grid{grid-template-columns:1fr}}
+
 .pillars{background:var(--sand)}
 .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .pillar-grid h3{margin-bottom:10px}
@@ -100,8 +105,11 @@ footer a{color:var(--cream)}
 <header class="site">
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <strong>Good Stuff</strong>
-      <span>RESTAURANTS</span>
+      <img src="https://eatgoodstuff.com/wp-content/uploads/2022/12/GS-Vintage-Color-Logo-RGB.png" alt="Good Stuff Restaurants badge logo">
+      <span>
+        <strong>Good Stuff</strong>
+        <span>RESTAURANTS</span>
+      </span>
     </a>
     <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
       <li><a href="index.html">Home</a></li>
@@ -150,6 +158,15 @@ footer a{color:var(--cream)}
     <div class="tl-row">
       <div class="year">Today</div>
       <p>Still family owned and operated, serving the South Bay from four locations.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-block:0 56px">
+  <div class="wrap">
+    <div class="today-grid">
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/10/Hermosa-Beach-Outside-2-768x768.jpg" alt="Good Stuff on the Strand in Hermosa Beach today"></div>
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/10/Palos-Verdes-Inside-6-768x768.jpg" alt="Inside Good Stuff Palos Verdes"></div>
     </div>
   </div>
 </section>

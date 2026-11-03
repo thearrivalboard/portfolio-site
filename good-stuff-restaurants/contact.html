@@ -11,7 +11,7 @@
 :root{
   color-scheme:light;
   --cream:#fbf1de; --sand:#f3e2bd; --white:#fffaf0; --ink:#231f18; --ink-2:#6e6554; --line:#e4d4ac;
-  --coral:#fb5a35; --coral-deep:#d8401d; --teal:#15696a; --teal-soft:#dcebe9;
+  --coral:#fb5a35; --coral-deep:#d8401d; --teal:#1f3063; --teal-soft:#dde2ef; --mustard:#f2b332;
   --display:"Anton",system-ui,sans-serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
@@ -38,9 +38,10 @@ h3{font-size:18px}
 
 header.site{background:rgba(251,241,222,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
-.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1}
-.brand strong{font-family:var(--display);font-weight:400;font-size:23px;text-transform:uppercase}
-.brand span{font:700 10px/1 var(--body);letter-spacing:.2em;color:var(--coral-deep);margin-top:5px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);line-height:1}
+.brand img{width:42px;height:42px}
+.brand strong{font-family:var(--display);font-weight:400;font-size:22px;text-transform:uppercase;display:block}
+.brand span{font:700 10px/1 var(--body);letter-spacing:.2em;color:var(--coral-deep);margin-top:5px;display:block}
 .links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:700}
 .links a{color:var(--ink);text-decoration:none}
 .links a:hover{color:var(--coral-deep)}
@@ -72,6 +73,16 @@ section{padding-block:60px}
 .offer p{margin:0 0 18px;color:var(--ink-2);font-size:15px}
 @media (max-width:860px){.offer-grid{grid-template-columns:1fr}}
 
+.events-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+.events-grid .photo{aspect-ratio:4/3;border-radius:10px;overflow:hidden}
+.events-grid .photo img{width:100%;height:100%;object-fit:cover}
+@media (max-width:560px){.events-grid{grid-template-columns:1fr}}
+.testimonials{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.testimonial{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:22px}
+.testimonial p{margin:0 0 10px;font-size:15px;color:var(--ink)}
+.testimonial cite{font-style:normal;font-weight:700;font-size:13.5px;color:var(--ink-2)}
+@media (max-width:760px){.testimonials{grid-template-columns:1fr}}
+
 .general{background:var(--white);border-block:1px solid var(--line)}
 .general-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .general-grid dt{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin-bottom:4px}
@@ -90,8 +101,11 @@ footer a{color:var(--cream)}
 <header class="site">
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <strong>Good Stuff</strong>
-      <span>RESTAURANTS</span>
+      <img src="https://eatgoodstuff.com/wp-content/uploads/2022/12/GS-Vintage-Color-Logo-RGB.png" alt="Good Stuff Restaurants badge logo">
+      <span>
+        <strong>Good Stuff</strong>
+        <span>RESTAURANTS</span>
+      </span>
     </a>
     <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
       <li><a href="index.html">Home</a></li>
@@ -133,8 +147,31 @@ footer a{color:var(--cream)}
       </div>
       <div class="offer">
         <h3>Private Events</h3>
-        <p>Planning a party but don't have the space? Hermosa Beach and Palos Verdes can host your next event.</p>
+        <p>Hermosa on the Strand holds up to 200 guests, and the Palos Verdes Peninsula Room holds up to 45, for weddings, mixers, showers and birthdays.</p>
         <a class="btn btn-ghost" href="#">Book a space</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-block:0 60px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Celebrate like a local</h2>
+      <p>Weddings, parties and corporate mixers at our Hermosa Beach and Palos Verdes locations.</p>
+    </div>
+    <div class="events-grid">
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/10/Palos-Verdes-Inside-1-768x768.jpg" alt="The Peninsula Room event space at Good Stuff Palos Verdes"></div>
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/10/Hermosa-Beach-Outside-5-768x768.jpg" alt="Good Stuff Hermosa Beach patio, available for private events"></div>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Thank you Cris &amp; Cassidy, it was a perfect evening. Thank you from the bottom of our hearts."</p>
+        <cite>&mdash; Ed, Wedding</cite>
+      </div>
+      <div class="testimonial">
+        <p>"I just wanted to extend a big thank you for helping make my 30th birthday such a special occasion! Everything ran so smoothly, and the space was perfect."</p>
+        <cite>&mdash; Sam, Birthday Party</cite>
       </div>
     </div>
   </div>

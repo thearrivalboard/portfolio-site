@@ -11,7 +11,7 @@
 :root{
   color-scheme:light;
   --cream:#fbf1de; --sand:#f3e2bd; --white:#fffaf0; --ink:#231f18; --ink-2:#6e6554; --line:#e4d4ac;
-  --coral:#fb5a35; --coral-deep:#d8401d; --teal:#15696a; --teal-soft:#dcebe9;
+  --coral:#fb5a35; --coral-deep:#d8401d; --teal:#1f3063; --teal-soft:#dde2ef; --mustard:#f2b332;
   --display:"Anton",system-ui,sans-serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
@@ -35,9 +35,10 @@ h2{font-size:clamp(24px,2.8vw,28px)}
 
 header.site{background:rgba(251,241,222,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
-.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1}
-.brand strong{font-family:var(--display);font-weight:400;font-size:23px;text-transform:uppercase}
-.brand span{font:700 10px/1 var(--body);letter-spacing:.2em;color:var(--coral-deep);margin-top:5px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);line-height:1}
+.brand img{width:42px;height:42px}
+.brand strong{font-family:var(--display);font-weight:400;font-size:22px;text-transform:uppercase;display:block}
+.brand span{font:700 10px/1 var(--body);letter-spacing:.2em;color:var(--coral-deep);margin-top:5px;display:block}
 .links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:700}
 .links a{color:var(--ink);text-decoration:none}
 .links a:hover{color:var(--coral-deep)}
@@ -73,6 +74,11 @@ section{padding-block:0 60px}
 @media (max-width:760px){.loc-detail{grid-template-columns:1fr}.loc-facts{grid-template-columns:1fr 1fr}}
 @media (max-width:460px){.loc-facts{grid-template-columns:1fr}}
 
+.loc-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:-24px 0 24px}
+.loc-photos .photo{aspect-ratio:4/3;border-radius:10px;padding:0}
+.loc-photos .photo img{object-fit:cover}
+@media (max-width:520px){.loc-photos{grid-template-columns:1fr}}
+
 footer{background:var(--ink);color:#b5ac99;font-size:13.5px;padding-block:30px}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
 footer a{color:var(--cream)}
@@ -85,8 +91,11 @@ footer a{color:var(--cream)}
 <header class="site">
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <strong>Good Stuff</strong>
-      <span>RESTAURANTS</span>
+      <img src="https://eatgoodstuff.com/wp-content/uploads/2022/12/GS-Vintage-Color-Logo-RGB.png" alt="Good Stuff Restaurants badge logo">
+      <span>
+        <strong>Good Stuff</strong>
+        <span>RESTAURANTS</span>
+      </span>
     </a>
     <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
       <li><a href="index.html">Home</a></li>
@@ -126,6 +135,10 @@ footer a{color:var(--cream)}
         <a class="btn btn-primary" href="https://www.toasttab.com/good-stuff-hermosa-beach/v3">Order from Hermosa Beach</a>
       </div>
     </div>
+    <div class="loc-photos">
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/10/Hermosa-Beach-Outside-2-768x768.jpg" alt="Good Stuff Hermosa Beach patio seating"></div>
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/10/Hermosa-Beach-Outside-5-768x768.jpg" alt="Good Stuff Hermosa Beach, view of the pier and beach from the patio"></div>
+    </div>
 
     <div class="loc-detail">
       <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/12/Redondo-Beach.png" alt="Redondo Beach badge"></div>
@@ -153,6 +166,10 @@ footer a{color:var(--cream)}
         </dl>
         <a class="btn btn-primary" href="#">Order from Palos Verdes</a>
       </div>
+    </div>
+    <div class="loc-photos">
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/10/Palos-Verdes-Inside-1-768x768.jpg" alt="Good Stuff Palos Verdes dining room"></div>
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/10/Palos-Verdes-Inside-5-768x768.jpg" alt="Good Stuff Palos Verdes indoor seating"></div>
     </div>
 
     <div class="loc-detail">
