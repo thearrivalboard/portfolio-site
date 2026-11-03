@@ -6,14 +6,14 @@
 <title>Good Stuff Restaurants | South Bay Favorite Since 1979</title>
 <meta name="description" content="Family owned South Bay breakfast and lunch spot since 1979. Four locations: Hermosa Beach, Redondo Beach, Palos Verdes and El Segundo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@400;500;600;700;800;900&display=swap">
 <style>
 :root{
   color-scheme:light;
   --cream:#fbf1de; --sand:#f3e2bd; --white:#fffaf0; --ink:#231f18; --ink-2:#6e6554; --line:#e4d4ac;
   --coral:#fb5a35; --coral-deep:#d8401d; --teal:#1f3063; --teal-soft:#dde2ef; --mustard:#f2b332;
-  --display:"Anton",system-ui,sans-serif;
-  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"Luckiest Guy",system-ui,sans-serif;
+  --body:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -64,15 +64,19 @@ header.site{background:rgba(251,241,222,.92);backdrop-filter:blur(8px);border-bo
 }
 
 /* hero */
-.hero{position:relative;padding-block:64px;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-.hero h1{margin-bottom:18px}
-.hero p.lead{font-size:18.5px;color:var(--ink-2);max-width:48ch;margin:0 0 26px}
+.hero{position:relative;padding-block:140px 76px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,20,14,.2) 0%,rgba(24,20,14,.72) 65%,var(--cream) 100%)}
+.hero-inner{position:relative;z-index:1;max-width:660px}
+.hero .btn-ghost{border-color:#fff;color:#fff}
+.hero .btn-ghost:hover{background:#fff;color:var(--ink)}
+.hero h1{margin-bottom:18px;color:#fff}
+.hero p.lead{font-size:19px;color:#f4ead8;max-width:50ch;margin:0 0 26px}
 .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px}
 .badge-line{display:flex;gap:10px;flex-wrap:wrap}
-.badge-line span{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:700;color:var(--ink-2)}
-.hero .photo{aspect-ratio:1/1}
-@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero .photo{max-width:380px;margin:0 auto}}
+.badge-line span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:700;color:#fff}
+@media (max-width:620px){.hero{padding-block:100px 60px}}
 
 .tear{width:100%;height:28px;object-fit:cover;display:block}
 
@@ -164,22 +168,20 @@ footer a{color:var(--cream)}
 
 <main>
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <h1>Family owned on the South Bay coast since 1979.</h1>
-      <p class="lead">Beach breakfast classics, health conscious options and a menu that's been perfected for over 40 years, across four South Bay locations.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="locations.html">Order Online</a>
-        <a class="btn btn-ghost" href="menu.html">View the menu</a>
-      </div>
-      <div class="badge-line">
-        <span>Gluten-Free Options</span>
-        <span>Vegan Options</span>
-        <span>Keto Friendly</span>
-        <span>Kids Menu</span>
-      </div>
+  <div class="hero-bg"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/10/Hermosa-Beach-Outside-5-768x768.jpg" alt="Good Stuff Hermosa Beach patio on the Strand, with the pier and beach behind it"></div>
+  <div class="wrap hero-inner">
+    <h1>Family owned on the South Bay coast since 1979.</h1>
+    <p class="lead">Beach breakfast classics, health conscious options and a menu that's been perfected for over 40 years, across four South Bay locations.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="locations.html">Order Online</a>
+      <a class="btn btn-ghost" href="menu.html">View the menu</a>
     </div>
-    <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/10/Hermosa-Beach-Outside-5-768x768.jpg" alt="Good Stuff Hermosa Beach patio on the Strand, with the pier and beach behind it"></div>
+    <div class="badge-line">
+      <span>Gluten-Free Options</span>
+      <span>Vegan Options</span>
+      <span>Keto Friendly</span>
+      <span>Kids Menu</span>
+    </div>
   </div>
 </section>
 
