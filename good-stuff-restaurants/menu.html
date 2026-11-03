@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu | Good Stuff Restaurants</title>
+<meta name="description" content="Breakfast, lunch, kids menu and more from Good Stuff Restaurants. Gluten-free, vegan and keto options available at all South Bay locations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --cream:#fbf1de; --sand:#f3e2bd; --white:#fffaf0; --ink:#231f18; --ink-2:#6e6554; --line:#e4d4ac;
+  --coral:#fb5a35; --coral-deep:#d8401d; --teal:#15696a; --teal-soft:#dcebe9;
+  --display:"Anton",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--coral-deep)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-transform:uppercase;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(34px,4.6vw,52px)}
+h2{font-size:clamp(24px,2.8vw,28px)}
+h3{font-size:15.5px;text-transform:none;font-family:var(--body);font-weight:800}
+.btn{display:inline-flex;align-items:center;font:700 15px/1 var(--body);text-decoration:none;padding:14px 26px;border-radius:999px;border:2px solid transparent}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-primary:hover{background:var(--coral-deep)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--cream)}
+
+.concept{background:var(--ink);color:#d8cfbd;font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:#fff}
+
+header.site{background:rgba(251,241,222,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1}
+.brand strong{font-family:var(--display);font-weight:400;font-size:23px;text-transform:uppercase}
+.brand span{font:700 10px/1 var(--body);letter-spacing:.2em;color:var(--coral-deep);margin-top:5px}
+.links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:700}
+.links a{color:var(--ink);text-decoration:none}
+.links a:hover{color:var(--coral-deep)}
+.links a[aria-current="page"]{color:var(--coral-deep)}
+.nav .btn{padding:11px 20px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:999px;padding:9px 11px;cursor:pointer;color:var(--ink)}
+.menu-toggle svg{display:block}
+@media (max-width:980px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--cream);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+@media (max-width:460px){
+  .nav .btn{padding:10px 16px;font-size:12.5px}
+}
+
+.page-hero{padding-block:52px 40px}
+.page-hero p{color:var(--ink-2);max-width:62ch;margin:14px 0 0;font-size:18px}
+.jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.jump a{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:13.5px;font-weight:700;color:var(--ink);text-decoration:none}
+.jump a:hover{border-color:var(--coral)}
+
+section{padding-block:0 56px}
+.cat{margin-bottom:52px}
+.cat h2{margin-bottom:6px}
+.cat .sub{color:var(--ink-2);margin:0 0 22px}
+.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dish{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.dish .photo{aspect-ratio:1/1;background:var(--sand);position:relative}
+.dish .photo img{width:100%;height:100%;object-fit:cover}
+.fav{position:absolute;top:10px;left:10px;background:var(--coral);color:#fff;font:800 11px/1 var(--body);padding:5px 10px;border-radius:999px}
+.dish .body{padding:14px 16px}
+.dish h3{font-size:15.5px;margin-bottom:4px}
+.dish p{margin:0 0 8px;color:var(--ink-2);font-size:13px}
+.dish .price{font-weight:800;color:var(--coral-deep)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:11px;font-weight:700;color:var(--teal);border:1px solid var(--teal);border-radius:999px;padding:3px 9px}
+@media (max-width:860px){.menu-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.menu-grid{grid-template-columns:1fr}}
+
+.pdfs{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px 30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.pdfs p{margin:0;color:var(--ink-2)}
+.pdf-links{display:flex;flex-wrap:wrap;gap:10px}
+
+footer{background:var(--ink);color:#b5ac99;font-size:13.5px;padding-block:30px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:var(--cream)}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Good Stuff Restaurants by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <strong>Good Stuff</strong>
+      <span>RESTAURANTS</span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" aria-current="page">Menu</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="locations.html">Order Online</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <h1>The menu</h1>
+    <p>Perfected since 1980. A highlight reel of what's on offer, breakfast, lunch, kids and drinks, at every location.</p>
+    <div class="jump">
+      <a href="#breakfast">Breakfast</a>
+      <a href="#lunch">Lunch &amp; Dinner</a>
+      <a href="#kids">Kids</a>
+      <a href="#drinks">Drinks</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <div class="cat" id="breakfast">
+      <h2>Anytime Breakfast</h2>
+      <p class="sub">Served all day, every day.</p>
+      <div class="menu-grid">
+        <div class="dish">
+          <div class="photo"><span class="fav">Favorite</span><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/THE-CLASSICS-Good-Stuff-Breakfast-1-q455zfv4k7tt1gyefvnyg89h5x5ksp6y8mqtdoqm60.jpg" alt="Good Stuff Breakfast"></div>
+          <div class="body"><h3>Good Stuff Breakfast</h3><p>Two eggs, bacon or sausage, hashbrowns or pancakes</p><div class="tags"><span>Cage-Free Eggs</span></div><p class="price">$17</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/Uniquely-Adams-Avocado-Toast-r4jsh53pktp3q1p0dz78q2y8hnat615z832aq6ifug.jpg" alt="Adam's Avocado Toast"></div>
+          <div class="body"><h3>Adam's Avocado Toast</h3><p>Sourdough, guacamole, tomatoes, bacon &amp; feta, two eggs</p><div class="tags"></div><p class="price">$13</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><span class="fav">Favorite</span><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/World-Cup-Wrap-Web-rnpf6i8ik1mkobg1r8tekij3djamm3txc49nuhmldk.jpg" alt="World Cup Wrap"></div>
+          <div class="body"><h3>World Cup Wrap</h3><p>Scrambled eggs, homemade chorizo, hashbrowns &amp; pico</p><div class="tags"></div><p class="price">$18</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><span class="fav">Favorite</span><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/BEACH-BODY-FITNESS-Beach-Body-Omelette-scaled-q16qaw5c9rm7xhapcthdljnyeik1hjs3ib6fqwkbeg.jpg" alt="Beach Body Omelette"></div>
+          <div class="body"><h3>Beach Body Omelette</h3><p>Egg whites, ground turkey, tomatoes &amp; spinach, guacamole</p><div class="tags"><span>Gluten-Free</span></div><p class="price">$19</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat" id="lunch">
+      <h2>Lunch &amp; Dinner</h2>
+      <p class="sub">Burgers, bowls, salads and south-of-the-border favorites.</p>
+      <div class="menu-grid">
+        <div class="dish">
+          <div class="photo"><span class="fav">Favorite</span><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/Carne-Asada-Eggs-op1m8z16deznnb332pwttkj09466rh7o6lel5g294o.jpg" alt="Carne Asada Steak"></div>
+          <div class="body"><h3>Carne Asada Steak</h3><p>Wanderer Farms&reg; steak, rice, beans, guacamole &amp; tortillas</p><div class="tags"></div><p class="price">$22</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/Teriyaki-Steak-Breakfast-Bowl-qk3ugvkujuxxwijylhcro7vocsjdffqzea4b27y5dk.jpg" alt="Teriyaki Steak and Veggie Bowl"></div>
+          <div class="body"><h3>Teriyaki Steak &amp; Veggie Bowl</h3><p>Flank steak, stir-fried veggies, brown rice, sesame seeds</p><div class="tags"></div><p class="price">$22</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><span class="fav">Favorite</span><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/THE-BASIC-Bacon-Eggs-rq62hfl17p61wfrwsr15675yyc9baiyqtlwdodmx88.jpg" alt="Avocado Bacon Cheddar Burger"></div>
+          <div class="body"><h3>Avocado Bacon Cheddar</h3><p>Fresh avocado, bacon, cheddar, lettuce, tomato &amp; onion</p><div class="tags"></div><p class="price">$20</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><span class="fav">Favorite</span><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/VEGAN-TOFU-SCRAMBLE-op1mdmcg5xcp1wc1xq8f5eb1zp9itlnw5lj0kp66d4.jpg" alt="Vegan Tofu Scramble"></div>
+          <div class="body"><h3>Vegan Tofu Scramble</h3><p>Black beans, mushrooms, zucchini, spinach, basil, tortillas</p><div class="tags"><span>Vegan</span><span>Gluten-Free</span></div><p class="price">$18</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat" id="kids">
+      <h2>Kids</h2>
+      <p class="sub">All-day breakfast and anytime favorites, kid-sized.</p>
+      <div class="menu-grid">
+        <div class="dish">
+          <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/GS-buttermilk-pancakes-v01-op1mcwyt1edycfcx1x9hs2plyaqm1rv523wwm87t14.jpg" alt="Silver dollar pancakes"></div>
+          <div class="body"><h3>6 Silver Dollar Pancakes</h3><p>Made from scratch, gluten-free available</p><div class="tags"><span>Gluten-Free</span></div><p class="price">$9</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/Jones-Pork-Sausage-Patties-Eggs-rq62bdih64vj2wko64rp3q714y45oqx0nmjqc6m9bs.jpg" alt="Jr. Good Stuff Breakfast"></div>
+          <div class="body"><h3>Jr. Good Stuff Breakfast</h3><p>One egg, two bacon or sausage, pancakes or toast</p><div class="tags"></div><p class="price">$10</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/THE-CLASSICS-Breakfast-Wrap-2-q46ndx7qnnk6u0fyhvsd63iw2lhhynb9w1831a97zs.jpg" alt="Riley's Fried Chicken Wrap"></div>
+          <div class="body"><h3>Riley's Fried Chicken Wrap</h3><p>Chicken tenders, bacon, lettuce, tomato, cheese &amp; ranch</p><div class="tags"><span>Gluten-Free</span></div><p class="price">$11</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/STUFF-WITH-SYRUP-Half-Waffle-Two-Eggs-q46n8c2a13wttgk54gu7cia8y50y7f4psdm6c2jgzc.jpg" alt="Charlee's Cheeseburger Slider"></div>
+          <div class="body"><h3>Charlee's Cheeseburger Slider</h3><p>Wanderer Farms&reg; beef patty on a brioche bun</p><div class="tags"></div><p class="price">$9</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat" id="drinks">
+      <h2>Drinks</h2>
+      <p class="sub">Local coffee, fresh juice, and a full bar at most locations.</p>
+      <div class="menu-grid">
+        <div class="dish">
+          <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/Tropical-Green-Smoothie-1-raxkioyejgmakpy27dmwjezu8isfftx8dbd4x31mew.jpg" alt="Tropical Green Smoothie"></div>
+          <div class="body"><h3>Tropical Green Smoothie</h3><p>Mango, banana, orange juice, almond milk &amp; spinach</p><div class="tags"><span>Vegan</span><span>Gluten-Free</span></div><p class="price">$11</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/Breakfast-Shake-rqibhicnxkbjdwvynrt3qfcjvn3h5qw18w5gkw0p14.png" alt="GS Breakfast Shake"></div>
+          <div class="body"><h3>GS Breakfast Shake</h3><p>Plant protein, banana, strawberries, peanut butter, oats</p><div class="tags"><span>Vegan</span></div><p class="price">$12</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/Food-shots-for-website-4-op1mcqdxpk4y35mh4cf3smddsln1jw50p7ci9ahk8o.jpg" alt="Nitro cold brew"></div>
+          <div class="body"><h3>Nitro Cold Brew</h3><p>Locally roasted Owlverick's&reg; coffee, served over ice</p><div class="tags"></div><p class="price">$7</p></div>
+        </div>
+        <div class="dish">
+          <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/elementor/thumbs/Food-shots-for-website-9-op1m6ynlr68ktc07tcmjzksiig2xas8c8n67751kfs.jpg" alt="Mimosa"></div>
+          <div class="body"><h3>Mimosa</h3><p>Guava, mango, cranberry or orange</p><div class="tags"></div><p class="price">$9</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pdfs">
+      <p>Want the full menu with every option? Download the PDFs.</p>
+      <div class="pdf-links">
+        <a class="btn btn-ghost" href="#">Main Menu (PDF)</a>
+        <a class="btn btn-ghost" href="#">Kids Menu (PDF)</a>
+        <a class="btn btn-ghost" href="#">Catering Menu (PDF)</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Good Stuff Restaurants</div>
+    <div>Hermosa Beach &middot; Redondo Beach &middot; Palos Verdes &middot; El Segundo</div>
+    <div>Eat Good. Do Good. Live Good.&reg;</div>
+  </div>
+</footer>
+</body>
+</html>

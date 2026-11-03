@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Locations | Good Stuff Restaurants</title>
+<meta name="description" content="Four Good Stuff Restaurants locations in the South Bay: Hermosa Beach, Redondo Beach, Palos Verdes and El Segundo. Addresses, hours and phone numbers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --cream:#fbf1de; --sand:#f3e2bd; --white:#fffaf0; --ink:#231f18; --ink-2:#6e6554; --line:#e4d4ac;
+  --coral:#fb5a35; --coral-deep:#d8401d; --teal:#15696a; --teal-soft:#dcebe9;
+  --display:"Anton",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--coral-deep)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-transform:uppercase;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(34px,4.6vw,52px)}
+h2{font-size:clamp(24px,2.8vw,28px)}
+.btn{display:inline-flex;align-items:center;font:700 15px/1 var(--body);text-decoration:none;padding:14px 26px;border-radius:999px;border:2px solid transparent}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-primary:hover{background:var(--coral-deep)}
+
+.concept{background:var(--ink);color:#d8cfbd;font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:#fff}
+
+header.site{background:rgba(251,241,222,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1}
+.brand strong{font-family:var(--display);font-weight:400;font-size:23px;text-transform:uppercase}
+.brand span{font:700 10px/1 var(--body);letter-spacing:.2em;color:var(--coral-deep);margin-top:5px}
+.links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:700}
+.links a{color:var(--ink);text-decoration:none}
+.links a:hover{color:var(--coral-deep)}
+.links a[aria-current="page"]{color:var(--coral-deep)}
+.nav .btn{padding:11px 20px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:999px;padding:9px 11px;cursor:pointer;color:var(--ink)}
+.menu-toggle svg{display:block}
+@media (max-width:980px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--cream);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+@media (max-width:460px){
+  .nav .btn{padding:10px 16px;font-size:12.5px}
+}
+
+.page-hero{padding-block:52px 40px}
+.page-hero p{color:var(--ink-2);max-width:62ch;margin:14px 0 0;font-size:18px}
+
+section{padding-block:0 60px}
+.loc-detail{display:grid;grid-template-columns:.8fr 1.2fr;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--white);margin-bottom:24px}
+.loc-detail .photo{background:var(--sand);display:flex;align-items:center;justify-content:center;padding:28px}
+.loc-detail .photo img{width:100%;height:100%;object-fit:contain}
+.loc-detail .body{padding:30px 34px}
+.loc-detail h2{margin-bottom:14px}
+.loc-detail p.desc{color:var(--ink-2);margin:0 0 18px;font-size:15.5px;max-width:56ch}
+.loc-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:20px}
+.loc-facts dt{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin-bottom:4px}
+.loc-facts dd{margin:0;font-weight:700;font-size:14.5px}
+@media (max-width:760px){.loc-detail{grid-template-columns:1fr}.loc-facts{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.loc-facts{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#b5ac99;font-size:13.5px;padding-block:30px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:var(--cream)}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Good Stuff Restaurants by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <strong>Good Stuff</strong>
+      <span>RESTAURANTS</span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="locations.html" aria-current="page">Locations</a></li>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#top">Order Online</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Four locations across the South Bay</h1>
+    <p>Each one has its own personality, but the same menu, the same family, and the same beach-town welcome.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <div class="loc-detail">
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/12/hermosa_beach.svg" alt="Hermosa Beach badge"></div>
+      <div class="body">
+        <h2>Hermosa Beach</h2>
+        <p class="desc">Our flagship location has been on the Strand for 44 years, perfectly positioned to take in the beach, the pier and all the action on the volleyball courts. One block north of the Hermosa pier, next to the only parking structure in the city.</p>
+        <dl class="loc-facts">
+          <div><dt>Address</dt><dd>1286 The Strand<br>Hermosa Beach, CA 90254</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+13103742334">(310) 374-2334</a></dd></div>
+          <div><dt>Hours</dt><dd>Mon&ndash;Thu 7am&ndash;2pm<br>Fri&ndash;Sun 7am&ndash;3pm</dd></div>
+        </dl>
+        <a class="btn btn-primary" href="https://www.toasttab.com/good-stuff-hermosa-beach/v3">Order from Hermosa Beach</a>
+      </div>
+    </div>
+
+    <div class="loc-detail">
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/12/Redondo-Beach.png" alt="Redondo Beach badge"></div>
+      <div class="body">
+        <h2>Redondo Beach</h2>
+        <p class="desc">A fixture on the Pacific Coast Highway in South Redondo, at the entrance to Riviera Village and an easy walk to the beach down Ave I. Free parking behind the building, just over a quarter mile from the Esplanade.</p>
+        <dl class="loc-facts">
+          <div><dt>Address</dt><dd>1617 S Pacific Coast Hwy, Ste 102<br>Redondo Beach, CA 90277</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+13103160262">(310) 316-0262</a></dd></div>
+          <div><dt>Hours</dt><dd>Everyday 7am&ndash;3pm</dd></div>
+        </dl>
+        <a class="btn btn-primary" href="#">Order from Redondo Beach</a>
+      </div>
+    </div>
+
+    <div class="loc-detail">
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2022/12/Palos-Verdes-Logo.png" alt="Palos Verdes badge"></div>
+      <div class="body">
+        <h2>Palos Verdes</h2>
+        <p class="desc">Located in the Promenade Mall on Silver Spur, on the ground floor next to the splash pad fountain. Outdoor seating takes in the Southern California weather, and the Peninsula Room is available for private events. Open for breakfast, lunch and dinner.</p>
+        <dl class="loc-facts">
+          <div><dt>Address</dt><dd>550 Deep Valley Dr, Ste 151<br>Rolling Hills Estates, CA 90274</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+13105448000">(310) 544-8000</a></dd></div>
+          <div><dt>Hours</dt><dd>Everyday 8am&ndash;8pm</dd></div>
+        </dl>
+        <a class="btn btn-primary" href="#">Order from Palos Verdes</a>
+      </div>
+    </div>
+
+    <div class="loc-detail">
+      <div class="photo"><img src="https://eatgoodstuff.com/wp-content/uploads/2023/02/El-Segundo-Green-Logo.png" alt="El Segundo badge"></div>
+      <div class="body">
+        <h2>El Segundo</h2>
+        <p class="desc">Right at the corner of Grand and Richmond, by the iconic lifeguard tower. A great place to meet up with friends and family for breakfast or lunch, or bring some Good Stuff to your next meeting.</p>
+        <dl class="loc-facts">
+          <div><dt>Address</dt><dd>131 W Grand Ave, Ste C<br>El Segundo, CA 90245</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+13106479997">(310) 647-9997</a></dd></div>
+          <div><dt>Hours</dt><dd>Everyday 7am&ndash;2pm</dd></div>
+        </dl>
+        <a class="btn btn-primary" href="#">Order from El Segundo</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Good Stuff Restaurants</div>
+    <div>Hermosa Beach &middot; Redondo Beach &middot; Palos Verdes &middot; El Segundo</div>
+    <div>Eat Good. Do Good. Live Good.&reg;</div>
+  </div>
+</footer>
+</body>
+</html>

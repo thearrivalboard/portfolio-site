@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Good Stuff Restaurants</title>
+<meta name="description" content="Loyalty program, catering, private events and contact info for Good Stuff Restaurants' four South Bay locations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --cream:#fbf1de; --sand:#f3e2bd; --white:#fffaf0; --ink:#231f18; --ink-2:#6e6554; --line:#e4d4ac;
+  --coral:#fb5a35; --coral-deep:#d8401d; --teal:#15696a; --teal-soft:#dcebe9;
+  --display:"Anton",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--coral-deep)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-transform:uppercase;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(34px,4.6vw,52px)}
+h2{font-size:clamp(22px,2.6vw,26px)}
+h3{font-size:18px}
+.btn{display:inline-flex;align-items:center;font:700 15px/1 var(--body);text-decoration:none;padding:14px 26px;border-radius:999px;border:2px solid transparent}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-primary:hover{background:var(--coral-deep)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--cream)}
+
+.concept{background:var(--ink);color:#d8cfbd;font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:#fff}
+
+header.site{background:rgba(251,241,222,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1}
+.brand strong{font-family:var(--display);font-weight:400;font-size:23px;text-transform:uppercase}
+.brand span{font:700 10px/1 var(--body);letter-spacing:.2em;color:var(--coral-deep);margin-top:5px}
+.links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:700}
+.links a{color:var(--ink);text-decoration:none}
+.links a:hover{color:var(--coral-deep)}
+.links a[aria-current="page"]{color:var(--coral-deep)}
+.nav .btn{padding:11px 20px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:999px;padding:9px 11px;cursor:pointer;color:var(--ink)}
+.menu-toggle svg{display:block}
+@media (max-width:980px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--cream);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+@media (max-width:460px){
+  .nav .btn{padding:10px 16px;font-size:12.5px}
+}
+
+.page-hero{background:var(--teal);color:#eaf4f3;padding-block:52px}
+.page-hero p{color:#bfe0dd;max-width:60ch;margin:14px 0 0;font-size:18px}
+
+section{padding-block:60px}
+.sec-head{max-width:640px;margin-bottom:32px}
+
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.offer{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px}
+.offer h3{margin-bottom:10px}
+.offer p{margin:0 0 18px;color:var(--ink-2);font-size:15px}
+@media (max-width:860px){.offer-grid{grid-template-columns:1fr}}
+
+.general{background:var(--white);border-block:1px solid var(--line)}
+.general-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.general-grid dt{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin-bottom:4px}
+.general-grid dd{margin:0 0 20px;font-weight:700}
+@media (max-width:760px){.general-grid{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#b5ac99;font-size:13.5px;padding-block:30px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:var(--cream)}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Good Stuff Restaurants by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <strong>Good Stuff</strong>
+      <span>RESTAURANTS</span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="locations.html">Order Online</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Get in touch</h1>
+    <p>Loyalty rewards, catering, private events, or just a question, here's how to reach us.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What can we help with?</h2>
+    </div>
+    <div class="offer-grid">
+      <div class="offer">
+        <h3>Loyalty Program</h3>
+        <p>Sign up for member-only specials, a $15 birthday credit, and a $10 reward every 125 points.</p>
+        <a class="btn btn-ghost" href="#">Sign up</a>
+      </div>
+      <div class="offer">
+        <h3>Catering</h3>
+        <p>Bring Good Stuff to your next office lunch, team event or gathering. Catering menu available at every location.</p>
+        <a class="btn btn-ghost" href="#">See catering menu</a>
+      </div>
+      <div class="offer">
+        <h3>Private Events</h3>
+        <p>Planning a party but don't have the space? Hermosa Beach and Palos Verdes can host your next event.</p>
+        <a class="btn btn-ghost" href="#">Book a space</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="general">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>General contact</h2>
+    </div>
+    <dl class="general-grid">
+      <div>
+        <dt>Prefer to call a location directly?</dt>
+        <dd>Hermosa Beach: <a href="tel:+13103742334">(310) 374-2334</a><br>Redondo Beach: <a href="tel:+13103160262">(310) 316-0262</a><br>Palos Verdes: <a href="tel:+13105448000">(310) 544-8000</a><br>El Segundo: <a href="tel:+13106479997">(310) 647-9997</a></dd>
+      </div>
+      <div>
+        <dt>Follow along</dt>
+        <dd>Instagram &middot; TikTok &middot; YouTube &middot; Facebook &middot; Yelp</dd>
+        <dt>Careers</dt>
+        <dd>We're always looking for people who care about hospitality, inquire at any location.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Good Stuff Restaurants</div>
+    <div>Hermosa Beach &middot; Redondo Beach &middot; Palos Verdes &middot; El Segundo</div>
+    <div>Eat Good. Do Good. Live Good.&reg;</div>
+  </div>
+</footer>
+</body>
+</html>
