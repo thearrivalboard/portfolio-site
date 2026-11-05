@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Jamie &amp; Xena | Hiking Girl with Dog</title>
+<meta name="description" content="Meet Jamie Sun, holistic hiking coach and founder of Hiking Girl with Dog, and the story of her trail partner Xena.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Albert+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --cream:#f7f2e7; --stone:#ece3cf; --white:#fffdf7; --ink:#262017; --ink-2:#6d6353; --line:#e2d8bf;
+  --moss:#3c5440; --moss-deep:#2a3c2e; --clay:#c2653a; --clay-deep:#a2502c;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Albert Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--clay-deep)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--clay);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(32px,4.2vw,46px)}
+h2{font-size:clamp(24px,3vw,30px)}
+h3{font-size:18px}
+.photo{background:var(--stone);overflow:hidden;border-radius:14px}
+.photo img{width:100%;height:100%;object-fit:cover}
+.btn{display:inline-flex;align-items:center;font:700 15px/1 var(--body);text-decoration:none;padding:14px 25px;border-radius:999px;border:1.5px solid transparent}
+.btn-primary{background:var(--clay);color:#fff}
+.btn-primary:hover{background:var(--clay-deep)}
+
+.concept{background:var(--moss-deep);color:#d8e2d8;font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:#fff}
+
+header.site{background:rgba(247,242,231,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1.1}
+.brand strong{font-family:var(--display);font-weight:600;font-size:19px}
+.brand span{font:600 10.5px/1 var(--body);letter-spacing:.12em;color:var(--clay-deep);margin-top:4px;text-transform:uppercase}
+.links{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
+.links a{color:var(--ink);text-decoration:none}
+.links a:hover{color:var(--clay-deep)}
+.links a[aria-current="page"]{color:var(--clay-deep)}
+.nav .btn{padding:11px 19px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:999px;padding:9px 11px;cursor:pointer}
+.menu-toggle svg{display:block}
+@media (max-width:980px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--cream);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+@media (max-width:460px){
+  .nav .btn{padding:10px 15px;font-size:12.5px}
+}
+
+section{padding-block:60px}
+.sec-head{max-width:620px;margin-bottom:32px}
+
+.about-hero .wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}
+.about-hero .photo{aspect-ratio:4/5}
+.about-copy p{margin:0 0 18px;max-width:62ch;color:var(--ink-2)}
+@media (max-width:860px){.about-hero .wrap{grid-template-columns:1fr}.about-hero .photo{max-width:300px}}
+
+.xena{background:var(--white);border-block:1px solid var(--line)}
+.xena-grid{display:grid;grid-template-columns:.6fr 1.4fr;gap:40px;align-items:center}
+.xena-grid .photo{aspect-ratio:1/1}
+.xena-grid h2{margin-bottom:4px}
+.xena-grid .trail-name{font-size:14px;color:var(--clay-deep);font-weight:700;margin-bottom:14px}
+.xena-grid p{color:var(--ink-2);margin:0 0 14px;max-width:60ch}
+@media (max-width:820px){.xena-grid{grid-template-columns:1fr}.xena-grid .photo{max-width:260px}}
+
+.contact{background:var(--moss);color:#eaf0ea}
+.contact-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.contact h2{color:#fff}
+.contact p{color:#c7d6c8;margin:8px 0 0}
+.contact .btn-primary{background:var(--clay)}
+.contact .btn-primary:hover{background:var(--clay-deep)}
+
+footer{background:var(--ink);color:#aaa193;font-size:13.5px;padding-block:30px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:var(--cream)}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Hiking Girl with Dog by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <strong>Hiking Girl with Dog</strong>
+      <span>Unplug &middot; Discover &middot; Recharge</span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Coaching &amp; Hikes</a></li>
+      <li><a href="hikes.html">Upcoming Hikes</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="contact.html">Book a Discovery Call</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="about-hero">
+  <div class="wrap">
+    <div class="photo"><img src="https://hikinggirlwithdog.com/wp-content/uploads/2023/07/20211017_093745.jpg?w=1024" alt="Jamie Sun on the trail"></div>
+    <div class="about-copy">
+      <h1 style="margin-bottom:20px">Hello, I'm Jamie</h1>
+      <p>I'm a holistic hiking coach, the founder of Hiking Girl with Dog, and a passionate advocate for reconnecting with nature. For over a decade, I've explored dog-friendly trails across LA and the South Bay, sharing those adventures to inspire others along the way.</p>
+      <p>What began in 2014 as simple weekend escapes grew into something much deeper, a path to healing, confidence and community. Along the way I discovered just how empowering hiking can be, for both people and pups, especially for those navigating life transitions, burnout, or simply craving more connection to themselves and the natural world.</p>
+      <p>That's what inspired me to turn this passion into a heart-driven business, helping others experience the same transformation through personalized coaching and curated group hikes. I specialize in small guided hikes and private sessions designed to meet you where you are, whether you're seasoned or just starting out, and I take the guesswork out of finding trails that are truly dog-friendly.</p>
+      <p>My mission is simple: to create meaningful, welcoming hiking experiences that leave you feeling more grounded, empowered and uplifted, because the trail doesn't just take you somewhere, it brings you back to yourself.</p>
+    </div>
+  </div>
+</section>
+
+<section class="xena">
+  <div class="wrap xena-grid">
+    <div class="photo"><img src="https://hikinggirlwithdog.com/wp-content/uploads/2021/09/sunset-peak-21-1.jpg?w=1000" alt="A trail Jamie and Xena hiked together"></div>
+    <div>
+      <h2>Xena</h2>
+      <p class="trail-name">Trail Name: Pink Goat &middot; 2012&ndash;2024</p>
+      <p>Xena was a gentle soul wrapped in 31 pounds of pure love, a mixed breed with a wise gaze and calm presence who touched countless lives during her 12 years on earth. People often said, "I wasn't a dog person, until I met Xena."</p>
+      <p>Whether on private hikes or guiding alongside me, we were true partners, always in step, always in sync. She had a gift for sensing who needed the most support, often slowing her pace to offer comfort or quietly making sure no one fell behind.</p>
+      <p>Though she crossed over the rainbow bridge in 2024, Xena still hikes with us in spirit. Her legacy lives on in the paw prints she left on the many hearts she helped open along the way.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap contact-inner">
+    <div>
+      <h2>Come find your trail</h2>
+      <p>Start with a free Discovery Call, no pressure, just a conversation.</p>
+    </div>
+    <a class="btn btn-primary" href="contact.html">Book a Free Discovery Call</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Hiking Girl with Dog</div>
+    <div>Coaching &middot; Small Group Hikes &middot; Private Events</div>
+    <div>Unplug. Discover. Recharge.</div>
+  </div>
+</footer>
+</body>
+</html>
