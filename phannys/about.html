@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Phanny's</title>
+<meta name="description" content="Phanny's has been serving the South Bay since 1982, specializing in breakfast, lunch and coffee from Redondo Beach and El Segundo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --paper:#f4efe1; --white:#fffcf5; --ink:#201c16; --ink-2:#6b6254; --line:#ddd2b4;
+  --red:#c23b2e; --red-deep:#9e2e23; --teal:#2b6e6e; --teal-soft:#e2edec;
+  --display:"Archivo Black",system-ui,sans-serif;
+  --body:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--red-deep)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(32px,4.4vw,48px)}
+h2{font-size:clamp(24px,3vw,30px)}
+h3{font-size:17px;font-family:var(--body);font-weight:800}
+.photo{background:var(--line);overflow:hidden;border-radius:4px}
+.photo img{width:100%;height:100%;object-fit:cover}
+.btn{display:inline-flex;align-items:center;font:700 15px/1 var(--body);text-decoration:none;padding:14px 25px;border-radius:3px;border:2px solid transparent}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:var(--red-deep)}
+
+.concept{background:var(--ink);color:#cfc6b4;font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:#fff}
+
+header.site{background:rgba(244,239,225,.94);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1}
+.brand strong{font-family:var(--display);font-weight:400;font-size:21px}
+.brand span{font:700 10px/1 var(--body);letter-spacing:.15em;color:var(--red-deep);margin-top:5px;text-transform:uppercase}
+.links{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
+.links a{color:var(--ink);text-decoration:none}
+.links a:hover{color:var(--red-deep)}
+.links a[aria-current="page"]{color:var(--red-deep)}
+.nav .btn{padding:11px 19px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:3px;padding:9px 11px;cursor:pointer}
+.menu-toggle svg{display:block}
+@media (max-width:980px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+@media (max-width:460px){
+  .nav .btn{padding:10px 15px;font-size:12.5px}
+}
+
+section{padding-block:60px}
+.sec-head{max-width:620px;margin-bottom:32px}
+
+.about-hero .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.about-hero .photo{aspect-ratio:4/3}
+.about-copy p{margin:0 0 18px;max-width:62ch;color:var(--ink-2)}
+@media (max-width:860px){.about-hero .wrap{grid-template-columns:1fr}}
+
+.stats{background:var(--white);border-block:1px solid var(--line)}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.stat{background:var(--white);padding:26px;text-align:center}
+.stat b{display:block;font-family:var(--display);font-weight:400;font-size:32px;margin-bottom:6px}
+.stat span{color:var(--ink-2);font-size:14px}
+@media (max-width:760px){.stat-grid{grid-template-columns:1fr}}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gallery .photo{aspect-ratio:1/1}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr}}
+
+.contact{background:var(--ink);color:#f0ebdd}
+.contact-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.contact h2{color:#fff}
+.contact p{color:#bfb6a3;margin:8px 0 0}
+.contact .btn-primary{background:var(--red)}
+.contact .btn-primary:hover{background:var(--red-deep)}
+
+footer{background:var(--ink);color:#8e866f;font-size:13.5px;padding-block:26px;border-top:1px solid #39331f}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:var(--paper)}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Phanny's by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <strong>Phanny's</strong>
+      <span>Home of the Breakfast Burrito</span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="locations.html">Order Ahead</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="about-hero">
+  <div class="wrap">
+    <div class="photo"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/sWEAwS891KaN-t3BKzeQ2A/l.jpg" alt="Inside Phanny's El Segundo"></div>
+    <div class="about-copy">
+      <h1 style="margin-bottom:20px">Serving the South Bay since 1982</h1>
+      <p>Phanny's has been a neighborhood fixture for over 40 years, specializing in breakfast, lunch and coffee. What started as a single counter in Redondo Beach grew into a second location in El Segundo, but the approach never changed: fresh ingredients, no shortcuts, and a burrito worth coming back for.</p>
+      <p>We're proud to be the kind of place where regulars know the order before they reach the counter, and where a health score of A and over a thousand combined reviews says more than we ever could.</p>
+      <p>Whether you're grabbing a burrito before work or settling in with a cup of Stumptown coffee, Phanny's is still, at its core, a simple neighborhood breakfast counter.</p>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The numbers</h2>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><b>1982</b><span>Founded in Redondo Beach</span></div>
+      <div class="stat"><b>A</b><span>Health score, both locations</span></div>
+      <div class="stat"><b>1,000+</b><span>Combined Yelp reviews</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Around the counter</h2>
+    </div>
+    <div class="gallery">
+      <div class="photo"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/udVTbUZytFp_pj0volJlxQ/l.jpg" alt="Phanny's counter"></div>
+      <div class="photo"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/QN7-OVkLlDlxljiZqv_wIw/l.jpg" alt="Phanny's breakfast burrito"></div>
+      <div class="photo"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/2HpFffdRF-UC4KpoIe2PCQ/l.jpg" alt="Inside Phanny's El Segundo"></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap contact-inner">
+    <div>
+      <h2>Come taste why people stay loyal for 40 years</h2>
+      <p>Two locations, open seven days a week except Monday.</p>
+    </div>
+    <a class="btn btn-primary" href="locations.html">Find a location</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Phanny's</div>
+    <div>Redondo Beach &middot; El Segundo</div>
+    <div>Home of the Breakfast Burrito</div>
+  </div>
+</footer>
+</body>
+</html>

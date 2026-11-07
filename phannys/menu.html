@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu | Phanny's</title>
+<meta name="description" content="Breakfast burritos, bacon and sausage, veggie and soy chorizo options, plus Stumptown coffee. The Phanny's menu, Redondo Beach and El Segundo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --paper:#f4efe1; --white:#fffcf5; --ink:#201c16; --ink-2:#6b6254; --line:#ddd2b4;
+  --red:#c23b2e; --red-deep:#9e2e23; --teal:#2b6e6e; --teal-soft:#e2edec;
+  --display:"Archivo Black",system-ui,sans-serif;
+  --body:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--red-deep)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(32px,4.4vw,48px)}
+h2{font-size:clamp(22px,2.6vw,26px)}
+.btn{display:inline-flex;align-items:center;font:700 15px/1 var(--body);text-decoration:none;padding:14px 25px;border-radius:3px;border:2px solid transparent}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:var(--red-deep)}
+
+.concept{background:var(--ink);color:#cfc6b4;font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:#fff}
+
+header.site{background:rgba(244,239,225,.94);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1}
+.brand strong{font-family:var(--display);font-weight:400;font-size:21px}
+.brand span{font:700 10px/1 var(--body);letter-spacing:.15em;color:var(--red-deep);margin-top:5px;text-transform:uppercase}
+.links{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
+.links a{color:var(--ink);text-decoration:none}
+.links a:hover{color:var(--red-deep)}
+.links a[aria-current="page"]{color:var(--red-deep)}
+.nav .btn{padding:11px 19px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:3px;padding:9px 11px;cursor:pointer}
+.menu-toggle svg{display:block}
+@media (max-width:980px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+@media (max-width:460px){
+  .nav .btn{padding:10px 15px;font-size:12.5px}
+}
+
+.page-hero{padding-block:52px 40px}
+.page-hero p{color:var(--ink-2);max-width:62ch;margin:14px 0 0;font-size:18px}
+
+section{padding-block:0 56px}
+.menu-table{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--white)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 22px;border-top:1px solid var(--line)}
+.row:first-child{border-top:none}
+.row .name{font-weight:700;font-size:16px}
+.row .name span{display:block;font-weight:400;color:var(--ink-2);font-size:13.5px;margin-top:2px}
+.row .tag{font:800 10.5px/1 var(--body);letter-spacing:.05em;color:var(--red-deep);text-transform:uppercase;margin-right:10px}
+.cat-label{font-family:var(--display);font-weight:400;font-size:20px;margin:40px 0 16px}
+.cat-label:first-child{margin-top:0}
+.note{background:var(--teal-soft);border:1px solid var(--line);border-radius:4px;padding:20px 24px;margin-top:40px}
+.note p{margin:0;color:var(--ink-2);font-size:15px}
+
+footer{background:var(--ink);color:#8e866f;font-size:13.5px;padding-block:26px;border-top:1px solid #39331f}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:var(--paper)}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Phanny's by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <strong>Phanny's</strong>
+      <span>Home of the Breakfast Burrito</span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" aria-current="page">Menu</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="locations.html">Order Ahead</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <h1>The menu</h1>
+    <p>Nine burritos, a handful of sides, and coffee worth the trip on its own.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <h2 class="cat-label">Burritos</h2>
+    <div class="menu-table">
+      <div class="row"><div class="name"><span class="tag">Most Popular</span>Breakfast Burrito<span>Hash browns, eggs, cheese &amp; salsa</span></div></div>
+      <div class="row"><div class="name">Bacon and Sausage Burrito<span>Double meat, extra hash browns</span></div></div>
+      <div class="row"><div class="name">Ham &amp; Bacon Burrito<span>A classic combo, done simple</span></div></div>
+      <div class="row"><div class="name"><span class="tag">Favorite</span>Carne Asada Burrito<span>Grilled steak with the classic fillings</span></div></div>
+      <div class="row"><div class="name">Meat Combo Sausage<span>A little of everything</span></div></div>
+      <div class="row"><div class="name">Meat Burrito<span>All the fixings, no extras</span></div></div>
+      <div class="row"><div class="name"><span class="tag">Plant-Based</span>Soy Chorizo Burrito<span>All the flavor, none of the meat</span></div></div>
+      <div class="row"><div class="name"><span class="tag">Plant-Based</span>Soyrizo Burrito<span>A lighter take on the classic</span></div></div>
+      <div class="row"><div class="name">Veggie Burrito<span>Fresh and simple, every morning</span></div></div>
+    </div>
+
+    <h2 class="cat-label">Coffee &amp; Drinks</h2>
+    <div class="menu-table">
+      <div class="row"><div class="name">Stumptown Coffee<span>Hot or iced, brewed fresh all day</span></div></div>
+      <div class="row"><div class="name">Espresso Drinks<span>Lattes, cappuccinos &amp; more</span></div></div>
+    </div>
+
+    <div class="note">
+      <p>Have a dairy allergy or other dietary need? Just ask, we're happy to leave off the eggs, cheese or meat on any burrito.</p>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Phanny's</div>
+    <div>Redondo Beach &middot; El Segundo</div>
+    <div>Home of the Breakfast Burrito</div>
+  </div>
+</footer>
+</body>
+</html>
