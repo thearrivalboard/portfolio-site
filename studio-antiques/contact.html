@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Studio Antiques</title>
+<meta name="description" content="Visit Studio Antiques in El Segundo, call, or email about buying, selling, trading or an appraisal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mulish:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --parchment:#f3ead9; --card:#e8dcc2; --white:#fbf5e8; --ink:#2a2017; --ink-2:#6e6150; --line:#d9c9a4;
+  --wine:#6b2737; --wine-deep:#4f1c28; --brass:#a67c3d; --brass-deep:#7e5d2b;
+  --display:"Abril Fatface",Georgia,serif;
+  --body:"Mulish",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--parchment);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--wine)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(32px,4.4vw,48px)}
+h2{font-size:clamp(22px,2.6vw,26px)}
+h3{font-size:17px;font-family:var(--body);font-weight:800}
+.btn{display:inline-flex;align-items:center;font:700 15px/1 var(--body);text-decoration:none;padding:14px 25px;border-radius:3px;border:1.5px solid transparent}
+.btn-primary{background:var(--wine);color:#fff}
+.btn-primary:hover{background:var(--wine-deep)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--parchment)}
+
+.concept{background:var(--ink);color:#cbbfa6;font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:#fff}
+
+header.site{background:rgba(243,234,217,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1.1}
+.brand strong{font-family:var(--display);font-weight:400;font-size:21px}
+.brand span{font:700 10px/1 var(--body);letter-spacing:.14em;color:var(--brass-deep);margin-top:4px;text-transform:uppercase}
+.links{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
+.links a{color:var(--ink);text-decoration:none}
+.links a:hover{color:var(--wine)}
+.links a[aria-current="page"]{color:var(--wine)}
+.nav .btn{padding:11px 19px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:3px;padding:9px 11px;cursor:pointer}
+.menu-toggle svg{display:block}
+@media (max-width:980px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--parchment);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+@media (max-width:460px){
+  .nav .btn{padding:10px 15px;font-size:12.5px}
+}
+
+.contact-hero{background:var(--wine);color:#f3e4e6;padding-block:52px}
+.contact-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.contact-hero h1{color:#fff;margin-bottom:14px}
+.contact-hero p{color:#e3c2c7;max-width:50ch;margin:0;font-size:18px}
+.details{border:1px solid rgba(255,255,255,.25);border-radius:4px;padding:26px;display:grid;gap:16px;margin:0}
+.details dt{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:#dcb3b8;margin-bottom:3px}
+.details dd{margin:0;font-size:17px;font-weight:700}
+.details a{color:#fff;text-decoration:none}
+@media (max-width:860px){.contact-hero-grid{grid-template-columns:1fr}}
+
+section{padding-block:60px}
+.sec-head{max-width:620px;margin-bottom:28px}
+
+.reach-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.reach-card{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:26px}
+.reach-card h3{margin:0 0 8px}
+.reach-card p{margin:0 0 16px;color:var(--ink-2);font-size:15px}
+@media (max-width:760px){.reach-grid{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#a89b83;font-size:13.5px;padding-block:30px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:var(--parchment)}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Studio Antiques by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <strong>Studio Antiques</strong>
+      <span>El Segundo, Since 1999</span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Buy, Sell &amp; Trade</a></li>
+      <li><a href="finds.html">Featured Finds</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#top">Visit the Shop</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<section class="contact-hero">
+  <div class="wrap contact-hero-grid">
+    <div>
+      <h1>Come say hello.</h1>
+      <p>Stop by the shop, give us a call, or send a message about buying, selling, trading or an appraisal.</p>
+    </div>
+    <dl class="details">
+      <div><dt>Address</dt><dd>337 Richmond St, El Segundo, CA 90245</dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:+13103223895">(310) 322-3895</a></dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:shop@studioantiques.com">shop@studioantiques.com</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Reach out about</h2>
+    </div>
+    <div class="reach-grid">
+      <div class="reach-card">
+        <h3>Buying or browsing</h3>
+        <p>New items added daily, the best way to see what's current is to stop by.</p>
+        <a class="btn btn-ghost" href="tel:+13103223895">Call (310) 322-3895</a>
+      </div>
+      <div class="reach-card">
+        <h3>Selling, trading or an appraisal</h3>
+        <p>Tell us what you have and we'll let you know how we can help.</p>
+        <a class="btn btn-ghost" href="mailto:shop@studioantiques.com?subject=Selling%2C%20trading%20or%20appraisal%20inquiry">Email the shop</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Studio Antiques</div>
+    <div>Antiques &middot; Collectibles &middot; Furniture &middot; Vinyl Records</div>
+    <div>337 Richmond St, El Segundo, CA</div>
+  </div>
+</footer>
+</body>
+</html>

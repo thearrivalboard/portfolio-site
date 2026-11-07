@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Featured Finds | Studio Antiques</title>
+<meta name="description" content="Rare vinyl, fine jewelry, antique glass and one-of-a-kind collectibles currently at Studio Antiques in El Segundo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mulish:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --parchment:#f3ead9; --card:#e8dcc2; --white:#fbf5e8; --ink:#2a2017; --ink-2:#6e6150; --line:#d9c9a4;
+  --wine:#6b2737; --wine-deep:#4f1c28; --brass:#a67c3d; --brass-deep:#7e5d2b;
+  --display:"Abril Fatface",Georgia,serif;
+  --body:"Mulish",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--parchment);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--wine)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(32px,4.4vw,48px)}
+h2{font-size:clamp(20px,2.2vw,24px)}
+h3{font-size:15.5px;font-family:var(--body);font-weight:800}
+.btn{display:inline-flex;align-items:center;font:700 15px/1 var(--body);text-decoration:none;padding:14px 25px;border-radius:3px;border:1.5px solid transparent}
+.btn-primary{background:var(--wine);color:#fff}
+.btn-primary:hover{background:var(--wine-deep)}
+
+.concept{background:var(--ink);color:#cbbfa6;font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:#fff}
+
+header.site{background:rgba(243,234,217,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1.1}
+.brand strong{font-family:var(--display);font-weight:400;font-size:21px}
+.brand span{font:700 10px/1 var(--body);letter-spacing:.14em;color:var(--brass-deep);margin-top:4px;text-transform:uppercase}
+.links{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
+.links a{color:var(--ink);text-decoration:none}
+.links a:hover{color:var(--wine)}
+.links a[aria-current="page"]{color:var(--wine)}
+.nav .btn{padding:11px 19px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:3px;padding:9px 11px;cursor:pointer}
+.menu-toggle svg{display:block}
+@media (max-width:980px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--parchment);border-bottom:1px solid var(--line);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+@media (max-width:460px){
+  .nav .btn{padding:10px 15px;font-size:12.5px}
+}
+
+.page-hero{padding-block:52px 40px}
+.page-hero p{color:var(--ink-2);max-width:62ch;margin:14px 0 0;font-size:18px}
+
+section{padding-block:0 56px}
+.find-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.find{background:var(--white);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.find .photo{aspect-ratio:1/1;background:var(--card)}
+.find .photo img{width:100%;height:100%;object-fit:cover}
+.find .body{padding:16px 18px}
+.find h3{margin-bottom:6px}
+.find p{margin:0;color:var(--ink-2);font-size:13px}
+.find .price{color:var(--wine);font-weight:800;font-size:14.5px;margin-top:8px}
+@media (max-width:860px){.find-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.find-grid{grid-template-columns:1fr}}
+
+.note{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:26px 28px;margin-top:40px}
+.note p{margin:0;color:var(--ink-2)}
+
+footer{background:var(--ink);color:#a89b83;font-size:13.5px;padding-block:30px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:var(--parchment)}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Studio Antiques by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <strong>Studio Antiques</strong>
+      <span>El Segundo, Since 1999</span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Buy, Sell &amp; Trade</a></li>
+      <li><a href="finds.html" aria-current="page">Featured Finds</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="contact.html">Visit the Shop</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Featured finds</h1>
+    <p>A sample of what's actually passed through the shop, rare records, fine jewelry, and the kind of pieces you stumble into rather than search for.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="find-grid">
+      <div class="find">
+        <div class="photo"><img src="https://studioantiques.com/wp-content/uploads/2017/03/BuyAntiques-400x200.jpg" alt="Captain Beefheart Lick My Decals Off Baby LP"></div>
+        <div class="body"><h3>Captain Beefheart &amp; Magic Band, "Lick My Decals Off Baby" LP, 1st Press, 1970</h3><p class="price">$49.00</p></div>
+      </div>
+      <div class="find">
+        <div class="photo"><img src="https://studioantiques.com/wp-content/uploads/2017/03/slider1886-700x300.jpg" alt="Netsuke Boy with Dog Japanese porcelain"></div>
+        <div class="body"><h3>Netsuke Boy with Dog, Japanese Porcelain, 1615&ndash;1856, Signed</h3><p class="price">$2,800.00</p></div>
+      </div>
+      <div class="find">
+        <div class="photo"><img src="https://studioantiques.com/wp-content/uploads/2017/03/sliderjewelry5.jpg" alt="Vintage turquoise jewelry"></div>
+        <div class="body"><h3>Vintage Turquoise &amp; Silver Jewelry Collection</h3><p class="price">Priced individually</p></div>
+      </div>
+      <div class="find">
+        <div class="photo"><img src="https://studioantiques.com/wp-content/uploads/2017/03/sliderSA-05.jpg" alt="Antique perfume and glass bottles"></div>
+        <div class="body"><h3>Antique Perfume &amp; Crystal Bottle Collection</h3><p class="price">Priced individually</p></div>
+      </div>
+    </div>
+
+    <div class="note">
+      <p>Original Led Zeppelin "Live Los Angeles Forum" ticket stub and Rubber Dubber bootleg 2xLP (1970), Northern Soul 45s, estate jewelry and more move through the shop regularly. Stop by to see what's currently on the floor, our inventory changes daily.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Studio Antiques</div>
+    <div>Antiques &middot; Collectibles &middot; Furniture &middot; Vinyl Records</div>
+    <div>337 Richmond St, El Segundo, CA</div>
+  </div>
+</footer>
+</body>
+</html>
