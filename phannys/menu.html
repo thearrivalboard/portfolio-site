@@ -62,8 +62,10 @@ header.site{background:rgba(244,239,225,.94);backdrop-filter:blur(8px);border-bo
 
 section{padding-block:0 56px}
 .menu-table{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--white)}
-.row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 22px;border-top:1px solid var(--line)}
+.row{display:flex;align-items:center;gap:16px;padding:14px 22px;border-top:1px solid var(--line)}
 .row:first-child{border-top:none}
+.row .thumb{width:60px;height:60px;border-radius:4px;overflow:hidden;background:var(--paper);flex-shrink:0}
+.row .thumb img{width:100%;height:100%;object-fit:cover}
 .row .name{font-weight:700;font-size:16px}
 .row .name span{display:block;font-weight:400;color:var(--ink-2);font-size:13.5px;margin-top:2px}
 .row .tag{font:800 10.5px/1 var(--body);letter-spacing:.05em;color:var(--red-deep);text-transform:uppercase;margin-right:10px}
@@ -114,15 +116,15 @@ footer a{color:var(--paper)}
 
     <h2 class="cat-label">Burritos</h2>
     <div class="menu-table">
-      <div class="row"><div class="name"><span class="tag">Most Popular</span>Breakfast Burrito<span>Hash browns, eggs, cheese &amp; salsa</span></div></div>
-      <div class="row"><div class="name">Bacon and Sausage Burrito<span>Double meat, extra hash browns</span></div></div>
-      <div class="row"><div class="name">Ham &amp; Bacon Burrito<span>A classic combo, done simple</span></div></div>
-      <div class="row"><div class="name"><span class="tag">Favorite</span>Carne Asada Burrito<span>Grilled steak with the classic fillings</span></div></div>
-      <div class="row"><div class="name">Meat Combo Sausage<span>A little of everything</span></div></div>
-      <div class="row"><div class="name">Meat Burrito<span>All the fixings, no extras</span></div></div>
-      <div class="row"><div class="name"><span class="tag">Plant-Based</span>Soy Chorizo Burrito<span>All the flavor, none of the meat</span></div></div>
-      <div class="row"><div class="name"><span class="tag">Plant-Based</span>Soyrizo Burrito<span>A lighter take on the classic</span></div></div>
-      <div class="row"><div class="name">Veggie Burrito<span>Fresh and simple, every morning</span></div></div>
+      <div class="row"><div class="thumb"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/kVfK_pgK_hsKUM8vaogn0Q/l.jpg" alt="Breakfast Burrito"></div><div class="name"><span class="tag">Most Popular</span>Breakfast Burrito<span>Hash browns, eggs, cheese &amp; salsa</span></div></div>
+      <div class="row"><div class="thumb"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/dKSLbr87YpkD-p-JLv5CSw/l.jpg" alt="Bacon and Sausage Burrito"></div><div class="name">Bacon and Sausage Burrito<span>Double meat, extra hash browns</span></div></div>
+      <div class="row"><div class="thumb"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/7oxqXyB7SfXn2OVTkqjkTw/l.jpg" alt="Ham & Bacon Burrito"></div><div class="name">Ham &amp; Bacon Burrito<span>A classic combo, done simple</span></div></div>
+      <div class="row"><div class="thumb"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/Q_S-cQe4jE_I8lTg-SFWAQ/l.jpg" alt="Carne Asada Burrito"></div><div class="name"><span class="tag">Favorite</span>Carne Asada Burrito<span>Grilled steak with the classic fillings</span></div></div>
+      <div class="row"><div class="thumb"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/XjCopqHLrKtycq5iPTEpUA/l.jpg" alt="Meat Combo Sausage"></div><div class="name">Meat Combo Sausage<span>A little of everything</span></div></div>
+      <div class="row"><div class="thumb"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/qGj8fVHtswfLvQ-alo2mSg/l.jpg" alt="Meat Burrito"></div><div class="name">Meat Burrito<span>All the fixings, no extras</span></div></div>
+      <div class="row"><div class="thumb"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/udVTbUZytFp_pj0volJlxQ/l.jpg" alt="Soy Chorizo Burrito"></div><div class="name"><span class="tag">Plant-Based</span>Soy Chorizo Burrito<span>All the flavor, none of the meat</span></div></div>
+      <div class="row"><div class="thumb"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/ye0aSaK6CGYBNuVqSqBjXw/l.jpg" alt="Soyrizo Burrito"></div><div class="name"><span class="tag">Plant-Based</span>Soyrizo Burrito<span>A lighter take on the classic</span></div></div>
+      <div class="row"><div class="thumb"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/jL7cQ_JmI9Rm9XccHku-UA/l.jpg" alt="Veggie Burrito"></div><div class="name">Veggie Burrito<span>Fresh and simple, every morning</span></div></div>
     </div>
 
     <h2 class="cat-label">Coffee &amp; Drinks</h2>
