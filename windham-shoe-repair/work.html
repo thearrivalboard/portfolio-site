@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Work | Windham Shoe Repair</title>
+<meta name="description" content="A look at real repairs from Windham Shoe Repair in Lawndale, resoled dress shoes, boots and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Readex+Pro:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --canvas:#f2ede2; --white:#fffbf2; --ink:#211c16; --ink-2:#685f50; --line:#ddd2bd;
+  --navy:#1f3350; --navy-deep:#152538; --gold:#c89730; --gold-deep:#a37722;
+  --display:"Alfa Slab One",Georgia,serif;
+  --body:"Readex Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--canvas);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--gold-deep)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.2;margin:0;text-wrap:balance}
+h1{font-size:clamp(28px,3.8vw,42px)}
+h2{font-size:clamp(19px,2.1vw,22px)}
+.btn{display:inline-flex;align-items:center;font:700 15px/1 var(--body);text-decoration:none;padding:14px 25px;border-radius:3px;border:2px solid transparent}
+.btn-primary{background:var(--gold);color:#241a05}
+.btn-primary:hover{background:var(--gold-deep);color:#fff}
+
+.concept{background:var(--navy-deep);color:#c7cfdb;font-size:13px;text-align:center;padding:9px 20px}
+.concept b{color:#fff}
+
+header.site{background:rgba(242,237,226,.94);backdrop-filter:blur(8px);border-bottom:2px solid var(--navy);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1.1}
+.brand strong{font-family:var(--display);font-weight:400;font-size:19px}
+.brand span{font:700 10px/1 var(--body);letter-spacing:.12em;color:var(--gold-deep);margin-top:5px;text-transform:uppercase}
+.links{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
+.links a{color:var(--ink);text-decoration:none}
+.links a:hover{color:var(--gold-deep)}
+.links a[aria-current="page"]{color:var(--gold-deep)}
+.nav .btn{padding:11px 19px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:3px;padding:9px 11px;cursor:pointer}
+.menu-toggle svg{display:block}
+@media (max-width:980px){
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--canvas);border-bottom:2px solid var(--navy);padding:6px 24px 14px;display:none}
+  .links.open{display:flex}
+  .links li{width:100%}
+  .links a{display:block;padding:12px 0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  header.site .nav{position:relative}
+}
+@media (max-width:460px){
+  .nav .btn{padding:10px 15px;font-size:12.5px}
+}
+
+.page-hero{padding-block:52px 40px}
+.page-hero p{color:var(--ink-2);max-width:62ch;margin:14px 0 0;font-size:18px}
+
+section{padding-block:0 56px}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gal-grid .photo{aspect-ratio:3/4;background:var(--line);border-radius:4px;overflow:hidden}
+.gal-grid .photo img{width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.gal-grid{grid-template-columns:1fr 1fr}}
+
+.note{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:26px 28px;margin-top:40px}
+.note p{margin:0;color:var(--ink-2)}
+
+footer{background:var(--navy-deep);color:#9aa4b8;font-size:13.5px;padding-block:30px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer a{color:var(--canvas)}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Redesign concept</b> prepared for Windham Shoe Repair by KM Designs. Not the live site.</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <strong>Windham</strong>
+      <span>Shoe Repair &amp; Keys</span>
+    </a>
+    <ul class="links" id="mobile-links" onclick="this.classList.remove('open');var t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu')}">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html" aria-current="page">Our Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="contact.html">Get in Touch</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open menu" onclick="var l=document.getElementById('mobile-links');var open=l.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close menu':'Open menu')">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Our work</h1>
+    <p>Real repairs, right outside our door. Every shoe here came in needing help and left ready for another few years.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="gal-grid">
+      <div class="photo"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/vrm7Qc76LIa7vLBvrU0kzA/o.jpg" alt="A freshly repaired loafer"></div>
+      <div class="photo"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/7suUA2Q3eMkH2ymvFMC-2w/o.jpg" alt="A resoled shoe, bottom view"></div>
+      <div class="photo"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/BxEcV9P8rskSDadMixAcYQ/o.jpg" alt="A repaired pair of loafers"></div>
+      <div class="photo"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/PMtlZdH2ipkzOMiQgX6qbg/o.jpg" alt="Iggy working at the finishing machine"></div>
+      <div class="photo"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/GxHh7qpRFMVG6u1xc25Bcw/o.jpg" alt="Inside the Windham Shoe Repair workshop"></div>
+    </div>
+
+    <div class="note">
+      <p>Every pair is different, which is why we look at your shoes in person before quoting a price. Bring them in and we'll tell you honestly what it'll take.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Windham Shoe Repair</div>
+    <div>Shoe Repair &middot; Shoe Shine &middot; Shoe Cleaning &middot; Keys</div>
+    <div>15128 Hawthorne Blvd, Lawndale, CA</div>
+  </div>
+</footer>
+</body>
+</html>
