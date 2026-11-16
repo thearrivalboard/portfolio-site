@@ -169,6 +169,13 @@ section{padding-block:84px}
 .hero-photo.video-block{aspect-ratio:21/9}
 @media (max-width:760px){.hero-photo.video-block{aspect-ratio:3/4}}
 
+/* video cards */
+.video-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.video-card .video-title{margin:12px 0 10px}
+.video-card p{margin:14px 0 10px;color:var(--slate);font-size:15px;line-height:1.55}
+.video-card .video-link{font:600 13px/1 var(--mono);letter-spacing:.02em}
+@media (max-width:900px){.video-cards{grid-template-columns:1fr;max-width:640px}}
+
 /* leaders */
 .leaders{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .leader{background:var(--white);border:1px solid var(--dune);padding:0;border-radius:4px;overflow:hidden}
@@ -441,6 +448,68 @@ footer a{color:var(--bone)}
           <div class="office">Las Vegas, NV</div>
           <div class="leader-actions"><a href="#">View profile</a><a href="#">Book 20 min</a></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="from-the-firm">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>From the firm</h2>
+      <p>Who we are, what we're reading and what's new.</p>
+    </div>
+    <div class="video-cards">
+      <div class="video-card">
+        <div class="video-rule"></div>
+        <div class="video-title">About Cooper Levenson</div>
+        <div class="video-block">
+          <video id="about-video" preload="none" poster="https://www.cooperlevenson.com/wp-content/uploads/2026/07/CooperLevenson_BPTW_2.webp" playsinline aria-label="About Cooper Levenson">
+            <!-- TODO: add about-video.mp4 once footage exists -->
+            <source src="assets/video/about-video.mp4" type="video/mp4">
+            <track kind="captions" src="assets/video/about-video.en.vtt" srclang="en" label="English" default>
+          </video>
+          <button class="video-play" type="button" aria-label="Play video: About Cooper Levenson" onclick="playInlineVideo('about-video',this)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <p>Our history, our people and how the firm works across seven offices.</p>
+        <!-- TODO: about-video.mp4 is a placeholder (1 to 2 min) -->
+        <a class="video-link" href="about.html">Read more about the firm &rarr;</a>
+      </div>
+      <div class="video-card">
+        <div class="video-rule"></div>
+        <div class="video-title">Firm news</div>
+        <div class="video-block">
+          <video id="news-video" preload="none" poster="https://www.cooperlevenson.com/wp-content/uploads/2025/09/gaming_igaming_law_coverimage.webp" playsinline aria-label="Firm news">
+            <!-- TODO: add news-video.mp4 once footage exists -->
+            <source src="assets/video/news-video.mp4" type="video/mp4">
+            <track kind="captions" src="assets/video/news-video.en.vtt" srclang="en" label="English" default>
+          </video>
+          <button class="video-play" type="button" aria-label="Play video: Firm news" onclick="playInlineVideo('news-video',this)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <p>A short look at recent news, rulings and announcements from our attorneys.</p>
+        <!-- TODO: news-video.mp4 is a placeholder; link to a real news page when one exists -->
+        <a class="video-link" href="gaming-igaming.html#insights">See all news and insights &rarr;</a>
+      </div>
+      <div class="video-card">
+        <div class="video-rule"></div>
+        <div class="video-title">What's new</div>
+        <div class="video-block">
+          <video id="whats-new-video" preload="none" poster="https://www.cooperlevenson.com/wp-content/uploads/2025/09/Commercial-Litigation.webp" playsinline aria-label="What's new">
+            <!-- TODO: add whats-new-video.mp4 once footage exists -->
+            <source src="assets/video/whats-new-video.mp4" type="video/mp4">
+            <track kind="captions" src="assets/video/whats-new-video.en.vtt" srclang="en" label="English" default>
+          </video>
+          <button class="video-play" type="button" aria-label="Play video: What's new" onclick="playInlineVideo('whats-new-video',this)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <p>New services, new resources and updates from our practice groups and offices.</p>
+        <!-- TODO: whats-new-video.mp4 is a placeholder; link to a real updates page when one exists -->
+        <a class="video-link" href="gaming-igaming.html#insights">See what's new &rarr;</a>
       </div>
     </div>
   </div>
