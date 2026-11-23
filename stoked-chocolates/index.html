@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stoked Chocolates | Handcrafted Chocolate, Hermosa Beach</title>
+<meta name="description" content="Redesign concept for Stoked Chocolates: handcrafted chocolates and custom gift boxes made in Hermosa Beach, CA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f6f0e3;
+  --fg:#221c17;
+  --muted:#73685a;
+  --surface:#fffaf0;
+  --accent:#2f8f94;
+  --accent-2:#6a2f45;
+  --line:rgba(34,28,23,0.14);
+  --font-display:'Fredoka',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+}
+h1,h2,h3{
+  font-family:var(--font-display);
+  font-weight:600;
+  line-height:1.1;
+  text-wrap:balance;
+  margin:0;
+}
+p{margin:0;}
+img{max-width:100%;display:block;border-radius:6px;}
+a{color:var(--accent);}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:24px;}
+
+.concept-banner{
+  background:var(--accent-2);
+  color:#fff;
+  text-align:center;
+  font-size:13px;
+  letter-spacing:.02em;
+  padding:8px 24px;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:22px 0;
+  flex-wrap:wrap;
+}
+.logo-mark{height:48px;width:auto;}
+.nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:15px;}
+.nav-links a{color:var(--fg);text-decoration:none;}
+.nav-links a:hover{color:var(--accent);}
+.btn{
+  display:inline-block;
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:14px;
+  padding:12px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  border:1.5px solid var(--fg);
+  color:var(--fg);
+}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:#09201f;}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
+
+.hero{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:48px;
+  align-items:center;
+  padding:48px 0 72px;
+}
+.hero h1{font-size:clamp(34px,5vw,52px);}
+.hero p.lede{margin-top:18px;color:var(--muted);font-size:18px;max-width:46ch;}
+.hero-photo{
+  transform:rotate(3deg);
+  background:var(--surface);
+  padding:10px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.18);
+  border-radius:4px;
+  justify-self:center;
+  width:min(320px,80%);
+}
+.hero-photo img{border-radius:2px;}
+
+section{padding:64px 0;border-top:1px solid var(--line);}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.split.reverse .media{order:2;}
+.eyebrow-free h2{font-size:clamp(26px,3.6vw,36px);margin-bottom:18px;}
+.split p{color:var(--muted);font-size:16.5px;max-width:52ch;}
+.media img{box-shadow:0 14px 30px rgba(0,0,0,0.14);}
+.feature-list{margin:22px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;color:var(--muted);font-size:15.5px;}
+.feature-list li{padding-left:22px;position:relative;}
+.feature-list li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--accent);}
+
+.flavor-head{text-align:left;max-width:60ch;margin-bottom:36px;}
+.flavor-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start;}
+.flavor-list{display:flex;flex-direction:column;}
+.flavor-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
+  gap:16px;
+}
+.flavor-row:first-child{border-top:1px solid var(--line);}
+.flavor-name{font-weight:600;}
+.flavor-tag{display:block;color:var(--muted);font-size:13.5px;margin-top:2px;}
+.flavor-price{font-family:var(--font-display);color:var(--accent);font-weight:600;white-space:nowrap;}
+
+.panel{
+  background:var(--surface);
+  border-radius:16px;
+  padding:48px;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:28px;
+  align-items:center;
+}
+.panel svg{width:56px;height:56px;flex:none;}
+.panel h2{font-size:24px;margin-bottom:10px;}
+.panel p{color:var(--muted);font-size:16px;max-width:56ch;}
+
+footer{padding:56px 0 64px;}
+.foot-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;}
+.foot-col h3{font-size:15px;margin-bottom:10px;}
+.foot-col p, .foot-col a{color:var(--muted);font-size:15px;text-decoration:none;display:block;}
+.copy-btn{
+  margin-top:10px;
+  font-size:13px;
+  border:1px solid var(--line);
+  background:none;
+  color:var(--fg);
+  padding:7px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  font-family:var(--font-body);
+}
+.foot-note{margin-top:40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:20px;}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:28px;}
+  .hero-photo{order:-1;width:min(260px,70%);margin:0 auto;}
+  .split, .split.reverse{grid-template-columns:1fr;}
+  .split.reverse .media{order:0;}
+  .flavor-grid{grid-template-columns:1fr;}
+  .panel{grid-template-columns:1fr;text-align:left;}
+  .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="concept-banner">Redesign concept by KM Designs — not the live site</div>
+
+<div class="wrap">
+
+<nav>
+  <img class="logo-mark" alt="Stoked Chocolates" src="stoked-assets/logo.png">
+  <ul class="nav-links">
+    <li><a href="#gifts">Gift Boxes</a></li>
+    <li><a href="#flavors">Flavors</a></li>
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="btn solid" href="#contact">Order a custom box</a>
+</nav>
+
+<section class="hero" style="border-top:none;">
+  <div>
+    <h1>Handcrafted chocolate, made a few blocks from the water.</h1>
+    <p class="lede">Small-batch chocolates and caramels, made by hand in Hermosa Beach. Built out of a love for the ocean as much as the chocolate, with custom gift boxes for birthdays, holidays, and everything in between.</p>
+    <div class="btn-row">
+      <a class="btn solid" href="#flavors">See the flavors</a>
+      <a class="btn" href="#gifts">Custom gift boxes</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img alt="Stoked Chocolates, out in the water" src="stoked-assets/hero.jpg">
+  </div>
+</section>
+
+<section id="gifts">
+  <div class="split eyebrow-free">
+    <div class="media"><img alt="Stoked Chocolates gift box" src="stoked-assets/octopus-box.jpg"></div>
+    <div>
+      <h2>Gift boxes for every occasion</h2>
+      <p>Our six-piece box can be customized to your liking, with a choice of ribbon colors and two carefully crafted flavors per box. Larger assortments and gift sets are available for weddings, offices, and holiday orders.</p>
+      <ul class="feature-list">
+        <li>Custom ribbon colors on every box</li>
+        <li>Pick two flavors per six-piece box</li>
+        <li>Bulk and corporate gift orders welcome</li>
+      </ul>
+      <div class="btn-row"><a class="btn" href="#contact">Ask about a custom order</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="flavors">
+  <div class="flavor-head eyebrow-free">
+    <h2>A few of the flavors</h2>
+  </div>
+  <div class="flavor-grid">
+    <div class="media"><img alt="Stoked Chocolates tray" src="stoked-assets/tray.jpg"></div>
+    <div class="flavor-list">
+      <div class="flavor-row"><span><span class="flavor-name">Sand Dollars</span><span class="flavor-tag">4 pc</span></span><span class="flavor-price">$10</span></div>
+      <div class="flavor-row"><span><span class="flavor-name">Doheny Berry Bar</span></span><span class="flavor-price">$13</span></div>
+      <div class="flavor-row"><span><span class="flavor-name">Maverick's Crunch Bar</span></span><span class="flavor-price">$13</span></div>
+      <div class="flavor-row"><span><span class="flavor-name">Cove Coffee Bar</span></span><span class="flavor-price">$13</span></div>
+      <div class="flavor-row"><span><span class="flavor-name">Waikiki Pineapple Bar</span></span><span class="flavor-price">$13</span></div>
+      <div class="flavor-row"><span><span class="flavor-name">Caramel Assortment</span></span><span class="flavor-price">$16</span></div>
+      <div class="flavor-row"><span><span class="flavor-name">Longboard Gift Set</span></span><span class="flavor-price">$50</span></div>
+      <div class="flavor-row"><span><span class="flavor-name">Chocolate Gift Set</span></span><span class="flavor-price">$50</span></div>
+      <div class="btn-row"><a class="btn solid" href="#contact">See the full lineup</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="panel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6"><path d="M2 17c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0M2 12c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0M2 7c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/></svg>
+    <div>
+      <h2>More chocolate, less plastic</h2>
+      <p>Every box ships in sustainable packaging whenever possible, our way of honoring the ocean the shop is named after.</p>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="split reverse eyebrow-free">
+    <div class="media"><img alt="Stoked Chocolates gift boxes" src="stoked-assets/assorted.jpg"></div>
+    <div>
+      <h2>Our story</h2>
+      <p>Stoked Chocolates was created out of a passion for chocolate and surfing. Each box is inspired by the stoke of a day spent in the ocean, surrounded by friends and family, and made by hand with the finest ingredients and paper. We hope you love them as much as we do, and spread the stoke.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="foot-grid">
+    <div class="foot-col">
+      <h3>Visit</h3>
+      <p>1134 Hermosa Ave<br>Hermosa Beach, CA 90254</p>
+    </div>
+    <div class="foot-col">
+      <h3>Order a custom box</h3>
+      <p>stokedchocolates@gmail.com</p>
+      <button class="copy-btn" onclick="navigator.clipboard?.writeText('stokedchocolates@gmail.com').catch(()=>{});this.textContent='Copied'">Copy email</button>
+    </div>
+    <div class="foot-col">
+      <h3>Stoked Chocolates</h3>
+      <p>Handcrafted in Hermosa Beach, CA</p>
+    </div>
+  </div>
+  <div class="foot-note">This is a redesign concept built by KM Designs as an example of what a new site could look like. Not affiliated with or published by Stoked Chocolates.</div>
+</footer>
+
+</div>
+</body>
+</html>
