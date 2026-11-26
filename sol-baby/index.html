@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sol Baby | Kids Clothing &amp; Accessories, Hermosa Beach</title>
+<meta name="description" content="Redesign concept for Sol Baby: original SoCal-inspired kids clothing and accessories, family-owned in Hermosa Beach since 2007.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#fff8ef;
+  --fg:#3a2314;
+  --muted:#7a6a5c;
+  --surface:#ffffff;
+  --coral:#f0527a;
+  --sun:#ffc23c;
+  --sky:#4fb3c9;
+  --line:rgba(58,35,20,0.12);
+  --font-display:'Baloo 2',system-ui,sans-serif;
+  --font-body:'Nunito',system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+}
+h1,h2,h3{
+  font-family:var(--font-display);
+  font-weight:700;
+  line-height:1.1;
+  text-wrap:balance;
+  margin:0;
+}
+p{margin:0;}
+img{max-width:100%;display:block;}
+a{color:var(--coral);}
+a:focus-visible,button:focus-visible{outline:2px solid var(--coral);outline-offset:3px;}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:24px;}
+
+.concept-banner{
+  background:var(--fg);
+  color:#fff8ef;
+  text-align:center;
+  font-size:13px;
+  letter-spacing:.02em;
+  padding:8px 24px;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:20px 0;
+  flex-wrap:wrap;
+}
+.logo-pill{
+  background:#fff;
+  border-radius:999px;
+  padding:8px 18px;
+  box-shadow:0 2px 10px rgba(58,35,20,0.08);
+}
+.logo-pill img{height:26px;width:auto;}
+.nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:700;}
+.nav-links a{color:var(--fg);text-decoration:none;}
+.nav-links a:hover{color:var(--coral);}
+.btn{
+  display:inline-block;
+  font-family:var(--font-body);
+  font-weight:800;
+  font-size:14px;
+  padding:13px 24px;
+  border-radius:999px;
+  text-decoration:none;
+  border:2px solid var(--fg);
+  color:var(--fg);
+}
+.btn.solid{background:var(--coral);border-color:var(--coral);color:#fff;}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+
+.hero{position:relative;border-radius:28px;overflow:hidden;margin-top:8px;}
+.hero img{width:100%;height:clamp(320px,52vw,520px);object-fit:cover;object-position:center 30%;}
+.hero-card{
+  position:absolute;
+  left:24px;
+  right:24px;
+  bottom:24px;
+  max-width:560px;
+  background:#fff8ef;
+  border-radius:22px;
+  padding:30px 32px;
+  box-shadow:0 18px 40px rgba(58,35,20,0.22);
+}
+.hero-card h1{font-size:clamp(26px,4vw,38px);}
+.hero-card p.lede{margin-top:12px;color:var(--muted);font-size:16px;max-width:42ch;}
+
+.sun-accent{
+  position:absolute;
+  top:-26px;
+  right:-26px;
+  width:72px;
+  height:72px;
+  background:var(--sun);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 24px rgba(58,35,20,0.2);
+}
+.sun-accent svg{width:36px;height:36px;}
+
+section{padding:60px 0;}
+.section-head{max-width:60ch;margin-bottom:32px;}
+.section-head h2{font-size:clamp(26px,3.6vw,34px);}
+.section-head p{color:var(--muted);font-size:16px;margin-top:10px;}
+
+.collections-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px 20px;
+}
+.collection-card{text-align:center;}
+.sticker{
+  width:100%;
+  aspect-ratio:1;
+  border-radius:50%;
+  overflow:hidden;
+  border:5px solid #fff;
+  box-shadow:0 10px 26px rgba(58,35,20,0.16);
+  position:relative;
+}
+.sticker img{width:100%;height:100%;object-fit:cover;}
+.collection-card:nth-child(3n+1) .sticker{outline:3px dashed var(--coral);outline-offset:6px;}
+.collection-card:nth-child(3n+2) .sticker{outline:3px dashed var(--sun);outline-offset:6px;}
+.collection-card:nth-child(3n+3) .sticker{outline:3px dashed var(--sky);outline-offset:6px;}
+.collection-card span{display:block;margin-top:18px;font-family:var(--font-display);font-weight:700;font-size:16px;}
+.collection-card small{display:block;color:var(--muted);font-size:13px;margin-top:2px;}
+
+.product-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.product-card{
+  background:var(--surface);
+  border-radius:20px;
+  padding:18px;
+  box-shadow:0 10px 26px rgba(58,35,20,0.1);
+}
+.product-card img{border-radius:14px;background:#fdf3e4;aspect-ratio:1;object-fit:contain;}
+.product-card .pname{font-weight:700;margin-top:14px;font-size:15px;}
+.product-card .pprice{color:var(--coral);font-family:var(--font-display);font-weight:700;margin-top:4px;}
+
+.reviews-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.review-card{
+  background:var(--surface);
+  border-radius:20px;
+  padding:26px;
+  box-shadow:0 10px 26px rgba(58,35,20,0.08);
+  border-top:5px solid var(--sun);
+}
+.review-card:nth-child(2){border-top-color:var(--coral);}
+.review-card:nth-child(3){border-top-color:var(--sky);}
+.review-card p{font-size:15px;color:var(--fg);}
+.review-card .who{margin-top:14px;color:var(--muted);font-size:13px;font-weight:700;}
+
+.story-split{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:52px;
+  align-items:center;
+}
+.story-split img{border-radius:20px;box-shadow:0 14px 30px rgba(58,35,20,0.14);}
+.story-split p{color:var(--muted);font-size:16.5px;max-width:52ch;margin-top:16px;}
+
+.brand-strip{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  flex-wrap:wrap;
+  margin-top:40px;
+  padding-top:32px;
+  border-top:1px solid var(--line);
+}
+.brand-strip img{height:36px;width:auto;opacity:0.75;filter:grayscale(40%);}
+
+footer{padding:50px 0 60px;border-top:1px solid var(--line);}
+.foot-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;}
+.foot-col h3{font-size:15px;margin-bottom:10px;font-family:var(--font-display);}
+.foot-col p, .foot-col a{color:var(--muted);font-size:15px;text-decoration:none;display:block;}
+.copy-btn{
+  margin-top:10px;
+  font-size:13px;
+  border:1px solid var(--line);
+  background:none;
+  color:var(--fg);
+  padding:7px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  font-family:var(--font-body);
+  font-weight:700;
+}
+.foot-note{margin-top:36px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:18px;}
+
+@media (max-width:760px){
+  .collections-grid,.product-row,.reviews-grid{grid-template-columns:repeat(2,1fr);}
+  .story-split{grid-template-columns:1fr;}
+  .hero-card{position:static;margin-top:16px;max-width:none;}
+  .hero{border-radius:20px;}
+  .nav-links{display:none;}
+}
+@media (max-width:480px){
+  .collections-grid,.product-row,.reviews-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="concept-banner">Redesign concept by KM Designs — not the live site</div>
+
+<div class="wrap">
+
+<nav>
+  <div class="logo-pill"><img alt="Sol Baby" src="sol-baby-assets/logo.jpg"></div>
+  <ul class="nav-links">
+    <li><a href="#collections">Collections</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#visit">Visit</a></li>
+  </ul>
+  <a class="btn solid" href="#visit">Get directions</a>
+</nav>
+
+<section style="padding-top:12px;">
+  <div class="hero">
+    <img alt="Kids on the beach in Sol Baby Hermosa Beach tees" src="sol-baby-assets/local-love.jpg">
+    <div class="hero-card">
+      <h1>Original kids' clothing, inspired by the beach.</h1>
+      <p class="lede">Family-owned in Hermosa Beach since 2007. Sol Baby designs and curates fun, beachy styles for babies and kids, from trucker hats to rock-and-roll tees.</p>
+      <div class="btn-row">
+        <a class="btn solid" href="#collections">See the collections</a>
+        <a class="btn" href="#visit">Visit the shop</a>
+      </div>
+    </div>
+    <div class="sun-accent">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#3a2314" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5" fill="#3a2314" stroke="none"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+    </div>
+  </div>
+</section>
+
+<section id="collections">
+  <div class="section-head">
+    <h2>Shop by collection</h2>
+    <p>Original Sol Baby prints alongside curated favorites, all with a SoCal, beach-town feel.</p>
+  </div>
+  <div class="collections-grid">
+    <div class="collection-card">
+      <div class="sticker"><img alt="Sol Baby Originals" src="sol-baby-assets/local-love.jpg"></div>
+      <span>Sol Baby Originals</span>
+      <small>288 items</small>
+    </div>
+    <div class="collection-card">
+      <div class="sticker"><img alt="Trucker hats" src="sol-baby-assets/bucket-hat.png"></div>
+      <span>Hats</span>
+      <small>78 items</small>
+    </div>
+    <div class="collection-card">
+      <div class="sticker"><img alt="Rock and roll styles" src="sol-baby-assets/rock-roll.jpg"></div>
+      <span>Rock &amp; Roll Styles</span>
+      <small>30 items</small>
+    </div>
+    <div class="collection-card">
+      <div class="sticker"><img alt="Tees and tops" src="sol-baby-assets/tees.jpg"></div>
+      <span>Tees &amp; Tops</span>
+      <small>84 items</small>
+    </div>
+    <div class="collection-card">
+      <div class="sticker"><img alt="Hoodies and sweatshirts" src="sol-baby-assets/hoodies.jpg"></div>
+      <span>Hoodies &amp; Sweatshirts</span>
+      <small>18 items</small>
+    </div>
+    <div class="collection-card">
+      <div class="sticker"><img alt="Bamboo rompers" src="sol-baby-assets/romper-pink.png"></div>
+      <span>Baby Onesies &amp; Rompers</span>
+      <small>101 items</small>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="section-head">
+    <h2>A few Sol Baby favorites</h2>
+    <p>Soft bamboo fabrics and original South Bay prints, made for little ones.</p>
+  </div>
+  <div class="product-row">
+    <div class="product-card">
+      <img alt="South Bay print reversible bucket hat" src="sol-baby-assets/bucket-hat.png">
+      <div class="pname">South Bay Print Reversible Bucket Hat</div>
+      <div class="pprice">$24.00</div>
+    </div>
+    <div class="product-card">
+      <img alt="Zip-up bamboo convertible romper, orange surf bus print" src="sol-baby-assets/romper-orange.png">
+      <div class="pname">Surf Bus Bamboo Convertible Romper</div>
+      <div class="pprice">$37.00</div>
+    </div>
+    <div class="product-card">
+      <img alt="Zip-up ruffle bamboo footie, pink surf bus print" src="sol-baby-assets/romper-pink.png">
+      <div class="pname">Surf Bus Ruffle Bamboo Footie</div>
+      <div class="pprice">$39.00</div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-head">
+    <h2>What South Bay families say</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <p>"A bit of a family tradition, a required stop every time we visit the South Bay."</p>
+      <div class="who">Reham H., Google review</div>
+    </div>
+    <div class="review-card">
+      <p>"The cutest children's clothes, with friendly, helpful staff."</p>
+      <div class="who">Heather L., Google review</div>
+    </div>
+    <div class="review-card">
+      <p>"Friendly service and world class offerings."</p>
+      <div class="who">Idean H., Google review</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="story-split">
+    <img alt="Sol Baby storefront wordmark" src="sol-baby-assets/sol-baby-brand.jpg">
+    <div>
+      <h2>Family-owned since 2007</h2>
+      <p>Sol Baby has been a Hermosa Beach original since 2007, designing playful, beach-inspired clothing for babies and kids and curating a lineup of favorite kids' brands alongside it.</p>
+      <div class="brand-strip">
+        <img alt="Tiny Whales" src="sol-baby-assets/brand-tinywhales.jpg">
+        <img alt="Appaman" src="sol-baby-assets/brand-appaman.jpg">
+        <img alt="Kickee Pants" src="sol-baby-assets/brand-kickee.jpg">
+        <img alt="Rowdy Sprout" src="sol-baby-assets/brand-rowdy.jpg">
+        <img alt="Born by the Shore" src="sol-baby-assets/brand-btts.jpg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="visit">
+  <div class="foot-grid">
+    <div class="foot-col">
+      <h3>Visit</h3>
+      <p>124 Pier Avenue<br>Hermosa Beach, CA 90254</p>
+      <p>Mon 11am-5pm<br>Tue-Sun 10am-6pm</p>
+    </div>
+    <div class="foot-col">
+      <h3>Get in touch</h3>
+      <p>310-318-3960</p>
+      <p>info@sol-baby.com</p>
+      <button class="copy-btn" onclick="navigator.clipboard?.writeText('info@sol-baby.com').catch(()=>{});this.textContent='Copied'">Copy email</button>
+    </div>
+    <div class="foot-col">
+      <h3>Sol Baby</h3>
+      <p>Original kids' clothing, Hermosa Beach</p>
+    </div>
+  </div>
+  <div class="foot-note">This is a redesign concept built by KM Designs as an example of what a new site could look like. Not affiliated with or published by Sol Baby.</div>
+</footer>
+
+</div>
+</body>
+</html>
